@@ -1,0 +1,376 @@
+id: simple
+title: Simple
+icon: mdi:home-automation
+cards:
+
+# BEDROOM
+# ROW 1
+  - type: vertical-stack
+    cards:
+      - type: "custom:button-card"
+        color_type: label-card
+        color: rgb(44, 109, 214)
+        name: Bedroom
+        style:
+        - font-size: 10px
+        - font-weight: bold
+      - type: horizontal-stack
+        cards:
+          - type: "custom:button-card"
+            entity: light.esp_led_bedroom
+            icon: mdi:led-strip
+            color: auto
+            color_type: card
+            default_color: rgb(255, 233, 155)
+            action: toggle
+            name: LED
+            size: 20px
+            style:
+              - font-size: 10px
+              - font-weight: bold
+          - type: "custom:button-card"
+            entity: input_boolean.bedroom_small_lamp
+            icon: mdi:lamp
+            color: auto
+            color_type: card
+            default_color: rgb(255, 233, 155)
+            action: toggle
+            name: Lamp
+            size: 20px
+            style:
+              - font-size: 10px
+              - font-weight: bold
+          - type: "custom:button-card"
+            color_type: blank-card
+          - type: "custom:button-card"
+            color_type: blank-card
+          - type: "custom:button-card"
+            color_type: blank-card
+# BEDROOM
+# ROW 2
+      - type: horizontal-stack
+        cards:
+          - type: "custom:button-card"
+            entity: sensor.bedroom_temperature
+            show_state: true
+            color: auto
+            color_type: card
+            default_color: rgb(255, 233, 155)
+            style:
+              - font-size: 10px
+              - font-weight: bold
+
+          - type: "custom:button-card"
+            entity: sensor.bedroom_humidity
+            show_state: true
+            color: auto
+            color_type: card
+            default_color: rgb(255, 233, 155)
+            size: 5px
+            style:
+              - font-size: 10px
+              - font-weight: bold
+          - type: "custom:button-card"
+            color_type: blank-card
+          - type: "custom:button-card"
+            color_type: blank-card
+          - type: "custom:button-card"
+            color_type: blank-card
+# KITCHEN 
+# ROW 1    
+      - type: "custom:button-card"
+        color_type: label-card
+        color: rgb(44, 109, 214)
+        name: Kitchen
+        style:
+        - font-size: 10px
+        - font-weight: bold
+      - type: horizontal-stack
+        cards:
+          - type: "custom:button-card"
+            entity: light.livingroom1
+            icon: mdi:led-strip
+            color: auto
+            color_type: card
+            default_color: rgb(255, 233, 155)
+            action: toggle
+            name: LED
+            size: 20px
+            style:
+              - font-size: 10px
+              - font-weight: bold
+          - type: "custom:button-card"
+            entity: input_boolean.kitchen_spot
+            icon: mdi:ceiling-light
+            color: auto
+            color_type: card
+            default_color: rgb(255, 233, 155)
+            action: toggle
+            name: Spot
+            size: 20px
+            style:
+              - font-size: 10px
+              - font-weight: bold
+          - type: "custom:button-card"
+            entity: input_boolean.kitchen_table
+            icon: mdi:ceiling-light
+            color: auto
+            color_type: card
+            default_color: rgb(255, 233, 155)
+            action: toggle
+            name: Table
+            size: 20px
+            style:
+              - font-size: 10px
+              - font-weight: bold
+          - type: "custom:button-card"
+            color_type: blank-card
+          - type: "custom:button-card"
+            color_type: blank-card
+# KITCHEN 
+# ROW 2  
+
+
+# HALLWAY
+# ROW 1
+
+      - type: "custom:button-card"
+        color_type: label-card
+        color: rgb(44, 109, 214)
+        name: Hallway
+        style:
+        - font-size: 10px
+        - font-weight: bold
+      - type: horizontal-stack
+        cards:
+          - type: "custom:button-card"
+            entity: input_boolean.hallway_celing
+            icon: mdi:ceiling-light
+            color: auto
+            color_type: card
+            default_color: rgb(255, 233, 155)
+            action: toggle
+            name: Celing
+            size: 20px
+            style:
+              - font-size: 10px
+              - font-weight: bold
+          - type: "custom:button-card"
+            color_type: blank-card             
+          - type: "custom:button-card"
+            color_type: blank-card
+          - type: "custom:button-card"
+            color_type: blank-card
+          - type: "custom:button-card"
+            color_type: blank-card
+# HALLWAY
+# ROW 2
+
+# LIVINGROOM
+# ROW 1
+      - type: "custom:button-card"
+        color_type: label-card
+        color: rgb(44, 109, 214)
+        name: Livingroom
+        style:
+        - font-size: 10px
+        - font-weight: bold
+      - type: horizontal-stack
+        cards:
+          - type: "custom:button-card"
+            entity: input_boolean.livingroom_small_lamps
+            icon: mdi:lamp
+            color: auto
+            color_type: card
+            default_color: rgb(255, 233, 155)
+            action: toggle
+            name: Lamp
+            size: 20px
+            style:
+              - font-size: 10px
+              - font-weight: bold
+          - type: "custom:button-card"
+            entity: input_boolean.livingroom_small_led
+            icon: mdi:lamp
+            color: auto
+            color_type: card
+            default_color: rgb(255, 233, 155)
+            action: toggle
+            name: LED
+            size: 20px
+            style:
+              - font-size: 10px
+              - font-weight: bold
+          - type: "custom:button-card"
+            entity: input_boolean.kitchen_window
+            icon: mdi:lamp
+            color: auto
+            color_type: card
+            default_color: rgb(255, 233, 155)
+            action: toggle
+            name: Lamp
+            size: 20px
+            style:
+              - font-size: 10px
+              - font-weight: bold
+
+          - type: "custom:button-card"
+            entity: switch.sonoff_basic_relay
+            icon: mdi:ceiling-light
+            color: auto
+            color_type: card
+            default_color: rgb(255, 233, 155)
+            action: toggle
+            name: Lamp
+            size: 20px
+            style:
+              - font-size: 10px
+              - font-weight: bold
+
+
+          - type: "custom:button-card"
+            color_type: blank-card
+# LIVINGROOM
+# ROW 2
+      - type: horizontal-stack
+        cards:
+          - type: "custom:button-card"
+            entity: sensor.livingroom_temperature
+            show_state: true
+            color: auto
+            color_type: card
+            default_color: rgb(255, 233, 155)
+            style:
+              - font-size: 10px
+              - font-weight: bold
+          - type: "custom:button-card"
+            entity: sensor.livingroom_humidity
+            show_state: true
+            color: auto
+            color_type: card
+            default_color: rgb(255, 233, 155)
+            style:
+              - font-size: 10px
+              - font-weight: bold
+          - type: "custom:button-card"
+            entity: sensor.livingroom_ir_esp_temp
+            show_state: true
+            color: auto
+            color_type: card
+            default_color: rgb(255, 233, 155)
+            style:
+              - font-size: 10px
+              - font-weight: bold
+          - type: "custom:button-card"
+            entity: sensor.livingroom_ir_esp_humid
+            show_state: true
+            color: auto
+            color_type: card
+            default_color: rgb(255, 233, 155)
+            style:
+              - font-size: 10px
+              - font-weight: bold
+          - type: "custom:button-card"
+            color_type: blank-card
+# OUTSIDE
+# ROW 1
+      - type: "custom:button-card"
+        color_type: label-card
+        color: rgb(44, 109, 214)
+        name: Outside
+        style:
+        - font-size: 10px
+        - font-weight: bold
+      - type: horizontal-stack
+        cards:
+          - type: "custom:button-card"
+            entity: light.holiday_lights
+            icon: mdi:led-strip
+            color: auto
+            color_type: card
+            default_color: rgb(255, 233, 155)
+            action: toggle
+            name: Lab
+            size: 20px
+            style:
+              - font-size: 10px
+              - font-weight: bold
+          - type: "custom:button-card"
+            entity: light.holiday_lights_outside
+            icon: mdi:led-strip
+            color: auto
+            color_type: card
+            default_color: rgb(255, 233, 155)
+            action: toggle
+            name: Wall
+            size: 20px
+            style:
+              - font-size: 10px
+              - font-weight: bold
+          - type: "custom:button-card"
+            entity: light.holiday_lights_outside2
+            icon: mdi:led-strip
+            color: auto
+            color_type: card
+            default_color: rgb(255, 233, 155)
+            action: toggle
+            name: Railing
+            size: 20px
+            style:
+              - font-size: 10px
+              - font-weight: bold
+          - type: "custom:button-card"
+            entity: light.holiday_lights_kitchen
+            icon: mdi:led-strip
+            color: auto
+            color_type: card
+            default_color: rgb(255, 233, 155)
+            action: toggle
+            name: Window
+            size: 20px
+            style:
+              - font-size: 10px
+              - font-weight: bold
+          - type: "custom:button-card"
+            entity: input_select.holiday_led_effect
+            show_state: true
+            color: auto
+            color_type: card
+            default_color: rgb(255, 233, 155)
+            size: 5px
+            style:
+              - font-size: 10px
+              - font-weight: bold
+# OUTSIDE 
+# ROW 2
+      - type: horizontal-stack
+        cards:
+          - type: "custom:button-card"
+            entity: sensor.blommlada
+            show_state: true
+            color: auto
+            color_type: card
+            default_color: rgb(255, 233, 155)
+            style:
+              - font-size: 10px
+              - font-weight: bold
+
+          - type: "custom:button-card"
+            entity: sensor.blommlada_temp
+            show_state: true
+            color: auto
+            color_type: card
+            default_color: rgb(255, 233, 155)
+            size: 5px
+            style:
+              - font-size: 10px
+              - font-weight: bold
+          - type: "custom:button-card"
+            color_type: blank-card
+          - type: "custom:button-card"
+            color_type: blank-card
+          - type: "custom:button-card"
+            color_type: blank-card
+
+
+            

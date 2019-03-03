@@ -1,0 +1,31 @@
+id: lampor
+title: Lampor
+icon: mdi:lamp
+cards:
+  - type: vertical-stack
+    cards:
+      - type: entities
+        title: Inside
+        entities:
+          - light.esp_led_bedroom
+          - input_boolean.bedroom_small_lamp
+          - light.livingroom1
+          - input_boolean.kitchen_odling
+          - input_boolean.kitchen_spot
+          - input_boolean.kitchen_table
+          - switch.sonoff
+          - input_boolean.akvarium_odling
+          - input_boolean.hallway_celing
+          - input_boolean.livingroom_small_lamps
+          - input_boolean.livingroom_small_led
+          - input_boolean.kitchen_window
+          - switch.sonoff_basic_relay
+      - type: entities
+        title: Outside
+        entities:
+          - light.holiday_lights
+          - light.holiday_lights_kitchen
+          - light.holiday_lights_outside
+          - light.holiday_lights_outside2
+          - input_number.lab_animation_speed
+          - input_select.holiday_led_effect

@@ -1,0 +1,13 @@
+- platform: generic
+  name: Skondal
+  still_image_url: https://api.trafikinfo.trafikverket.se/v1/Images/TrafficFlowCamera_39626465.Jpeg?type=fullsize
+- platform: generic
+  name: Gubbangen
+  still_image_url: https://api.trafikinfo.trafikverket.se/v1/Images/TrafficFlowCamera_39626461.Jpeg?type=fullsize
+- platform: generic
+  name: Skogskyrkogarden
+  still_image_url: https://api.trafikinfo.trafikverket.se/v1/Images/TrafficFlowCamera_39626462.Jpeg?type=fullsize
+- platform: generic
+  name: Sockenvagen
+  still_image_url: https://api.trafikinfo.trafikverket.se/v1/Images/TrafficFlowCamera_39626463.Jpeg?type=fullsize
+

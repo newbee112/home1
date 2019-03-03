@@ -1,0 +1,8 @@
+---
+id: security
+title: Alarm
+icon: mdi:shield-lock
+cards:
+  - type: alarm-panel
+    entity: alarm_control_panel.ha_alarm
+    title: Alarm System

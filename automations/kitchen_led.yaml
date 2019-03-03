@@ -1,0 +1,47 @@
+- id: '3453334342124534666534'
+  alias: turn_kitchen_red
+  hide_entity: true
+  trigger:
+    platform: time
+    at: "16:30:00"
+  action:
+    service: light.turn_on
+    data:
+      brightness: 25
+      rgb_color: [255, 0, 0]
+      entity_id:
+        - light.livingroom1
+
+- id: '345333477734534666534'
+  alias: turn_kitchen_off_night
+  hide_entity: true
+  trigger:
+    platform: time
+    at: "23:45:00"
+  action:
+    service: light.turn_off
+    entity_id: light.livingroom1
+
+- id: '347775124534666534'
+  alias: turn_kitchen_blue
+  hide_entity: true
+  trigger:
+    platform: time
+    at: "03:00:50"
+  action:
+    service: light.turn_on
+    data:
+      brightness: 25
+      rgb_color: [0, 0, 255]
+      entity_id:
+        - light.livingroom1
+
+- id: '3453334777348963466534'
+  alias: turn_kitchen_off_morning
+  hide_entity: true
+  trigger:
+    platform: time
+    at: "09:36:10"
+  action:
+    service: light.turn_off
+    entity_id: light.livingroom1

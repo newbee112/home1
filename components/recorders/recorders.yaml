@@ -1,0 +1,47 @@
+purge_interval: 1
+purge_keep_days: 2
+#db_url: !secret mariadb_url
+exclude:
+  entities:
+    - weather.dark_sky
+    - camera.hall
+    - camera.odling
+    - camera.outside
+    - camera.room
+    - input_boolean.node_red
+    - input_number.animation_speed
+    - input_select.holiday_led_effect
+    - sensor.cpu_speed
+    - zone.home
+    - input_boolean.tellstick
+    - device_tracker.bose
+    - device_tracker.music_box
+    - device_tracker.s9
+    - device_tracker.tv
+    - group.all_automations
+    - input_boolean.johan_home
+    - input_boolean.mali_home
+    - input_number.lab_animation_speed
+    - input_select.holiday_led_effect
+    - media_player.bose_bedrooom
+    - media_player.mpd
+    - media_player.samsung_tv_remote
+    - sensor.larm
+    - sensor.node_red
+    - sensor.temp_ute_unknown
+    - device_tracker.bedroom_bed_esp_led
+    - device_tracker.bedroom_bose
+    - device_tracker.kitchen_window_esp_led
+    - device_tracker.lab_esp_led
+    - device_tracker.lab_esp_temp
+    - device_tracker.lab_sonoff_pow1
+    - device_tracker.lab_vm_node_red
+    - device_tracker.livingroom_esp_720
+    - device_tracker.livingroom_esp_led
+    - device_tracker.livingroom_pi3_pressence
+    - device_tracker.livingroom_tv
+    - device_tracker.outside_front_esp_led_rail
+    - device_tracker.outside_front_esp_led_wall
+    - sensor.livingroom_roomba_battery
+    - sensor.livingroom_roomba_status
+    - group.all_automations

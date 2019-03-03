@@ -1,0 +1,4 @@
+- platform: mqtt
+  name: "Lab_ESP_motion_detect"
+  device_class: motion
+  state_topic: "stat/odlingtemp/POWER"

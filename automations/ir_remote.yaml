@@ -1,0 +1,30 @@
+- alias: "Ir_remote_1"
+  id: '3333444343423546768785245'
+  trigger:
+    platform: mqtt
+    topic: esp/remoteIR
+    # Optional
+    payload: '16718565'
+  action: 
+    - service: mqtt.publish
+      data:
+        topic: "cmnd/blommlada/POWER"
+        payload: "on"
+    - delay: '00:00:30'
+    - service: mqtt.publish
+      data:
+        topic: "cmnd/blommlada/POWER"
+        payload: "off"    
+
+- alias: "Ir_remote_2"
+  id: '3333444332423456564685245'
+  trigger:
+    platform: mqtt
+    topic: esp/remoteIR
+    # Optional
+    payload: '16751205'
+  action: 
+    - service: homeassistant.toggle
+      data:
+        entity_id:
+          - input_boolean.livingroom_small_lamps

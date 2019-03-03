@@ -1,0 +1,5 @@
+- platform: krisinformation
+  name: Krisinformation Stockholm
+  latitude: !secret lat
+  longitude: !secret lon
+  radius: 100

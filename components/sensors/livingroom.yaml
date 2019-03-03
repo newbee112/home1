@@ -1,0 +1,17 @@
+- platform: mqtt
+  name: "Livingroom_Roomba_Status"
+  state_topic: "roomba/currentStatus"
+  
+- platform: mqtt
+  name: "Livingroom_Roomba_Battery"
+  state_topic: "roomba/battery"
+
+- platform: mqtt
+  name: "livingroom_ir_esp_temp"
+  state_topic: "esp/IR/temp"
+  unit_of_measurement: 'c'
+
+- platform: mqtt
+  name: "livingroom_ir_esp_humid"
+  state_topic: "esp/IR/humid"
+  unit_of_measurement: '%'

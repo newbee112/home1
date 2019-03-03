@@ -1,0 +1,7 @@
+id: krisinfo
+title: Kris information
+icon: mdi:bullhorn-outline
+cards:
+  - type: custom:krisinfo-card
+    entity: sensor.krisinformation_stockholm
+

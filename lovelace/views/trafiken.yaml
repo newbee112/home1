@@ -1,0 +1,16 @@
+id: trafiken
+title: Trafik information
+icon: mdi:car
+cards:
+- type: picture-entity
+  entity: camera.skogskyrkogarden
+  show_state: false
+- type: picture-entity
+  entity: camera.skondal
+  show_state: false
+- type: picture-entity
+  entity: camera.sockenvagen
+  show_state: false
+- type: picture-entity
+  entity: camera.gubbangen
+  show_state: false

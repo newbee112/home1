@@ -1,0 +1,17 @@
+- id: '34684367897544266534'
+  alias: vattna1
+  trigger:  
+    - platform: numeric_state
+      entity_id: sensor.blommlada
+      above: 530
+      for: '00:05:00'
+  action:
+    - service: mqtt.publish
+      data:
+        topic: "cmnd/blommlada/POWER"
+        payload: "on"
+    - delay: '00:00:30'
+    - service: mqtt.publish
+      data:
+        topic: "cmnd/blommlada/POWER"
+        payload: "off"

@@ -1,0 +1,51 @@
+
+- alias: nattlampa
+  id: '3121777777774534666534'
+  trigger:
+  - platform: state
+    entity_id: binary_sensor.sense1
+    to: 'on'
+  condition:
+  - condition: time
+    after: '23:00:00'
+    before: '06:00:00'
+  action:
+  - service: homeassistant.turn_on
+    data:
+      entity_id:
+        - light.esp_led_bedroom
+  - service: timer.start
+    data:
+      entity_id: timer.bedroom
+
+- alias: nattlampa2
+  id: '31217777777745332323234666534'
+  trigger:
+  - platform: state
+    entity_id: binary_sensor.sense2
+    to: 'on'
+  condition:
+  - condition: time
+    after: '23:00:00'
+    before: '06:00:00'
+  action:
+  - service: homeassistant.turn_on
+    data:
+      entity_id:
+        - light.esp_led_bedroom
+  - service: timer.start
+    data:
+      entity_id: timer.bedroom
+
+- alias: timer_bedroom
+  id: '312177777734343434534666534'
+  trigger:
+    platform: event
+    event_type: timer.finished
+    event_data:
+      entity_id: timer.bedroom
+  action:
+    service: homeassistant.turn_off
+    data:
+      entity_id:
+        - light.esp_led_bedroom

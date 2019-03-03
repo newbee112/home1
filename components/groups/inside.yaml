@@ -1,0 +1,16 @@
+insidelightning:
+  name: Inside Lights
+  entities:
+    - input_boolean.akvarium_odling
+    - input_boolean.bedroom_small_lamp
+    - input_boolean.kitchen_odling
+    - input_boolean.kitchen_window
+    - input_boolean.livingroom_small_lamps
+    - input_boolean.livingroom_small_led
+    - light.esp_led_bedroom
+    - light.livingroom1
+    - switch.sonoff
+    - input_boolean.hallway_celing
+    - input_boolean.kitchen_spot
+    - input_boolean.kitchen_table
+    

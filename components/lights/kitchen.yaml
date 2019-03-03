@@ -1,0 +1,12 @@
+- platform: mqtt
+  schema: json
+  name: livingroom1
+  state_topic: "home/livingroom1"
+  command_topic: "home/livingroom1/set"
+  brightness: true
+  rgb: true
+  effect: true
+  white_value: true
+  effect_list: [colorfade_slow, colorfade_fast, flash]
+  optimistic: false
+  qos: 0

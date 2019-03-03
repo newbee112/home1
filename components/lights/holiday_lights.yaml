@@ -1,0 +1,39 @@
+- platform: mqtt
+  name: "Holiday Lights"
+  command_topic: "bruh/mqttstrip/setpower"
+  state_topic: "bruh/mqttstrip/setpowerpub"
+  rgb_state_topic: "bruh/mqttstrip/setcolorpub"
+  rgb_command_topic: "bruh/mqttstrip/setcolor"
+  brightness_state_topic: "bruh/mqttstrip/setbrightnesspub"
+  brightness_command_topic: "bruh/mqttstrip/setbrightness"
+  optimistic: false
+
+- platform: mqtt
+  name: "Holiday Lights Outside"
+  command_topic: "bruh1/outside/setpower"
+  state_topic: "bruh1/outside/setpowerpub"
+  rgb_state_topic: "bruh1/outside/setcolorpub"
+  rgb_command_topic: "bruh1/outside/setcolor"
+  brightness_state_topic: "bruh1/outside/setbrightnesspub"
+  brightness_command_topic: "bruh1/outside/setbrightness"
+  optimistic: false
+
+- platform: mqtt
+  name: "Holiday Lights Kitchen"
+  command_topic: "bruh2/outside/setpower"
+  state_topic: "bruh2/outside/setpowerpub"
+  rgb_state_topic: "bruh2/outside/setcolorpub"
+  rgb_command_topic: "bruh2/outside/setcolor"
+  brightness_state_topic: "bruh2/outside/setbrightnesspub"
+  brightness_command_topic: "bruh2/outside/setbrightness"
+  optimistic: false
+
+- platform: mqtt
+  name: "Holiday Lights Outside2"
+  command_topic: "bruh3/outside/setpower"
+  state_topic: "bruh3/outside/setpowerpub"
+  rgb_state_topic: "bruh3/outside/setcolorpub"
+  rgb_command_topic: "bruh3/outside/setcolor"
+  brightness_state_topic: "bruh3/outside/setbrightnesspub"
+  brightness_command_topic: "bruh3/outside/setbrightness"
+  optimistic: false

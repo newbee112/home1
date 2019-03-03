@@ -1,0 +1,71 @@
+light.esp_led_bedroom:
+  icon: mdi:led-strip
+  friendly_name: Sovrum LED
+
+light.livingroom1:
+  icon: mdi:led-strip
+  friendly_name: Kök LED
+
+light.holiday_lights:
+  icon: mdi:led-strip
+  friendly_name: LAB LED
+
+light.holiday_lights_kitchen:
+  icon: mdi:led-strip
+  friendly_name: Jul LED
+
+light.holiday_lights_outside:
+  icon: mdi:led-strip
+  friendly_name: Utomhus1 LED
+
+light.holiday_lights_outside2:
+  icon: mdi:led-strip
+  friendly_name: Utomhus2 LED
+
+switch.sonoff:
+  icon: mdi:lamp
+  friendly_name: SonOff LAB
+
+input_boolean.livingroom_small_lamps:
+  friendly_name: Vardagsrum lampa
+  initial: on
+  icon: mdi:lamp
+
+input_boolean.livingroom_small_led:
+  friendly_name: Vardagsrum lampa
+  initial: on
+  icon: mdi:lamp
+
+input_boolean.kitchen_window:
+  friendly_name: Vardagsrum lampa
+  initial: on
+  icon: mdi:lamp
+
+input_boolean.bedroom_small_lamp:
+  friendly_name: Sovrum lampa
+  initial: on
+  icon: mdi:lamp
+
+input_boolean.kitchen_odling:
+  friendly_name: Odling lampa
+  initial: off
+  icon: mdi:flower
+
+input_boolean.hallway_celing:
+  friendly_name: Hallen tak
+  initial: off
+  icon: mdi:ceiling-light
+
+input_boolean.kitchen_spot:
+  friendly_name: Kök spot
+  initial: off
+  icon: mdi:ceiling-light
+
+input_boolean.kitchen_table:
+  friendly_name: Kök tak
+  initial: off
+  icon: mdi:ceiling-light
+
+switch.sonoff_basic_relay:
+  friendly_name: Livingroom ceiling front
+  icon: mdi:ceiling-light

@@ -1,0 +1,244 @@
+input_boolean.akvarium_odling:
+  friendly_name: Garderob Akvarie
+  initial: on
+  icon: mdi:fish
+
+input_boolean.720_co2:
+  friendly_name: Akvarium 720l co2
+  initial: on
+  icon: mdi:gas-cylinder
+
+input_boolean.tellstick:
+  friendly_name: NodeRedServerWatchdog
+  initial: off
+  icon: mdi:server-network
+
+input_boolean.alarm_arm_disarm:
+  friendly_name: Alarm home/away
+  initial: OFF
+  icon: mdi:pirate
+
+sensor.bedroom_humid:
+  friendly_name: Sovrum
+  icon: mdi:water-percent
+
+sensor.bedroom_temp:
+  friendly_name: Sovrum
+  icon: mdi:thermometer
+
+sensor.disk_use_percent_home:
+  friendly_name: Hårddisk VM
+  icon: mdi:harddisk
+
+sensor.aquarium_1:
+  friendly_name: Akvarie 1
+  icon: mdi:thermometer
+
+sensor.aquarium_2:
+  friendly_name: Akvarie 2
+  icon: mdi:thermometer
+
+sensor.aquarium_3:
+  friendly_name: Akvarie 3
+  icon: mdi:thermometer
+
+sensor.lab_nexa_humid:
+  friendly_name: Garderoben
+  icon: mdi:water-percent
+
+sensor.lab_nexa_temp:
+  friendly_name: Garderoben
+  icon: mdi:thermometer
+
+sensor.lab_sonoff_pow1_current:
+  friendly_name: sonoff
+  icon: mdi:chip
+
+sensor.lab_sonoff_pow1_power:
+  friendly_name: sonoff
+  icon: mdi:chip
+
+sensor.lab_sonoff_pow1_voltage:
+  friendly_name: sonoff
+  icon: mdi:chip
+
+sensor.livingroom_humidity:
+  friendly_name: Vardagsrum
+  icon: mdi:water-percent
+
+sensor.livingroom_temperature:
+  friendly_name: Vardagsrum
+  icon: mdi:thermometer
+
+sensor.livingroom_roomba_battery:
+  friendly_name: Roomba batteri
+  icon: mdi:robot-vacuum-variant
+
+sensor.livingroom_roomba_status:
+  friendly_name: Roomba status
+  icon: mdi:robot-vacuum-variant
+
+binary_sensor.water_alarm_720:
+  friendly_name: Vatten larm
+  icon: mdi:alert
+
+sensor.memory_free:
+  friendly_name: Använt minne VM
+  icon: mdi:memory
+
+sensor.outside_door_alarm:
+  friendly_name: Sensor dörr ute
+  icon: mdi:door
+
+
+binary_sensor.lab_esp_motion_detect:
+  friendly_name: Garderob PIR
+  icon: mdi:thermometer
+
+binary_sensor.larm:
+  friendly_name: test larm
+  icon: mdi:motion-sensor
+
+device_tracker.lab_esp_led:
+  friendly_name: Garderob
+  icon: mdi:chip
+
+device_tracker.livingroom_esp_720:
+  friendly_name: Vardagsrum
+  icon: mdi:chip
+
+device_tracker.bedroom_bed_esp_led:
+  friendly_name: Sovrum LED
+  icon: mdi:chip
+
+device_tracker.lab_server_main:
+  friendly_name: Host Server
+  icon: mdi:server-network
+
+device_tracker.lab_vm_node_red:
+  friendly_name: NodeRed Server
+  icon: mdi:server-network
+
+device_tracker.livingroom_tv:
+  friendly_name: Samsung TV
+  icon: mdi:television
+
+device_tracker.bedroom_bose:
+  friendly_name: Sovrum Bose
+  icon: mdi:speaker-bluetooth
+
+device_tracker.bedroom_alexa:
+  friendly_name: Sovrum Alexa
+  icon: mdi:amazon
+
+device_tracker.outside_front_esp_led_wall:
+  friendly_name: Loftgång LED
+  icon: mdi:chip
+
+device_tracker.kitchen_window_esp_led:
+  friendly_name: Kök Jul LED
+  icon: mdi:chip
+
+device_tracker.livingroom_esp_roomba:
+  friendly_name: Roomba
+  icon: mdi:chip
+
+device_tracker.livingroom_pi3_pressence:
+  friendly_name: Vardagsrum PI3
+  icon: mdi:chip
+
+device_tracker.outside_front_esp_led_rail:
+  friendly_name: Loftgång LED
+  icon: mdi:chip
+
+device_tracker.livingroom_esp_led:
+  friendly_name: Vardagsrum
+  icon: mdi:chip
+
+device_tracker.lab_sonoff_pow1:
+  friendly_name: SonOff Pow1
+  icon: mdi:chip
+
+device_tracker.lab_esp_temp:
+  friendly_name: Garderob
+  icon: mdi:chip
+
+device_tracker.odling_esp:
+  friendly_name: Odling
+  icon: mdi:chip
+
+device_tracker.rmlinkmini:
+  friendly_name: RM Link Mini
+  icon: mdi:chip
+
+device_tracker.camera_720:
+  friendly_name: Vardagsrum kamera
+  icon: mdi:video
+
+device_tracker.camera_hall:
+  friendly_name: Hallen kamera
+  icon: mdi:video
+
+device_tracker.camera_ute:
+  friendly_name: Loftgång kamera
+  icon: mdi:video
+
+device_tracker.camera_akvarie:
+  friendly_name: Garderob kamera
+  icon: mdi:video
+
+input_boolean.bedroom_movement1:
+  friendly_name: Sovrum PIR
+  icon: mdi:motion-sensor
+
+sensor.blommlada_temp:
+  friendly_name: Blomlåda
+  icon: mdi:thermometer
+
+sensor.blommlada_humid:
+  friendly_name: Blomlåda
+  icon: mdi:water-percent
+
+sensor.blommlada:
+  friendly_name: Blomlåda
+  icon: mdi:grave-stone
+
+device_tracker.blomlada_esp:
+  friendly_name: Blomlåda
+  icon: mdi:chip
+
+sensor.livingroom_ir_esp_temp:
+  friendly_name: Livingroom
+  icon: mdi:thermometer
+
+sensor.livingroom_ir_esp_humid:
+  friendly_name: Livingroom
+  icon: mdi:water-percent
+
+device_tracker.livingroom_esp_ir:
+  friendly_name: Livingroom esp ir
+  icon: mdi:chip
+
+sensor.luftdaten_18986_p2:
+  friendly_name: Skogås PM2.5
+  icon: mdi:thought-bubble-outline
+
+sensor.luftdaten_18986_p1:
+  friendly_name: Skogås PM10
+  icon: mdi:thought-bubble
+
+camera.skogskyrkogarden:
+  friendly_name: Skogskyrkovägen
+  icon: mdi:video
+
+camera.skondal:
+  friendly_name: Sköndal
+  icon: mdi:video
+
+camera.sockenvagen:
+  friendly_name: Sockenvägen
+  icon: mdi:video
+
+camera.gubbangen:
+  friendly_name: Gubbängen
+  icon: mdi:video

@@ -1,0 +1,18 @@
+
+- platform: mqtt
+  name: "blommlada"
+  state_topic: "tele/blommlada/SENSOR"
+  value_template: '{{ value_json["ANALOG"]["A0"] }}'
+  unit_of_measurement: 'soil'
+
+- platform: mqtt
+  name: "blommlada_temp"
+  state_topic: "tele/blommlada/SENSOR"
+  value_template: '{{ value_json["AM2301"]["Temperature"] }}'
+  unit_of_measurement: 'c'
+  
+- platform: mqtt
+  name: "blommlada_humid"
+  state_topic: "tele/blommlada/SENSOR"
+  value_template: '{{ value_json["AM2301"]["Humidity"] }}'
+  unit_of_measurement: '%'

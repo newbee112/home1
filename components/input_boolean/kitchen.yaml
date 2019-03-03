@@ -1,0 +1,14 @@
+kitchen_spot:
+  name: Kök spot
+  initial: off
+  icon: mdi:lamp
+
+kitchen_table:
+  name: Kök tak
+  initial: off
+  icon: mdi:lamp
+
+kitchen_odling:
+  name: Odling lampa
+  initial: off
+  icon: mdi:lamp

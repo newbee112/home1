@@ -1,0 +1,71 @@
+- alias: bedroom_led_morning_weekdays
+  id: '345367756884535355676234'
+  trigger:
+  - platform: time
+    at: '06:01:00'
+  condition: 
+  - condition: time
+    weekday:
+      - mon
+      - tue
+      - wed
+      - thu
+      - fri 
+  action:
+  - service: homeassistant.turn_on
+    data:
+      entity_id:
+        - light.esp_led_bedroom
+  - delay: '01:33:00'
+  - service: homeassistant.turn_off
+    data:
+      entity_id:
+        - light.esp_led_bedroom
+
+- alias: bedroom_led_morning_weekends
+  id: '6565665567425627654878'
+  trigger:
+  - platform: time
+    at: '08:15:00'
+  condition: 
+  - condition: time
+    weekday:
+      - sat
+      - sun 
+  action:
+  - service: homeassistant.turn_on
+    data:
+      entity_id:
+        - light.esp_led_bedroom
+  - delay: '01:30:00'
+  - service: homeassistant.turn_off
+    data:
+      entity_id:
+        - light.esp_led_bedroom
+
+- alias: bedroom_led_evening_on
+  id: '65622222112354657654634422222222223'
+  trigger:
+  - platform: sun
+    event: sunset
+    offset: '-00:30:00'
+  condition: 
+  - condition: time
+    before: '22:00:00' 
+  action:
+  - service: homeassistant.turn_on
+    data:
+      entity_id:
+        - light.esp_led_bedroom
+
+- alias: bedroom_led_evening_off
+  id: '6562333434322323323211111223'
+  trigger:
+  - platform: sun
+    event: sunset
+    offset: '+04:00:00'
+  action:
+  - service: homeassistant.turn_off
+    data:
+      entity_id:
+        - light.esp_led_bedroom

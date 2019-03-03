@@ -1,0 +1,15 @@
+720_co2:
+  name: Akvarium 720l co2
+  icon: mdi:fish
+
+kitchen_window:
+  name: Vardagsrum lampa
+  icon: mdi:lamp
+
+livingroom_small_lamps:
+  name: Vardagsrum lampa
+  icon: mdi:lamp
+
+livingroom_small_led:
+  name: Vardagsrum lampa
+  icon: mdi:lamp

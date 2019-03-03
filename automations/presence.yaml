@@ -1,0 +1,103 @@
+- alias: "pressence_king_mqtt_home"
+  id: '333344434545353453456534655785245'
+  trigger:
+    platform: mqtt
+    topic: presence/johan
+    # Optional
+    payload: 'ON'
+  action:
+  - service: homeassistant.turn_on
+    data:
+      entity_id:
+        - input_boolean.johan_home_status
+
+- alias: "pressence_king_mqtt_not_home"
+  id: '323456764334333336788833'
+  trigger:
+    platform: mqtt
+    topic: presence/johan
+    # Optional
+    payload: 'OFF'
+  action:
+  - service: homeassistant.turn_off
+    data:
+      entity_id:
+        - input_boolean.johan_home_status
+
+- alias: "pressence_queen_mqtt_home"
+  id: '3333444555665554444655785245'
+  trigger:
+    platform: mqtt
+    topic: presence/jirawan
+    # Optional
+    payload: 'ON'
+  action:
+  - service: homeassistant.turn_on
+    data:
+      entity_id:
+        - input_boolean.jirawan_home_status
+
+- alias: "pressence_queen_mqtt_not_home"
+  id: '323456764333333344444555222226788833'
+  trigger:
+    platform: mqtt
+    topic: presence/jirawan
+    # Optional
+    payload: 'OFF'
+  action:
+  - service: homeassistant.turn_off
+    data:
+      entity_id:
+        - input_boolean.jirawan_home_status
+
+- alias: "pressence_home_ocupance_off_jonan"
+  id: '3337767676672221111224566345245'
+  trigger:
+    - platform: state
+      entity_id: input_boolean.johan_home_status
+      from: 'on'
+      to: 'off'
+  condition:
+    - condition: state
+      entity_id: input_boolean.jirawan_home_status
+      state: 'off'
+  action:
+  - service: homeassistant.turn_off
+    data:
+      entity_id:
+        - input_boolean.someone_home_status
+
+- alias: "pressence_home_ocupance_off_jirawan"
+  id: '3337767676672221111224566345245'
+  trigger:
+    - platform: state
+      entity_id: input_boolean.jirawan_home_status
+      from: 'on'
+      to: 'off'
+  condition:
+    - condition: state
+      entity_id: input_boolean.johan_home_status
+      state: 'off'
+  action:
+  - service: homeassistant.turn_off
+    data:
+      entity_id:
+        - input_boolean.someone_home_status
+
+
+- alias: "pressence_home_ocupance_on"
+  id: '333776767622222223331111'
+  trigger:
+    - platform: state
+      entity_id: input_boolean.johan_home_status
+      from: 'off'
+      to: 'on'
+    - platform: state
+      entity_id: input_boolean.jirawan_home_status
+      from: 'off'
+      to: 'on'
+  action:
+  - service: homeassistant.turn_on
+    data:
+      entity_id:
+        - input_boolean.someone_home_status

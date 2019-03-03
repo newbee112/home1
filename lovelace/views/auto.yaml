@@ -1,0 +1,43 @@
+id: automations
+title: Automations
+icon: mdi:home-automation
+cards:
+  - type: vertical-stack
+    cards:
+      - type: entities
+        title: one
+        entities:
+          - automation.animation_speed_kitchen
+          - automation.animation_speed_lab
+          - automation.animation_speed_outside
+          - automation.animation_speed_outside2
+          - automation.holiday_input_effect_kitchen
+          - automation.holiday_input_effect_lab
+          - automation.holiday_input_effect_outside
+          - automation.holiday_input_effect_outside_2
+          - automation.holiday_lights_evening
+          - automation.holiday_lights_evening_solid
+          - automation.holiday_lights_kitchen_evening
+          - automation.holiday_lights_kitchen_evening_solid
+          - automation.holiday_lights_kitchen_morning
+          - automation.holiday_lights_kitchen_morning_solid
+          - automation.nattlampa
+      - type: entities
+        title: two
+        entities:
+          - automation.holiday_lights_morning
+          - automation.holiday_lights_morning_solid
+          - automation.holiday_lights_outside2_evening
+          - automation.holiday_lights_outside2_evening_solid
+          - automation.holiday_lights_outside2_morning
+          - automation.holiday_lights_outside2_morning_solid
+          - automation.holiday_lights_outside_evening
+          - automation.holiday_lights_outside_evening_solid
+          - automation.holiday_lights_outside_morning
+          - automation.holiday_lights_outside_morning_solid
+          - automation.outside_led_off
+          - automation.outside_led_off2
+          - automation.turn_kitchen_off_morning
+          - automation.turn_kitchen_off_night
+          - automation.turn_kitchen_red
+          - automation.turn_kitchen_blue

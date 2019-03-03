@@ -1,0 +1,13 @@
+- alias: 'Trigger alarm while armed away'
+  id: '31212453334342124534666534'
+  trigger:
+    - platform: state
+      entity_id: binary_sensor.lab_esp_motion_detect
+      to: 'off'
+  condition:
+    - condition: state
+      entity_id: alarm_control_panel.ha_alarm
+      state: armed_away
+  action:
+    service: alarm_control_panel.alarm_trigger
+    entity_id: alarm_control_panel.ha_alarm

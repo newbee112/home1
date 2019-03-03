@@ -1,0 +1,71 @@
+- alias: livingroom_small_led_morning_weekdays
+  id: '652222211111228'
+  trigger:
+  - platform: time
+    at: '06:16:00'
+  condition: 
+  - condition: time
+    weekday:
+      - mon
+      - tue
+      - wed
+      - thu
+      - fri 
+  action:
+  - service: homeassistant.turn_on
+    data:
+      entity_id:
+        - input_boolean.livingroom_small_led
+  - delay: '01:00:00'
+  - service: homeassistant.turn_off
+    data:
+      entity_id:
+        - input_boolean.livingroom_small_led
+
+- alias: livingroom_small_led_morning_weekends
+  id: '333322211112232312'
+  trigger:
+  - platform: time
+    at: '08:16:00'
+  condition: 
+  - condition: time
+    weekday:
+      - sat
+      - sun 
+  action:
+  - service: homeassistant.turn_on
+    data:
+      entity_id:
+        - input_boolean.livingroom_small_led
+  - delay: '01:00:00'
+  - service: homeassistant.turn_off
+    data:
+      entity_id:
+        - input_boolean.livingroom_small_led
+
+- alias: livingroom_small_led_evening_on
+  id: '1222313433434566523'
+  trigger:
+  - platform: sun
+    event: sunset
+    offset: '-00:30:00'
+  condition: 
+  - condition: time
+    before: '22:00:00' 
+  action:
+  - service: homeassistant.turn_on
+    data:
+      entity_id:
+        - input_boolean.livingroom_small_led
+
+- alias: livingroom_small_led_evening_off
+  id: '644443333322567635432'
+  trigger:
+  - platform: sun
+    event: sunset
+    offset: '+04:00:00'
+  action:
+  - service: homeassistant.turn_off
+    data:
+      entity_id:
+        - input_boolean.livingroom_small_led

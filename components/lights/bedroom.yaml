@@ -1,0 +1,11 @@
+- platform: mqtt
+  schema: json
+  name: esp_led_bedroom
+  state_topic: "home/ESP_LED_BEDROOM"
+  command_topic: "home/ESP_LED_BEDROOM/set"
+  brightness: true
+  rgb: true
+  effect: true
+  effect_list: [colorfade_slow, colorfade_fast, flash]
+  optimistic: false
+  qos: 0

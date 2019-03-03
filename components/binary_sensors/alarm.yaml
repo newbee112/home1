@@ -1,0 +1,4 @@
+- platform: mqtt
+  name: "larm"
+  device_class: motion
+  state_topic: "hus/larm"

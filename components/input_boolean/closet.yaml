@@ -1,0 +1,9 @@
+akvarium_odling:
+  name: Dator rum Akvarie
+  initial: on
+  icon: mdi:fish
+
+tellstick:
+  name: NodeRedServerWatchdog
+  initial: off
+  icon: mdi:server-network

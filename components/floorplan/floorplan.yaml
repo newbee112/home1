@@ -1,0 +1,46 @@
+name: Floorplan
+image: /local/custom_ui/floorplan/floorplan.svg
+stylesheet: /local/custom_ui/floorplan/floorplan.css
+warnings:
+hide_app_toolbar:
+groups:
+  - name: Lights
+    entities:
+      - input_boolean.kitchen_table
+      - input_boolean.kitchen_spot
+      - input_boolean.hallway_celing
+      - input_boolean.bedroom_small_lamp
+      - input_boolean.kitchen_window
+      - input_boolean.livingroom_small_led
+      - input_boolean.livingroom_small_lamps
+      - light.holiday_lights_outside2
+      - light.holiday_lights_outside
+      - light.holiday_lights
+      - light.livingroom1
+      - light.esp_led_bedroom
+      - input_boolean.akvarium_odling
+    states:
+      - state: 'on'
+        class: 'light-on'
+      - state: 'off'
+        class: 'light-off'
+    action:
+      domain: homeassistant
+      service: toggle
+
+  - name: Sensors
+    entities:
+      - sensor.bedroom_temp
+      - sensor.lab_nexa_temp
+      - sensor.livingroom_720_temp
+      - sensor.livingroom_water_alarm
+      - sensor.livingroom_ir_esp_temp
+  - name: Cameras
+    entities:
+      - camera.hall
+      - camera.odling
+      - camera.outside
+      - camera.room
+    states:
+      - state: 'idle'
+        class: 'camera-idle'

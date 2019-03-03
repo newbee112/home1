@@ -1,0 +1,952 @@
+- alias: "Holiday Input Effect Lab"
+  id: '3121245333434212453466611212534'
+  initial_state: True
+  hide_entity: True
+  trigger:
+    - platform: state
+      entity_id: input_select.holiday_led_effect
+  action:
+    - service: mqtt.publish
+      data_template:
+        topic: "bruh/mqttstrip/seteffect"
+        payload: '{{ trigger.to_state.state | string }}'
+        
+- alias: "Holiday Input Effect Outside"
+  id: '3121245333434212453466611212534'
+  initial_state: True
+  hide_entity: True
+  trigger:
+    - platform: state
+      entity_id: input_select.holiday_led_effect
+    #  entity_id: input_select.holiday_led_effect_outside
+  action:
+    - service: mqtt.publish
+      data_template:
+        topic: "bruh1/outside/seteffect"
+        payload: '{{ trigger.to_state.state | string }}'
+
+- alias: "Holiday Input Effect Kitchen"
+  id: '31212453334342112121212453466611212534'
+  initial_state: True
+  hide_entity: True
+  trigger:
+    - platform: state
+      #entity_id: input_select.holiday_led_effect_kitchen
+      entity_id: input_select.holiday_led_effect
+  action:
+    - service: mqtt.publish
+      data_template:
+        topic: "bruh2/outside/seteffect"
+        payload: '{{ trigger.to_state.state | string }}'
+
+- alias: "Holiday Input Effect Outside 2"
+  id: '3121245333434213234234125212534'
+  initial_state: True
+  hide_entity: True
+  trigger:
+    - platform: state
+      #entity_id: input_select.holiday_led_effect_outside2
+      entity_id: input_select.holiday_led_effect
+  action:
+    - service: mqtt.publish
+      data_template:
+        topic: "bruh3/outside/seteffect"
+        payload: '{{ trigger.to_state.state | string }}'
+
+- alias: "Animation_Speed_Lab"
+  id: '32222223343421245346634444442534'
+  initial_state: True
+  hide_entity: True
+  trigger:
+    - platform: state
+      entity_id: input_number.lab_animation_speed
+  action:
+    - service: mqtt.publish
+      data_template:
+        topic: "bruh/mqttstrip/setanimationspeed"
+        payload: '{{ trigger.to_state.state | int }}'
+
+- alias: "Animation_Speed_Outside"
+  id: '312124533343421245888787651212534'
+  initial_state: True
+  hide_entity: True
+  trigger:
+    - platform: state
+      entity_id: input_number.lab_animation_speed
+  action:
+    - service: mqtt.publish
+      data_template:
+        topic: "bruh1/outside/setanimationspeed"
+        payload: '{{ trigger.to_state.state | int }}'
+
+- alias: "Animation_Speed_Kitchen"
+  id: '315555555421245888787651212534'
+  initial_state: True
+  hide_entity: True
+  trigger:
+    - platform: state
+      entity_id: input_number.lab_animation_speed
+  action:
+    - service: mqtt.publish
+      data_template:
+        topic: "bruh2/outside/setanimationspeed"
+        payload: '{{ trigger.to_state.state | int }}'
+
+- alias: "Animation_Speed_Outside2"
+  id: '315555566781245888787651212534'
+  initial_state: True
+  hide_entity: True
+  trigger:
+    - platform: state
+      entity_id: input_number.lab_animation_speed
+  action:
+    - service: mqtt.publish
+      data_template:
+        topic: "bruh3/outside/setanimationspeed"
+        payload: '{{ trigger.to_state.state | int }}'
+
+
+- alias: holiday_lights_morning_solid
+  initial_state: true
+  hide_entity: true
+  trigger:
+    platform: sun
+    event: sunrise
+    offset: "00:30:00"
+  action:
+    service: input_select.select_option
+    entity_id: input_select.holiday_led_effect
+    data_template:
+      option: >
+        {% if now().strftime("%m%d")|int == 0101 %}
+          Solid
+        {% elif now().strftime("%m%d")|int >= 0210 and now().strftime("%m%d")|int <= 0214 %}
+          Solid
+        {% elif now().strftime("%m%d")|int == 0305 %}
+          Solid
+        {% elif now().strftime("%m%d")|int >= 0311 and now().strftime("%m%d")|int <= 0317 %}
+          Solid
+        {% elif now().strftime("%m%d")|int >= 0419 and now().strftime("%m%d")|int <= 0421 %}
+          Solid
+        {% elif now().strftime("%m%d")|int == 0504 %}
+          Solid
+        {% elif now().strftime("%m%d")|int == 0505 %}
+          Solid
+        {% elif now().strftime("%m%d")|int >= 1001 and now().strftime("%m%d")|int <= 1031 %}
+          Solid
+        {% elif now().strftime("%m%d")|int == 1113 %}
+          Solid
+        {% elif now().strftime("%m%d")|int >= 1101 and now().strftime("%m%d")|int <= 1130 %}
+          Solid
+        {% elif now().strftime("%m%d")|int >= 1210 and now().strftime("%m%d")|int <= 1212 %}
+          Solid
+        {% elif now().strftime("%m%d")|int >= 1213 and now().strftime("%m%d")|int <= 1215 %}
+          Solid
+        {% elif now().strftime("%m%d")|int >= 1216 and now().strftime("%m%d")|int <= 1220 %}
+          Solid
+        {% elif now().strftime("%m%d")|int >= 1221 and now().strftime("%m%d")|int <= 1223 %}
+          Solid
+        {% elif now().strftime("%m%d")|int >= 1224 and now().strftime("%m%d")|int <= 1225 %}
+          Solid
+        {% elif now().strftime("%m%d")|int >= 1226 and now().strftime("%m%d")|int <= 1230 %}
+          Solid
+        {% elif now().strftime("%m%d")|int == 1231 %}
+          Solid
+        {% else %}
+          Solid
+        {% endif %}
+  id: 1fe49fca51ad499f8767734f98711254f2a33
+- alias: holiday_lights_kitchen_morning_solid
+  initial_state: true
+  hide_entity: true
+  trigger:
+    platform: sun
+    event: sunrise
+    offset: "00:30:00"
+  action:
+    service: input_select.select_option
+    #entity_id: input_select.holiday_led_effect_kitchen
+    entity_id: input_select.holiday_led_effect
+    data_template:
+      option: >
+        {% if now().strftime("%m%d")|int == 0101 %}
+          Solid
+        {% elif now().strftime("%m%d")|int >= 0210 and now().strftime("%m%d")|int <= 0214 %}
+          Solid
+        {% elif now().strftime("%m%d")|int == 0305 %}
+          Solid
+        {% elif now().strftime("%m%d")|int >= 0311 and now().strftime("%m%d")|int <= 0317 %}
+          Solid
+        {% elif now().strftime("%m%d")|int >= 0419 and now().strftime("%m%d")|int <= 0421 %}
+          Solid
+        {% elif now().strftime("%m%d")|int == 0504 %}
+          Solid
+        {% elif now().strftime("%m%d")|int == 0505 %}
+          Solid
+        {% elif now().strftime("%m%d")|int >= 1001 and now().strftime("%m%d")|int <= 1031 %}
+          Solid
+        {% elif now().strftime("%m%d")|int == 1113 %}
+          Solid
+        {% elif now().strftime("%m%d")|int >= 1101 and now().strftime("%m%d")|int <= 1130 %}
+          Solid
+        {% elif now().strftime("%m%d")|int >= 1210 and now().strftime("%m%d")|int <= 1212 %}
+          Solid
+        {% elif now().strftime("%m%d")|int >= 1213 and now().strftime("%m%d")|int <= 1215 %}
+          Solid
+        {% elif now().strftime("%m%d")|int >= 1216 and now().strftime("%m%d")|int <= 1220 %}
+          Solid
+        {% elif now().strftime("%m%d")|int >= 1221 and now().strftime("%m%d")|int <= 1223 %}
+          Solid
+        {% elif now().strftime("%m%d")|int >= 1224 and now().strftime("%m%d")|int <= 1225 %}
+          Solid
+        {% elif now().strftime("%m%d")|int >= 1226 and now().strftime("%m%d")|int <= 1230 %}
+          Solid
+        {% elif now().strftime("%m%d")|int == 1231 %}
+          Solid
+        {% else %}
+          Solid
+        {% endif %}
+  id: 1fe49fca51ad499gfdg345312dfe1c98711254f2a33
+- alias: holiday_lights_outside_morning_solid
+  initial_state: true
+  hide_entity: true
+  trigger:
+    platform: sun
+    event: sunrise
+    offset: "00:30:00"
+  action:
+    service: input_select.select_option
+    #entity_id: input_select.holiday_led_effect_outside
+    entity_id: input_select.holiday_led_effect
+    data_template:
+      option: >
+        {% if now().strftime("%m%d")|int == 0101 %}
+          Solid
+        {% elif now().strftime("%m%d")|int >= 0210 and now().strftime("%m%d")|int <= 0214 %}
+          Solid
+        {% elif now().strftime("%m%d")|int == 0305 %}
+          Solid
+        {% elif now().strftime("%m%d")|int >= 0311 and now().strftime("%m%d")|int <= 0317 %}
+          Solid
+        {% elif now().strftime("%m%d")|int >= 0419 and now().strftime("%m%d")|int <= 0421 %}
+          Solid
+        {% elif now().strftime("%m%d")|int == 0504 %}
+          Solid
+        {% elif now().strftime("%m%d")|int == 0505 %}
+          Solid
+        {% elif now().strftime("%m%d")|int >= 1001 and now().strftime("%m%d")|int <= 1031 %}
+          Solid
+        {% elif now().strftime("%m%d")|int == 1113 %}
+          Solid
+        {% elif now().strftime("%m%d")|int >= 1101 and now().strftime("%m%d")|int <= 1130 %}
+          Solid
+        {% elif now().strftime("%m%d")|int >= 1210 and now().strftime("%m%d")|int <= 1212 %}
+          Solid
+        {% elif now().strftime("%m%d")|int >= 1213 and now().strftime("%m%d")|int <= 1215 %}
+          Solid
+        {% elif now().strftime("%m%d")|int >= 1216 and now().strftime("%m%d")|int <= 1220 %}
+          Solid
+        {% elif now().strftime("%m%d")|int >= 1221 and now().strftime("%m%d")|int <= 1223 %}
+          Solid
+        {% elif now().strftime("%m%d")|int >= 1224 and now().strftime("%m%d")|int <= 1225 %}
+          Solid
+        {% elif now().strftime("%m%d")|int >= 1226 and now().strftime("%m%d")|int <= 1230 %}
+          Solid
+        {% elif now().strftime("%m%d")|int == 1231 %}
+          Solid
+        {% else %}
+          Solid
+        {% endif %}
+  id: 1fe49fca51ad4dd34566asdfr3dge1c98711254f2a33
+
+
+- alias: holiday_lights_outside2_morning_solid
+  initial_state: true
+  hide_entity: true
+  trigger:
+    platform: sun
+    event: sunrise
+    offset: "00:30:00"
+  action:
+    service: input_select.select_option
+    #entity_id: input_select.holiday_led_effect_outside2
+    entity_id: input_select.holiday_led_effect
+    data_template:
+      option: >
+        {% if now().strftime("%m%d")|int == 0101 %}
+          Solid
+        {% elif now().strftime("%m%d")|int >= 0210 and now().strftime("%m%d")|int <= 0214 %}
+          Solid
+        {% elif now().strftime("%m%d")|int == 0305 %}
+          Solid
+        {% elif now().strftime("%m%d")|int >= 0311 and now().strftime("%m%d")|int <= 0317 %}
+          Solid
+        {% elif now().strftime("%m%d")|int >= 0419 and now().strftime("%m%d")|int <= 0421 %}
+          Easter
+        {% elif now().strftime("%m%d")|int == 0504 %}
+          Solid
+        {% elif now().strftime("%m%d")|int == 0505 %}
+          Solid
+        {% elif now().strftime("%m%d")|int >= 1001 and now().strftime("%m%d")|int <= 1031 %}
+          Solid
+        {% elif now().strftime("%m%d")|int == 1113 %}
+          Solid
+        {% elif now().strftime("%m%d")|int >= 1101 and now().strftime("%m%d")|int <= 1130 %}
+          Solid
+        {% elif now().strftime("%m%d")|int >= 1210 and now().strftime("%m%d")|int <= 1212 %}
+          Solid
+        {% elif now().strftime("%m%d")|int >= 1213 and now().strftime("%m%d")|int <= 1215 %}
+          Solid
+        {% elif now().strftime("%m%d")|int >= 1216 and now().strftime("%m%d")|int <= 1220 %}
+          Solid
+        {% elif now().strftime("%m%d")|int >= 1221 and now().strftime("%m%d")|int <= 1223 %}
+          Solid
+        {% elif now().strftime("%m%d")|int >= 1224 and now().strftime("%m%d")|int <= 1225 %}
+          Solid
+        {% elif now().strftime("%m%d")|int >= 1226 and now().strftime("%m%d")|int <= 1230 %}
+          Solid
+        {% elif now().strftime("%m%d")|int == 1231 %}
+          Solid
+        {% else %}
+          Solid
+        {% endif %}
+  id: 1fe49fca51a222214gg3dge1c344711254324253
+
+- alias: holiday_lights_morning
+  initial_state: true
+  hide_entity: true
+  trigger:
+    platform: sun
+    event: sunrise
+    offset: "-02:00:00"
+  action:
+    service: input_select.select_option
+    entity_id: input_select.holiday_led_effect
+    data_template:
+      option: >
+        {% if now().strftime("%m%d")|int == 0101 %}
+          Twinkle
+        {% elif now().strftime("%m%d")|int >= 0210 and now().strftime("%m%d")|int <= 0214 %}
+          Lovey Day
+        {% elif now().strftime("%m%d")|int == 0305 %}
+          Confetti
+        {% elif now().strftime("%m%d")|int >= 0311 and now().strftime("%m%d")|int <= 0317 %}
+          St Patty
+        {% elif now().strftime("%m%d")|int >= 0419 and now().strftime("%m%d")|int <= 0421 %}
+          Easter
+        {% elif now().strftime("%m%d")|int == 0504 %}
+          Go Blue
+        {% elif now().strftime("%m%d")|int == 0505 %}
+          Cyclon Rainbow
+        {% elif now().strftime("%m%d")|int >= 1001 and now().strftime("%m%d")|int <= 1031 %}
+          Halloween
+        {% elif now().strftime("%m%d")|int == 1113 %}
+          Hail
+        {% elif now().strftime("%m%d")|int >= 1101 and now().strftime("%m%d")|int <= 1130 %}
+          Thanksgiving
+        {% elif now().strftime("%m%d")|int >= 1210 and now().strftime("%m%d")|int <= 1212 %}
+          Holly Jolly
+        {% elif now().strftime("%m%d")|int >= 1213 and now().strftime("%m%d")|int <= 1215 %}
+          Candy Cane
+        {% elif now().strftime("%m%d")|int >= 1216 and now().strftime("%m%d")|int <= 1220 %}
+          Holly Jolly
+        {% elif now().strftime("%m%d")|int >= 1221 and now().strftime("%m%d")|int <= 1223 %}
+          Candy Cane
+        {% elif now().strftime("%m%d")|int >= 1224 and now().strftime("%m%d")|int <= 1225 %}
+          Christmas
+        {% elif now().strftime("%m%d")|int >= 1226 and now().strftime("%m%d")|int <= 1230 %}
+          Christmas
+        {% elif now().strftime("%m%d")|int == 1231 %}
+          Twinkle
+        {% else %}
+          Twinkle
+        {% endif %}
+  id: 1fe49fca51ad499f81casdasda98711254f2a33
+- alias: holiday_lights_kitchen_morning
+  initial_state: true
+  hide_entity: true
+  trigger:
+    platform: sun
+    event: sunrise
+    offset: "-02:00:00"
+  action:
+    service: input_select.select_option
+    entity_id: input_select.holiday_led_effect
+    data_template:
+      option: >
+        {% if now().strftime("%m%d")|int == 0101 %}
+          Twinkle
+        {% elif now().strftime("%m%d")|int >= 0210 and now().strftime("%m%d")|int <= 0214 %}
+          Lovey Day
+        {% elif now().strftime("%m%d")|int == 0305 %}
+          Confetti
+        {% elif now().strftime("%m%d")|int >= 0311 and now().strftime("%m%d")|int <= 0317 %}
+          St Patty
+        {% elif now().strftime("%m%d")|int >= 0419 and now().strftime("%m%d")|int <= 0421 %}
+          Easter
+        {% elif now().strftime("%m%d")|int == 0504 %}
+          Go Blue
+        {% elif now().strftime("%m%d")|int == 0505 %}
+          Cyclon Rainbow
+        {% elif now().strftime("%m%d")|int >= 1001 and now().strftime("%m%d")|int <= 1031 %}
+          Halloween
+        {% elif now().strftime("%m%d")|int == 1113 %}
+          Hail
+        {% elif now().strftime("%m%d")|int >= 1101 and now().strftime("%m%d")|int <= 1130 %}
+          Thanksgiving
+        {% elif now().strftime("%m%d")|int >= 1210 and now().strftime("%m%d")|int <= 1212 %}
+          Holly Jolly
+        {% elif now().strftime("%m%d")|int >= 1213 and now().strftime("%m%d")|int <= 1215 %}
+          Candy Cane
+        {% elif now().strftime("%m%d")|int >= 1216 and now().strftime("%m%d")|int <= 1220 %}
+          Holly Jolly
+        {% elif now().strftime("%m%d")|int >= 1221 and now().strftime("%m%d")|int <= 1223 %}
+          Candy Cane
+        {% elif now().strftime("%m%d")|int >= 1224 and now().strftime("%m%d")|int <= 1225 %}
+          Christmas
+        {% elif now().strftime("%m%d")|int >= 1226 and now().strftime("%m%d")|int <= 1230 %}
+          Christmas
+        {% elif now().strftime("%m%d")|int == 1231 %}
+          Twinkle
+        {% else %}
+          Twinkle
+        {% endif %}
+  id: 1fe49fca51ad499gfdgdfdfse1c98711254f2a33
+- alias: holiday_lights_outside_morning
+  initial_state: true
+  hide_entity: true
+  trigger:
+    platform: sun
+    event: sunrise
+    offset: "-02:00:00"
+  action:
+    service: input_select.select_option
+    entity_id: input_select.holiday_led_effect
+    data_template:
+      option: >
+        {% if now().strftime("%m%d")|int == 0101 %}
+          Twinkle
+        {% elif now().strftime("%m%d")|int >= 0210 and now().strftime("%m%d")|int <= 0214 %}
+          Lovey Day
+        {% elif now().strftime("%m%d")|int == 0305 %}
+          Confetti
+        {% elif now().strftime("%m%d")|int >= 0311 and now().strftime("%m%d")|int <= 0317 %}
+          St Patty
+        {% elif now().strftime("%m%d")|int >= 0419 and now().strftime("%m%d")|int <= 0421 %}
+          Easter
+        {% elif now().strftime("%m%d")|int == 0504 %}
+          Go Blue
+        {% elif now().strftime("%m%d")|int == 0505 %}
+          Cyclon Rainbow
+        {% elif now().strftime("%m%d")|int >= 1001 and now().strftime("%m%d")|int <= 1031 %}
+          Halloween
+        {% elif now().strftime("%m%d")|int == 1113 %}
+          Hail
+        {% elif now().strftime("%m%d")|int >= 1101 and now().strftime("%m%d")|int <= 1130 %}
+          Thanksgiving
+        {% elif now().strftime("%m%d")|int >= 1210 and now().strftime("%m%d")|int <= 1212 %}
+          Holly Jolly
+        {% elif now().strftime("%m%d")|int >= 1213 and now().strftime("%m%d")|int <= 1215 %}
+          Candy Cane
+        {% elif now().strftime("%m%d")|int >= 1216 and now().strftime("%m%d")|int <= 1220 %}
+          Holly Jolly
+        {% elif now().strftime("%m%d")|int >= 1221 and now().strftime("%m%d")|int <= 1223 %}
+          Candy Cane
+        {% elif now().strftime("%m%d")|int >= 1224 and now().strftime("%m%d")|int <= 1225 %}
+          Christmas
+        {% elif now().strftime("%m%d")|int >= 1226 and now().strftime("%m%d")|int <= 1230 %}
+          Christmas
+        {% elif now().strftime("%m%d")|int == 1231 %}
+          Twinkle
+        {% else %}
+          Twinkle
+        {% endif %}
+  id: 1fe49fca51ad4dddfsdfsge1c98711254f2a33
+
+- alias: holiday_lights_outside2_morning
+  initial_state: true
+  hide_entity: true
+  trigger:
+    platform: sun
+    event: sunrise
+    offset: "-02:00:00"
+  action:
+    service: input_select.select_option
+    entity_id: input_select.holiday_led_effect
+    data_template:
+      option: >
+        {% if now().strftime("%m%d")|int == 0101 %}
+          Twinkle
+        {% elif now().strftime("%m%d")|int >= 0210 and now().strftime("%m%d")|int <= 0214 %}
+          Lovey Day
+        {% elif now().strftime("%m%d")|int == 0305 %}
+          Confetti
+        {% elif now().strftime("%m%d")|int >= 0311 and now().strftime("%m%d")|int <= 0317 %}
+          St Patty
+        {% elif now().strftime("%m%d")|int >= 0419 and now().strftime("%m%d")|int <= 0421 %}
+          Easter
+        {% elif now().strftime("%m%d")|int == 0504 %}
+          Go Blue
+        {% elif now().strftime("%m%d")|int == 0505 %}
+          Cyclon Rainbow
+        {% elif now().strftime("%m%d")|int >= 1001 and now().strftime("%m%d")|int <= 1031 %}
+          Halloween
+        {% elif now().strftime("%m%d")|int == 1113 %}
+          Hail
+        {% elif now().strftime("%m%d")|int >= 1101 and now().strftime("%m%d")|int <= 1130 %}
+          Thanksgiving
+        {% elif now().strftime("%m%d")|int >= 1210 and now().strftime("%m%d")|int <= 1212 %}
+          Holly Jolly
+        {% elif now().strftime("%m%d")|int >= 1213 and now().strftime("%m%d")|int <= 1215 %}
+          Candy Cane
+        {% elif now().strftime("%m%d")|int >= 1216 and now().strftime("%m%d")|int <= 1220 %}
+          Holly Jolly
+        {% elif now().strftime("%m%d")|int >= 1221 and now().strftime("%m%d")|int <= 1223 %}
+          Candy Cane
+        {% elif now().strftime("%m%d")|int >= 1224 and now().strftime("%m%d")|int <= 1225 %}
+          Christmas
+        {% elif now().strftime("%m%d")|int >= 1226 and now().strftime("%m%d")|int <= 1230 %}
+          Christmas
+        {% elif now().strftime("%m%d")|int == 1231 %}
+          Twinkle
+        {% else %}
+          Twinkle
+        {% endif %}
+  id: 1fe49fca51ad4d22222223sge1c98711254f2a33
+
+
+
+- id: '345345435423'
+  alias: Outside_LED_Off
+  hide_entity: true
+  trigger:
+    platform: sun
+    event: sunset
+    offset: "05:01:00"
+  action:
+    service: light.turn_off
+    entity_id: group.outsideled
+
+- id: '345334342124534534'
+  alias: Outside_LED_Off2
+  hide_entity: true
+  trigger:
+    platform: sun
+    event: sunrise
+    offset: "00:30:10"
+  action:
+    service: light.turn_off
+    entity_id: group.outsideled
+
+
+- alias: holiday_lights_evening_solid
+  initial_state: true
+  hide_entity: true
+  trigger:
+    platform: sun
+    event: sunset
+    offset: "05:00:50"
+  action:
+    service: input_select.select_option
+    entity_id: input_select.holiday_led_effect
+    data_template:
+      option: >
+        {% if now().strftime("%m%d")|int == 0101 %}
+          Solid
+        {% elif now().strftime("%m%d")|int >= 0210 and now().strftime("%m%d")|int <= 0214 %}
+          Solid
+        {% elif now().strftime("%m%d")|int == 0305 %}
+          Solid
+        {% elif now().strftime("%m%d")|int >= 0311 and now().strftime("%m%d")|int <= 0317 %}
+          Solid
+        {% elif now().strftime("%m%d")|int >= 0419 and now().strftime("%m%d")|int <= 0421 %}
+          Solid
+        {% elif now().strftime("%m%d")|int == 0504 %}
+          Solid
+        {% elif now().strftime("%m%d")|int == 0505 %}
+          Solid
+        {% elif now().strftime("%m%d")|int >= 1001 and now().strftime("%m%d")|int <= 1031 %}
+          Solid
+        {% elif now().strftime("%m%d")|int == 1113 %}
+          Solid
+        {% elif now().strftime("%m%d")|int >= 1101 and now().strftime("%m%d")|int <= 1130 %}
+          Solid
+        {% elif now().strftime("%m%d")|int >= 1210 and now().strftime("%m%d")|int <= 1212 %}
+          Solid
+        {% elif now().strftime("%m%d")|int >= 1213 and now().strftime("%m%d")|int <= 1215 %}
+          Solid
+        {% elif now().strftime("%m%d")|int >= 1216 and now().strftime("%m%d")|int <= 1220 %}
+          Solid
+        {% elif now().strftime("%m%d")|int >= 1221 and now().strftime("%m%d")|int <= 1223 %}
+          Solid
+        {% elif now().strftime("%m%d")|int >= 1224 and now().strftime("%m%d")|int <= 1225 %}
+          Solid
+        {% elif now().strftime("%m%d")|int >= 1226 and now().strftime("%m%d")|int <= 1230 %}
+          Solid
+        {% elif now().strftime("%m%d")|int == 1231 %}
+          Solid
+        {% else %}
+          Solid
+        {% endif %}
+  id: 1fe49fca51ad499f81csdfsf98711254f2a33
+- alias: holiday_lights_kitchen_evening_solid
+  initial_state: true
+  hide_entity: true
+  trigger:
+    platform: sun
+    event: sunset
+    offset: "05:00:50"
+  action:
+    service: input_select.select_option
+    #entity_id: input_select.holiday_led_effect_kitchen
+    entity_id: input_select.holiday_led_effect
+    data_template:
+      option: >
+        {% if now().strftime("%m%d")|int == 0101 %}
+          Solid
+        {% elif now().strftime("%m%d")|int >= 0210 and now().strftime("%m%d")|int <= 0214 %}
+          Solid
+        {% elif now().strftime("%m%d")|int == 0305 %}
+          Solid
+        {% elif now().strftime("%m%d")|int >= 0311 and now().strftime("%m%d")|int <= 0317 %}
+          Solid
+        {% elif now().strftime("%m%d")|int >= 0419 and now().strftime("%m%d")|int <= 0421 %}
+          Solid
+        {% elif now().strftime("%m%d")|int == 0504 %}
+          Solid
+        {% elif now().strftime("%m%d")|int == 0505 %}
+          Solid
+        {% elif now().strftime("%m%d")|int >= 1001 and now().strftime("%m%d")|int <= 1031 %}
+          Solid
+        {% elif now().strftime("%m%d")|int == 1113 %}
+          Solid
+        {% elif now().strftime("%m%d")|int >= 1101 and now().strftime("%m%d")|int <= 1130 %}
+          Solid
+        {% elif now().strftime("%m%d")|int >= 1210 and now().strftime("%m%d")|int <= 1212 %}
+          Solid
+        {% elif now().strftime("%m%d")|int >= 1213 and now().strftime("%m%d")|int <= 1215 %}
+          Solid
+        {% elif now().strftime("%m%d")|int >= 1216 and now().strftime("%m%d")|int <= 1220 %}
+          Solid
+        {% elif now().strftime("%m%d")|int >= 1221 and now().strftime("%m%d")|int <= 1223 %}
+          Solid
+        {% elif now().strftime("%m%d")|int >= 1224 and now().strftime("%m%d")|int <= 1225 %}
+          Solid
+        {% elif now().strftime("%m%d")|int >= 1226 and now().strftime("%m%d")|int <= 1230 %}
+          Solid
+        {% elif now().strftime("%m%d")|int == 1231 %}
+          Solid
+        {% else %}
+          Solid
+        {% endif %}
+  id: 1fe49fca51ad499gfdgsdfsdfe1c98711254f2a33
+- alias: holiday_lights_outside_evening_solid
+  initial_state: true
+  hide_entity: true
+  trigger:
+    platform: sun
+    event: sunset
+    offset: "05:00:50"
+  action:
+    service: input_select.select_option
+    #entity_id: input_select.holiday_led_effect_outside
+    entity_id: input_select.holiday_led_effect
+    data_template:
+      option: >
+        {% if now().strftime("%m%d")|int == 0101 %}
+          Solid
+        {% elif now().strftime("%m%d")|int >= 0210 and now().strftime("%m%d")|int <= 0214 %}
+          Solid
+        {% elif now().strftime("%m%d")|int == 0305 %}
+          Solid
+        {% elif now().strftime("%m%d")|int >= 0311 and now().strftime("%m%d")|int <= 0317 %}
+          Solid
+        {% elif now().strftime("%m%d")|int >= 0419 and now().strftime("%m%d")|int <= 0421 %}
+          Solid
+        {% elif now().strftime("%m%d")|int == 0504 %}
+          Solid
+        {% elif now().strftime("%m%d")|int == 0505 %}
+          Solid
+        {% elif now().strftime("%m%d")|int >= 1001 and now().strftime("%m%d")|int <= 1031 %}
+          Solid
+        {% elif now().strftime("%m%d")|int == 1113 %}
+          Solid
+        {% elif now().strftime("%m%d")|int >= 1101 and now().strftime("%m%d")|int <= 1130 %}
+          Solid
+        {% elif now().strftime("%m%d")|int >= 1210 and now().strftime("%m%d")|int <= 1212 %}
+          Solid
+        {% elif now().strftime("%m%d")|int >= 1213 and now().strftime("%m%d")|int <= 1215 %}
+          Solid
+        {% elif now().strftime("%m%d")|int >= 1216 and now().strftime("%m%d")|int <= 1220 %}
+          Solid
+        {% elif now().strftime("%m%d")|int >= 1221 and now().strftime("%m%d")|int <= 1223 %}
+          Solid
+        {% elif now().strftime("%m%d")|int >= 1224 and now().strftime("%m%d")|int <= 1225 %}
+          Solid
+        {% elif now().strftime("%m%d")|int >= 1226 and now().strftime("%m%d")|int <= 1230 %}
+          Solid
+        {% elif now().strftime("%m%d")|int == 1231 %}
+          Solid
+        {% else %}
+          Solid
+        {% endif %}
+  id: 1fe49fca51ad4ddrgfgasdfr3dge1c98711254f2a33
+
+
+- alias: holiday_lights_outside2_evening_solid
+  initial_state: true
+  hide_entity: true
+  trigger:
+    platform: sun
+    event: sunset
+    offset: "05:00:50"
+  action:
+    service: input_select.select_option
+    #entity_id: input_select.holiday_led_effect_outside2
+    entity_id: input_select.holiday_led_effect
+    data_template:
+      option: >
+        {% if now().strftime("%m%d")|int == 0101 %}
+          Solid
+        {% elif now().strftime("%m%d")|int >= 0210 and now().strftime("%m%d")|int <= 0214 %}
+          Solid
+        {% elif now().strftime("%m%d")|int == 0305 %}
+          Solid
+        {% elif now().strftime("%m%d")|int >= 0311 and now().strftime("%m%d")|int <= 0317 %}
+          Solid
+        {% elif now().strftime("%m%d")|int >= 0419 and now().strftime("%m%d")|int <= 0421 %}
+          Solid
+        {% elif now().strftime("%m%d")|int == 0504 %}
+          Solid
+        {% elif now().strftime("%m%d")|int == 0505 %}
+          Solid
+        {% elif now().strftime("%m%d")|int >= 1001 and now().strftime("%m%d")|int <= 1031 %}
+          Solid
+        {% elif now().strftime("%m%d")|int == 1113 %}
+          Solid
+        {% elif now().strftime("%m%d")|int >= 1101 and now().strftime("%m%d")|int <= 1130 %}
+          Solid
+        {% elif now().strftime("%m%d")|int >= 1210 and now().strftime("%m%d")|int <= 1212 %}
+          Solid
+        {% elif now().strftime("%m%d")|int >= 1213 and now().strftime("%m%d")|int <= 1215 %}
+          Solid
+        {% elif now().strftime("%m%d")|int >= 1216 and now().strftime("%m%d")|int <= 1220 %}
+          Solid
+        {% elif now().strftime("%m%d")|int >= 1221 and now().strftime("%m%d")|int <= 1223 %}
+          Solid
+        {% elif now().strftime("%m%d")|int >= 1224 and now().strftime("%m%d")|int <= 1225 %}
+          Solid
+        {% elif now().strftime("%m%d")|int >= 1226 and now().strftime("%m%d")|int <= 1230 %}
+          Solid
+        {% elif now().strftime("%m%d")|int == 1231 %}
+          Solid
+        {% else %}
+          Solid
+        {% endif %}
+  id: 1fe49fca51ad42324gg3dge1c344711254324253
+
+- alias: holiday_lights_evening
+  initial_state: true
+  hide_entity: true
+  trigger:
+    platform: sun
+    event: sunset
+    offset: "-00:00:01"
+  action:
+    service: input_select.select_option
+    entity_id: input_select.holiday_led_effect
+    data_template:
+      option: >
+        {% if now().strftime("%m%d")|int == 0101 %}
+          Twinkle
+        {% elif now().strftime("%m%d")|int >= 0210 and now().strftime("%m%d")|int <= 0214 %}
+          Lovey Day
+        {% elif now().strftime("%m%d")|int == 0305 %}
+          Confetti
+        {% elif now().strftime("%m%d")|int >= 0311 and now().strftime("%m%d")|int <= 0317 %}
+          St Patty
+        {% elif now().strftime("%m%d")|int >= 0419 and now().strftime("%m%d")|int <= 0421 %}
+          Easter
+        {% elif now().strftime("%m%d")|int == 0504 %}
+          Go Blue
+        {% elif now().strftime("%m%d")|int == 0505 %}
+          Cyclon Rainbow
+        {% elif now().strftime("%m%d")|int >= 1001 and now().strftime("%m%d")|int <= 1031 %}
+          Halloween
+        {% elif now().strftime("%m%d")|int == 1113 %}
+          Hail
+        {% elif now().strftime("%m%d")|int >= 1101 and now().strftime("%m%d")|int <= 1130 %}
+          Thanksgiving
+        {% elif now().strftime("%m%d")|int >= 1210 and now().strftime("%m%d")|int <= 1212 %}
+          Holly Jolly
+        {% elif now().strftime("%m%d")|int >= 1213 and now().strftime("%m%d")|int <= 1215 %}
+          Candy Cane
+        {% elif now().strftime("%m%d")|int >= 1216 and now().strftime("%m%d")|int <= 1220 %}
+          Holly Jolly
+        {% elif now().strftime("%m%d")|int >= 1221 and now().strftime("%m%d")|int <= 1223 %}
+          Candy Cane
+        {% elif now().strftime("%m%d")|int >= 1224 and now().strftime("%m%d")|int <= 1225 %}
+          Christmas
+        {% elif now().strftime("%m%d")|int >= 1226 and now().strftime("%m%d")|int <= 1230 %}
+          Christmas
+        {% elif now().strftime("%m%d")|int == 1231 %}
+          Twinkle
+        {% else %}
+          Twinkle
+        {% endif %}
+  id: 1fe49fca51ad499f81c98711254f2a33
+- alias: holiday_lights_kitchen_evening
+  initial_state: true
+  hide_entity: true
+  trigger:
+    platform: sun
+    event: sunset
+    offset: "-00:00:01"
+  action:
+    service: input_select.select_option
+    #entity_id: input_select.holiday_led_effect_kitchen
+    entity_id: input_select.holiday_led_effect
+    data_template:
+      option: >
+        {% if now().strftime("%m%d")|int == 0101 %}
+          Twinkle
+        {% elif now().strftime("%m%d")|int >= 0210 and now().strftime("%m%d")|int <= 0214 %}
+          Lovey Day
+        {% elif now().strftime("%m%d")|int == 0305 %}
+          Confetti
+        {% elif now().strftime("%m%d")|int >= 0311 and now().strftime("%m%d")|int <= 0317 %}
+          St Patty
+        {% elif now().strftime("%m%d")|int >= 0419 and now().strftime("%m%d")|int <= 0421 %}
+          Easter
+        {% elif now().strftime("%m%d")|int == 0504 %}
+          Go Blue
+        {% elif now().strftime("%m%d")|int == 0505 %}
+          Cyclon Rainbow
+        {% elif now().strftime("%m%d")|int >= 1001 and now().strftime("%m%d")|int <= 1031 %}
+          Halloween
+        {% elif now().strftime("%m%d")|int == 1113 %}
+          Hail
+        {% elif now().strftime("%m%d")|int >= 1101 and now().strftime("%m%d")|int <= 1130 %}
+          Thanksgiving
+        {% elif now().strftime("%m%d")|int >= 1210 and now().strftime("%m%d")|int <= 1212 %}
+          Holly Jolly
+        {% elif now().strftime("%m%d")|int >= 1213 and now().strftime("%m%d")|int <= 1215 %}
+          Candy Cane
+        {% elif now().strftime("%m%d")|int >= 1216 and now().strftime("%m%d")|int <= 1220 %}
+          Holly Jolly
+        {% elif now().strftime("%m%d")|int >= 1221 and now().strftime("%m%d")|int <= 1223 %}
+          Candy Cane
+        {% elif now().strftime("%m%d")|int >= 1224 and now().strftime("%m%d")|int <= 1225 %}
+          Christmas
+        {% elif now().strftime("%m%d")|int >= 1226 and now().strftime("%m%d")|int <= 1230 %}
+          Christmas
+        {% elif now().strftime("%m%d")|int == 1231 %}
+          Twinkle
+        {% else %}
+          Twinkle
+        {% endif %}
+  id: 1fe49fca51ad499gfdge1c98711254f2a33
+- alias: holiday_lights_outside_evening
+  initial_state: true
+  hide_entity: true
+  trigger:
+    platform: sun
+    event: sunset
+    offset: "-00:00:01"
+  action:
+    service: input_select.select_option
+    #entity_id: input_select.holiday_led_effect_outside
+    entity_id: input_select.holiday_led_effect
+    data_template:
+      option: >
+        {% if now().strftime("%m%d")|int == 0101 %}
+          Twinkle
+        {% elif now().strftime("%m%d")|int >= 0210 and now().strftime("%m%d")|int <= 0214 %}
+          Lovey Day
+        {% elif now().strftime("%m%d")|int == 0305 %}
+          Confetti
+        {% elif now().strftime("%m%d")|int >= 0311 and now().strftime("%m%d")|int <= 0317 %}
+          St Patty
+        {% elif now().strftime("%m%d")|int >= 0419 and now().strftime("%m%d")|int <= 0421 %}
+          Easter
+        {% elif now().strftime("%m%d")|int == 0504 %}
+          Go Blue
+        {% elif now().strftime("%m%d")|int == 0505 %}
+          Cyclon Rainbow
+        {% elif now().strftime("%m%d")|int >= 1001 and now().strftime("%m%d")|int <= 1031 %}
+          Halloween
+        {% elif now().strftime("%m%d")|int == 1113 %}
+          Hail
+        {% elif now().strftime("%m%d")|int >= 1101 and now().strftime("%m%d")|int <= 1130 %}
+          Thanksgiving
+        {% elif now().strftime("%m%d")|int >= 1210 and now().strftime("%m%d")|int <= 1212 %}
+          Holly Jolly
+        {% elif now().strftime("%m%d")|int >= 1213 and now().strftime("%m%d")|int <= 1215 %}
+          Candy Cane
+        {% elif now().strftime("%m%d")|int >= 1216 and now().strftime("%m%d")|int <= 1220 %}
+          Holly Jolly
+        {% elif now().strftime("%m%d")|int >= 1221 and now().strftime("%m%d")|int <= 1223 %}
+          Candy Cane
+        {% elif now().strftime("%m%d")|int >= 1224 and now().strftime("%m%d")|int <= 1225 %}
+          Christmas
+        {% elif now().strftime("%m%d")|int >= 1226 and now().strftime("%m%d")|int <= 1230 %}
+          Christmas
+        {% elif now().strftime("%m%d")|int == 1231 %}
+          Twinkle
+        {% else %}
+          Twinkle
+        {% endif %}
+  id: 1fe49fca51ad4ddrr3dge1c98711254f2a33
+
+
+- alias: holiday_lights_outside2_evening
+  initial_state: true
+  hide_entity: true
+  trigger:
+    platform: sun
+    event: sunset
+    offset: "-00:00:01"
+  action:
+    service: input_select.select_option
+    #entity_id: input_select.holiday_led_effect_outside2
+    entity_id: input_select.holiday_led_effect
+    data_template:
+      option: >
+        {% if now().strftime("%m%d")|int == 0101 %}
+          Twinkle
+        {% elif now().strftime("%m%d")|int >= 0210 and now().strftime("%m%d")|int <= 0214 %}
+          Lovey Day
+        {% elif now().strftime("%m%d")|int == 0305 %}
+          Confetti
+        {% elif now().strftime("%m%d")|int >= 0311 and now().strftime("%m%d")|int <= 0317 %}
+          St Patty
+        {% elif now().strftime("%m%d")|int >= 0419 and now().strftime("%m%d")|int <= 0421 %}
+          Easter
+        {% elif now().strftime("%m%d")|int == 0504 %}
+          Go Blue
+        {% elif now().strftime("%m%d")|int == 0505 %}
+          Cyclon Rainbow
+        {% elif now().strftime("%m%d")|int >= 1001 and now().strftime("%m%d")|int <= 1031 %}
+          Halloween
+        {% elif now().strftime("%m%d")|int == 1113 %}
+          Hail
+        {% elif now().strftime("%m%d")|int >= 1101 and now().strftime("%m%d")|int <= 1130 %}
+          Thanksgiving
+        {% elif now().strftime("%m%d")|int >= 1210 and now().strftime("%m%d")|int <= 1212 %}
+          Holly Jolly
+        {% elif now().strftime("%m%d")|int >= 1213 and now().strftime("%m%d")|int <= 1215 %}
+          Candy Cane
+        {% elif now().strftime("%m%d")|int >= 1216 and now().strftime("%m%d")|int <= 1220 %}
+          Holly Jolly
+        {% elif now().strftime("%m%d")|int >= 1221 and now().strftime("%m%d")|int <= 1223 %}
+          Candy Cane
+        {% elif now().strftime("%m%d")|int >= 1224 and now().strftime("%m%d")|int <= 1225 %}
+          Christmas
+        {% elif now().strftime("%m%d")|int >= 1226 and now().strftime("%m%d")|int <= 1230 %}
+          Christmas
+        {% elif now().strftime("%m%d")|int == 1231 %}
+          Twinkle
+        {% else %}
+          Twinkle
+        {% endif %}
+  id: 1fe49fca51ad4ddrr3dge1c344711254324253

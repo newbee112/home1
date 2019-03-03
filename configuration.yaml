@@ -1,0 +1,74 @@
+#home
+homeassistant:
+  name: Home
+  latitude: !secret lat 
+  longitude: !secret lon 
+  elevation: 50
+  unit_system: metric
+  time_zone: Europe/Stockholm
+  customize: !include_dir_merge_named customizations/
+
+#startup standard things
+frontend:
+  themes: !include_dir_merge_named themes/
+  extra_html_url:
+  - /local/custom_ui/state-card-floorplan.html
+
+config:
+hassio:
+history:
+logbook:
+system_health:
+custom_updater:
+luftdaten:
+  sensor_id: 18986
+  show_on_map: false
+  scan_interval: 500
+  sensors:
+    monitored_conditions:
+      - P1
+      - P2
+ 
+
+influxdb:
+  host: 192.168.10.16
+  port: 8086
+  database: homeassistant
+  username: !secret influxuser
+  password: !secret influxpsw
+  ssl: false
+  verify_ssl: false
+  max_retries: 3
+  default_measurement: state
+
+
+#lovelace yaml conf enabled
+lovelace:
+  mode: yaml
+
+#legacy API to be removed
+http:
+  api_password: !secret api_password
+
+#all includes
+weather: !include_dir_merge_list components/weather/
+media_player: !include_dir_merge_list components/mediaplayers/
+panel_iframe: !include_dir_merge_named panels/
+camera: !include_dir_merge_list components/cameras/
+light: !include_dir_merge_list components/lights/
+alarm_control_panel: !include components/alarm_system/alarm_control_panel.yaml
+sensor: !include_dir_merge_list components/sensors/
+binary_sensor: !include_dir_merge_list components/binary_sensors/
+group: !include_dir_merge_named components/groups/
+input_select: !include components/input_selects/holiday_lights.yaml
+input_number: !include components/input_numbers/holiday_lights.yaml
+device_tracker: !include components/device_tracker/device_tracking.yaml
+recorder: !include components/recorders/recorders.yaml
+input_boolean: !include_dir_merge_named components/input_boolean/
+switch: !include_dir_merge_list components/switches/
+automation: !include_dir_merge_list automations/
+timer: !include_dir_merge_named components/timers/
+alexa_media: !include_dir_merge_named components/alexa_media/
+
+# to do, still old structure
+script: !include scripts.yaml

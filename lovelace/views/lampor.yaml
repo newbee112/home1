@@ -1,0 +1,39 @@
+---
+id: lampor
+title: Lampor
+icon: mdi:lamp
+cards:
+  - type: entity-button
+    entity: light.esp_led_bedroom
+  - type: entity-button
+    entity: input_boolean.bedroom_small_lamp
+  - type: entity-button
+    entity: switch.sonoff
+  - type: entity-button
+    entity: input_boolean.livingroom_small_lamps
+  - type: entity-button
+    entity: input_boolean.livingroom_small_led
+  - type: entity-button
+    entity: input_boolean.kitchen_window
+  - type: entity-button
+    entity: input_boolean.kitchen_spot
+  - type: entity-button
+    entity: light.holiday_lights_outside2
+  - type: entity-button
+    entity: light.holiday_lights_outside
+  - type: entity-button
+    entity: light.holiday_lights_kitchen
+  - type: entity-button
+    entity: light.holiday_lights
+  - type: entity-button
+    entity: light.livingroom1
+  - type: entity-button
+    entity: input_boolean.kitchen_odling
+  - type: entity-button
+    entity: input_boolean.hallway_celing
+  - type: entity-button
+    entity: input_boolean.kitchen_table
+  - type: entity-button
+    entity: input_boolean.akvarium_odling
+    card:
+      type: glance
