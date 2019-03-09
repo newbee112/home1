@@ -5,4 +5,4 @@
   siteid: 9140
  # lines: 17, 17
  # direction: 2
- # sensor: binary_sensor.test
+  sensor: binary_sensor.test
