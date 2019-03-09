@@ -46,7 +46,8 @@ cards:
           - sensor.livingroom_roomba_battery
           - sensor.livingroom_roomba_status
           - switch.roomba
-          - device_tracker.blomlada_esp
           - device_tracker.livingroom_esp_ir
           - device_tracker.pihole
           - device_tracker.livingroom_sonoff_front
+          - device_tracker.outsidefarm1
+          - device_tracker.outsidefarm2

@@ -1,0 +1,54 @@
+- alias: "Holiday Input Effect Lab"
+  id: '3121245333434212453466611212534'
+  initial_state: True
+  hide_entity: True
+  trigger:
+    - platform: state
+      entity_id: input_select.holiday_led_effect
+  action:
+    - service: mqtt.publish
+      data_template:
+        topic: "bruh/mqttstrip/seteffect"
+        payload: '{{ trigger.to_state.state | string }}'
+        
+- alias: "Holiday Input Effect Outside"
+  id: '3121245333434212453466611212534'
+  initial_state: True
+  hide_entity: True
+  trigger:
+    - platform: state
+      entity_id: input_select.holiday_led_effect
+    #  entity_id: input_select.holiday_led_effect_outside
+  action:
+    - service: mqtt.publish
+      data_template:
+        topic: "bruh1/outside/seteffect"
+        payload: '{{ trigger.to_state.state | string }}'
+
+- alias: "Holiday Input Effect Kitchen"
+  id: '31212453334342112121212453466611212534'
+  initial_state: True
+  hide_entity: True
+  trigger:
+    - platform: state
+      #entity_id: input_select.holiday_led_effect_kitchen
+      entity_id: input_select.holiday_led_effect
+  action:
+    - service: mqtt.publish
+      data_template:
+        topic: "bruh2/outside/seteffect"
+        payload: '{{ trigger.to_state.state | string }}'
+
+- alias: "Holiday Input Effect Outside 2"
+  id: '3121245333434213234234125212534'
+  initial_state: True
+  hide_entity: True
+  trigger:
+    - platform: state
+      #entity_id: input_select.holiday_led_effect_outside2
+      entity_id: input_select.holiday_led_effect
+  action:
+    - service: mqtt.publish
+      data_template:
+        topic: "bruh3/outside/seteffect"
+        payload: '{{ trigger.to_state.state | string }}'

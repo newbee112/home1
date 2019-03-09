@@ -191,20 +191,12 @@ input_boolean.bedroom_movement1:
   friendly_name: Sovrum PIR
   icon: mdi:motion-sensor
 
-sensor.blommlada_temp:
-  friendly_name: Blomlåda
-  icon: mdi:thermometer
+device_tracker.outsidefarm1:
+  friendly_name: Outside farm1
+  icon: mdi:chip
 
-sensor.blommlada_humid:
-  friendly_name: Blomlåda
-  icon: mdi:water-percent
-
-sensor.blommlada:
-  friendly_name: Blomlåda
-  icon: mdi:grave-stone
-
-device_tracker.blomlada_esp:
-  friendly_name: Blomlåda
+device_tracker.outsidefarm2:
+  friendly_name: Outside farm2
   icon: mdi:chip
 
 sensor.livingroom_ir_esp_temp:
@@ -219,13 +211,6 @@ device_tracker.livingroom_esp_ir:
   friendly_name: Livingroom esp ir
   icon: mdi:chip
 
-sensor.luftdaten_18986_p2:
-  friendly_name: Skogås PM2.5
-  icon: mdi:thought-bubble-outline
-
-sensor.luftdaten_18986_p1:
-  friendly_name: Skogås PM10
-  icon: mdi:thought-bubble
 
 camera.skogskyrkogarden:
   friendly_name: Skogskyrkovägen
@@ -242,3 +227,19 @@ camera.sockenvagen:
 camera.gubbangen:
   friendly_name: Gubbängen
   icon: mdi:video
+
+sensor.outsidefarm1_soil_conv:
+  friendly_name: Outside soil1
+  icon: mdi:grave-stone
+
+sensor.outsidefarm2_soil_conv:
+  friendly_name: Outside soil2
+  icon: mdi:grave-stone
+
+sensor.outsidefarm2_humidity:
+  friendly_name: Outside humid2
+  icon: mdi:water-percent
+
+sensor.outsidefarm2_temperature:
+  friendly_name: Outside temp2
+  icon: mdi:thermometer

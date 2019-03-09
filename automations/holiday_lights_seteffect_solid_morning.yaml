@@ -1,0 +1,18 @@
+- alias: holiday_lights_morning_solid
+  initial_state: true
+  hide_entity: true
+  trigger:
+    platform: sun
+    event: sunrise
+    offset: "00:09:55"
+  action:
+    service: input_select.select_option
+    entity_id: input_select.holiday_led_effect
+    data_template:
+      option: >
+        {% if now().strftime("%m%d")|int == 0101 %}
+          Solid
+        {% else %}
+          Solid
+        {% endif %}
+  id: 1fe49fca51ad499f8767734f98711254f2a33

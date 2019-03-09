@@ -24,7 +24,4 @@ cards:
     url: http://192.168.10.90:3000/d-solo/fkKXWxrik/test1?panelId=12&orgId=1&from=now-24h&to=now
   - type: iframe
     aspect_ratio: 90%
-    url: http://192.168.10.90:3000/d-solo/fkKXWxrik/test1?panelId=14&orgId=1&from=now-24h&to=now
-  - type: iframe
-    aspect_ratio: 90%
     url: http://192.168.10.90:3000/d-solo/fkKXWxrik/test1?panelId=16&orgId=1&from=now-24h&to=now

@@ -1,9 +1,0 @@
-outsideled:
-  name: Outside Lights LED
-  entities:
-    - light.holiday_lights
-    - light.holiday_lights_kitchen
-    - light.holiday_lights_outside
-    - light.holiday_lights_outside2
-    - input_select.holiday_led_effect
-    - input_number.lab_animation_speed

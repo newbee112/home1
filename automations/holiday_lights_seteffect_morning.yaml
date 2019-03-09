@@ -1,0 +1,50 @@
+- alias: holiday_lights_seteffect_morning
+  initial_state: true
+  hide_entity: true
+  trigger:
+    platform: sun
+    event: sunrise
+    offset: "-03:30:00"
+  action:
+    service: input_select.select_option
+    entity_id: input_select.holiday_led_effect
+    data_template:
+      option: >
+        {% if now().strftime("%m%d")|int == 0101 %}
+          Twinkle
+        {% elif now().strftime("%m%d")|int >= 0210 and now().strftime("%m%d")|int <= 0214 %}
+          Lovey Day
+        {% elif now().strftime("%m%d")|int == 0305 %}
+          Confetti
+        {% elif now().strftime("%m%d")|int >= 0311 and now().strftime("%m%d")|int <= 0317 %}
+          St Patty
+        {% elif now().strftime("%m%d")|int >= 0419 and now().strftime("%m%d")|int <= 0421 %}
+          Easter
+        {% elif now().strftime("%m%d")|int == 0504 %}
+          Go Blue
+        {% elif now().strftime("%m%d")|int == 0505 %}
+          Cyclon Rainbow
+        {% elif now().strftime("%m%d")|int >= 1001 and now().strftime("%m%d")|int <= 1031 %}
+          Halloween
+        {% elif now().strftime("%m%d")|int == 1113 %}
+          Hail
+        {% elif now().strftime("%m%d")|int >= 1101 and now().strftime("%m%d")|int <= 1130 %}
+          Thanksgiving
+        {% elif now().strftime("%m%d")|int >= 1210 and now().strftime("%m%d")|int <= 1212 %}
+          Holly Jolly
+        {% elif now().strftime("%m%d")|int >= 1213 and now().strftime("%m%d")|int <= 1215 %}
+          Candy Cane
+        {% elif now().strftime("%m%d")|int >= 1216 and now().strftime("%m%d")|int <= 1220 %}
+          Holly Jolly
+        {% elif now().strftime("%m%d")|int >= 1221 and now().strftime("%m%d")|int <= 1223 %}
+          Candy Cane
+        {% elif now().strftime("%m%d")|int >= 1224 and now().strftime("%m%d")|int <= 1225 %}
+          Christmas
+        {% elif now().strftime("%m%d")|int >= 1226 and now().strftime("%m%d")|int <= 1230 %}
+          Christmas
+        {% elif now().strftime("%m%d")|int == 1231 %}
+          Twinkle
+        {% else %}
+          Twinkle
+        {% endif %}
+  id: 1fe49fca51ad499gfdge1c98711254f2a33

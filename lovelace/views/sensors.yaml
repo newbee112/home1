@@ -38,25 +38,10 @@ cards:
             entity: sensor.hydrofarm1_brightness
             graph: none
           - type: sensor
-            entity: sensor.blommlada
-            graph: none
-          - type: sensor
-            entity: sensor.blommlada_humid
-            graph: none
-          - type: sensor
-            entity: sensor.blommlada_temp
-            graph: none
-          - type: sensor
             entity: sensor.livingroom_ir_esp_humid
             graph: none
           - type: sensor
             entity: sensor.livingroom_ir_esp_temp
-            graph: none
-          - type: sensor
-            entity: sensor.luftdaten_18986_p1
-            graph: none
-          - type: sensor
-            entity: sensor.luftdaten_18986_p2
             graph: none
           - type: sensor
             entity: sensor.livingroom_ceiling_front_current
@@ -67,7 +52,18 @@ cards:
           - type: sensor
             entity: sensor.livingroom_ceiling_front_voltage
             graph: none
-
+          - type: sensor
+            entity: sensor.outsidefarm1_soil_conv
+            graph: none
+          - type: sensor
+            entity: sensor.outsidefarm2_soil_conv
+            graph: none
+          - type: sensor
+            entity: sensor.outsidefarm2_humidity
+            graph: none
+          - type: sensor
+            entity: sensor.outsidefarm2_temperature
+            graph: none
 
       - type: entities
         title: Akvarium

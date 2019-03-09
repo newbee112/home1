@@ -12,3 +12,4 @@ views:
   - !include lovelace/views/grafana.yaml
   - !include lovelace/views/trafiken.yaml
   - !include lovelace/views/tabletview.yaml
+  - !include lovelace/views/sl.yaml

@@ -27,4 +27,4 @@
     - service: homeassistant.toggle
       data:
         entity_id:
-          - input_boolean.livingroom_small_lamps
+          - switch.sonoff_basic_relay

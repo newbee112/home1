@@ -1,4 +1,0 @@
-#- platform: mqtt
-#  name: "Master_of_domain_precence"
-#  device_class: occupancy
-#  state_topic: "presence/johan"

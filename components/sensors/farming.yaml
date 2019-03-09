@@ -1,18 +1,14 @@
 
-- platform: mqtt
-  name: "blommlada"
-  state_topic: "tele/blommlada/SENSOR"
-  value_template: '{{ value_json["ANALOG"]["A0"] }}'
-  unit_of_measurement: 'soil'
+- platform: template
+  sensors:
+    outsidefarm1_soil_conv:
+      friendly_name: "Testar"
+      unit_of_measurement: 'soil'
+      value_template: "{{ states('sensor.outsidefarm1_soil')|float * 1024 }}"
 
-- platform: mqtt
-  name: "blommlada_temp"
-  state_topic: "tele/blommlada/SENSOR"
-  value_template: '{{ value_json["AM2301"]["Temperature"] }}'
-  unit_of_measurement: 'c'
-  
-- platform: mqtt
-  name: "blommlada_humid"
-  state_topic: "tele/blommlada/SENSOR"
-  value_template: '{{ value_json["AM2301"]["Humidity"] }}'
-  unit_of_measurement: '%'
+- platform: template
+  sensors:
+    outsidefarm2_soil_conv:
+      friendly_name: "Testar2"
+      unit_of_measurement: 'soil'
+      value_template: "{{ states('sensor.outsidefarm2_soil')|float * 1024 }}"

@@ -22,7 +22,8 @@
     Camera_hall: 192.168.10.57
     Camera_ute: 192.168.10.126
     Camera_akvarie: 192.168.10.121
-    blomlada_esp: 192.168.10.123
+    outsidefarm1: 192.168.10.123
+    outsidefarm2: 192.168.10.46
     livingroom_esp_ir: 192.168.10.102
     Pihole: 192.168.10.103
     

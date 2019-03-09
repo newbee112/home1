@@ -286,7 +286,7 @@ cards:
               - font-size: 10px
               - font-weight: bold
           - type: "custom:button-card"
-            entity: sensor.blommlada
+            entity: sensor.outsidefarm2_soil_conv
             show_state: true
             name: Odling soil
             color: auto
