@@ -2,8 +2,9 @@
   alias: turn_kitchen_red
   hide_entity: true
   trigger:
-    platform: time
-    at: "16:30:00"
+    platform: sun
+    event: sunset
+    offset: "-01:00:00"
   action:
     service: light.turn_on
     data:
@@ -11,6 +12,7 @@
       rgb_color: [255, 0, 0]
       entity_id:
         - light.livingroom1
+
 
 - id: '345333477734534666534'
   alias: turn_kitchen_off_night
@@ -26,8 +28,9 @@
   alias: turn_kitchen_blue
   hide_entity: true
   trigger:
-    platform: time
-    at: "03:00:50"
+    platform: sun
+    event: sunrise
+    offset: "-03:00:00"
   action:
     service: light.turn_on
     data:
@@ -41,7 +44,7 @@
   hide_entity: true
   trigger:
     platform: time
-    at: "09:36:10"
+    at: "08:36:10"
   action:
     service: light.turn_off
     entity_id: light.livingroom1

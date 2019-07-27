@@ -3,12 +3,6 @@ id: dashboard
 title: Dashboard
 icon: mdi:home-assistant
 cards:
-  - type: custom:compact-custom-header 
-    main_config: true
-    options: clock
-    menu: overflow
-    clock_format: 24
-    voice: hide
   - type: iframe
     aspect_ratio: 90%
     url: 'https://embed.windy.com/embed2.html?lat=59.346&lon=17.945&zoom=11&level=surface&overlay=wind&menu=&message=&marker=&calendar=now&pressure=true&type=map&location=coordinates&detail=&detailLat=59.346&detailLon=17.945&metricWind=default&metricTemp=default&radarRange=-1'
@@ -32,12 +26,20 @@ cards:
       - light.holiday_lights_outside2
       - input_boolean.akvarium_odling
       - switch.sonoff_basic_relay
+      - input_boolean.bedroom_celing_1
+      - input_boolean.bedroom_celing_2
+      - input_boolean.livingroom_celing_1
+      - input_boolean.livingroom_celing_2
+      - light.makeup_lights
+      - person.johan
+      - person.jirawan
     show_empty: false
     card:
       type: glance
       show_state: false
     state_filter:
       - 'on'
+      - 'home'
 
 
 

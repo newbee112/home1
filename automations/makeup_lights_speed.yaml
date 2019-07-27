@@ -1,0 +1,12 @@
+- alias: "Animation_Speed_Makeup"
+  id: '322212211116784534442534'
+  initial_state: True
+  hide_entity: True
+  trigger:
+    - platform: state
+      entity_id: input_number.makeup_animation_speed
+  action:
+    - service: mqtt.publish
+      data_template:
+        topic: "bruh2/makeup/setanimationspeed"
+        payload: '{{ trigger.to_state.state | int }}'

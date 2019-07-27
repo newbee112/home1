@@ -13,3 +13,13 @@ livingroom_small_lamps:
 livingroom_small_led:
   name: Vardagsrum lampa
   icon: mdi:lamp
+
+livingroom_celing_1:
+  name: Sovrum tak
+  initial: off
+  icon: mdi:ceiling-light
+
+livingroom_celing_2:
+  name: Sovrum spot
+  initial: off
+  icon: mdi:ceiling-light

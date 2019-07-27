@@ -1,0 +1,6 @@
+- platform: spotify
+  client_id: !secret spotify_client_id
+  client_secret: !secret spotify_client_secret
+  aliases:
+      2fc3dabcc98e262febd5707758235222f7add688: 'Echo'
+      bcade7d1ebb21a0562fb646e2040db6deac8736c: 'Bose'

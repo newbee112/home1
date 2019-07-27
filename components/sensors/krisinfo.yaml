@@ -1,5 +1,6 @@
 - platform: krisinformation
-  name: Krisinformation Stockholm
+  name: "Krisinformation Stockholm"
+  county: "Stockholms län"
   latitude: !secret lat
   longitude: !secret lon
-  radius: 100
+  radius: 1000

@@ -41,11 +41,41 @@ cards:
               - font-size: 10px
               - font-weight: bold
           - type: "custom:button-card"
-            color_type: blank-card
+            entity: input_boolean.bedroom_celing_1
+            icon: mdi:ceiling-light
+            color: auto
+            color_type: card
+            default_color: rgb(255, 233, 155)
+            action: toggle
+            name: Lamp
+            size: 20px
+            style:
+              - font-size: 10px
+              - font-weight: bold
           - type: "custom:button-card"
-            color_type: blank-card
+            entity: input_boolean.bedroom_celing_2
+            icon: mdi:ceiling-light
+            color: auto
+            color_type: card
+            default_color: rgb(255, 233, 155)
+            action: toggle
+            name: Lamp
+            size: 20px
+            style:
+              - font-size: 10px
+              - font-weight: bold
           - type: "custom:button-card"
-            color_type: blank-card
+            entity: light.makeup_lights
+            icon: mdi:led-strip
+            color: auto
+            color_type: card
+            default_color: rgb(255, 233, 155)
+            action: toggle
+            name: Makeup
+            size: 20px
+            style:
+              - font-size: 10px
+              - font-weight: bold
 # BEDROOM
 # ROW 2
       - type: horizontal-stack
@@ -55,6 +85,7 @@ cards:
             show_state: true
             color: auto
             color_type: card
+            show_name: false
             default_color: rgb(255, 233, 155)
             style:
               - font-size: 10px
@@ -65,11 +96,12 @@ cards:
             show_state: true
             color: auto
             color_type: card
+            show_name: false
             default_color: rgb(255, 233, 155)
-            size: 5px
             style:
               - font-size: 10px
               - font-weight: bold
+          
           - type: "custom:button-card"
             color_type: blank-card
           - type: "custom:button-card"
@@ -124,7 +156,17 @@ cards:
               - font-size: 10px
               - font-weight: bold
           - type: "custom:button-card"
-            color_type: blank-card
+            entity: input_boolean.kitchen_window
+            icon: mdi:lamp
+            color: auto
+            color_type: card
+            default_color: rgb(255, 233, 155)
+            action: toggle
+            name: Lamp
+            size: 20px
+            style:
+              - font-size: 10px
+              - font-weight: bold
           - type: "custom:button-card"
             color_type: blank-card
 # KITCHEN 
@@ -190,31 +232,6 @@ cards:
               - font-size: 10px
               - font-weight: bold
           - type: "custom:button-card"
-            entity: input_boolean.livingroom_small_led
-            icon: mdi:lamp
-            color: auto
-            color_type: card
-            default_color: rgb(255, 233, 155)
-            action: toggle
-            name: LED
-            size: 20px
-            style:
-              - font-size: 10px
-              - font-weight: bold
-          - type: "custom:button-card"
-            entity: input_boolean.kitchen_window
-            icon: mdi:lamp
-            color: auto
-            color_type: card
-            default_color: rgb(255, 233, 155)
-            action: toggle
-            name: Lamp
-            size: 20px
-            style:
-              - font-size: 10px
-              - font-weight: bold
-
-          - type: "custom:button-card"
             entity: switch.sonoff_basic_relay
             icon: mdi:ceiling-light
             color: auto
@@ -226,8 +243,30 @@ cards:
             style:
               - font-size: 10px
               - font-weight: bold
-
-
+          - type: "custom:button-card"
+            entity: input_boolean.livingroom_celing_1
+            icon: mdi:ceiling-light
+            color: auto
+            color_type: card
+            default_color: rgb(255, 233, 155)
+            action: toggle
+            name: LED
+            size: 20px
+            style:
+              - font-size: 10px
+              - font-weight: bold
+          - type: "custom:button-card"
+            entity: input_boolean.livingroom_celing_2
+            icon: mdi:ceiling-light
+            color: auto
+            color_type: card
+            default_color: rgb(255, 233, 155)
+            action: toggle
+            name: LED
+            size: 20px
+            style:
+              - font-size: 10px
+              - font-weight: bold
           - type: "custom:button-card"
             color_type: blank-card
 # LIVINGROOM
@@ -239,6 +278,7 @@ cards:
             show_state: true
             color: auto
             color_type: card
+            show_name: false
             default_color: rgb(255, 233, 155)
             style:
               - font-size: 10px
@@ -248,6 +288,7 @@ cards:
             show_state: true
             color: auto
             color_type: card
+            show_name: false
             default_color: rgb(255, 233, 155)
             style:
               - font-size: 10px
@@ -257,6 +298,7 @@ cards:
             show_state: true
             color: auto
             color_type: card
+            show_name: false
             default_color: rgb(255, 233, 155)
             style:
               - font-size: 10px
@@ -266,6 +308,7 @@ cards:
             show_state: true
             color: auto
             color_type: card
+            show_name: false
             default_color: rgb(255, 233, 155)
             style:
               - font-size: 10px
@@ -334,6 +377,7 @@ cards:
           - type: "custom:button-card"
             entity: input_select.holiday_led_effect
             show_state: true
+            show_name: false
             color: auto
             color_type: card
             default_color: rgb(255, 233, 155)
@@ -346,22 +390,33 @@ cards:
       - type: horizontal-stack
         cards:
           - type: "custom:button-card"
-            entity: sensor.blommlada
+            entity: sensor.outsidefarm2_humidity
             show_state: true
             color: auto
             color_type: card
+            show_name: false
             default_color: rgb(255, 233, 155)
             style:
               - font-size: 10px
               - font-weight: bold
 
           - type: "custom:button-card"
-            entity: sensor.blommlada_temp
+            entity: sensor.outsidefarm2_temperature
             show_state: true
             color: auto
             color_type: card
+            show_name: false
             default_color: rgb(255, 233, 155)
-            size: 5px
+            style:
+              - font-size: 10px
+              - font-weight: bold
+          - type: "custom:button-card"
+            entity: sensor.outsidefarm1_soil_conv
+            show_state: true
+            color: auto
+            color_type: card
+            show_name: false
+            default_color: rgb(255, 233, 155)
             style:
               - font-size: 10px
               - font-weight: bold
@@ -369,8 +424,3 @@ cards:
             color_type: blank-card
           - type: "custom:button-card"
             color_type: blank-card
-          - type: "custom:button-card"
-            color_type: blank-card
-
-
-            

@@ -1,0 +1,65 @@
+- alias: "telegram_notify_automation_water_alarm"
+  id: '11122311122385245'
+  trigger:
+    platform: state
+    entity_id: binary_sensor.water_alarm_720
+    from: 'off'
+    to: 'on'
+
+  action:
+    service: notify.telegram_notify
+    data:
+      title: '*Vattenläcka*'
+      message: "It apears that there is water on the floor under the 720l aquarium, please check"
+
+- alias: "telegram_notify_automation_fire_alarm"
+  id: '333344434332322221123545245'
+  trigger:
+    platform: mqtt
+    topic: esp/433
+    # Optional
+    payload: '7256488'
+
+  action:
+    service: notify.telegram_notify
+    data:
+      title: '*BRANDLARM*'
+      message: "It apears that there is a fire at home, please check"
+
+- alias: "telegram_notify_automation_jirawan_home"
+  id: '887678435475'
+  trigger:
+    platform: state
+    entity_id: person.jirawan
+    from: 'not_home'
+    to: 'home'
+
+  condition:
+    condition: time
+    after: '09:00:00'
+    before: '23:00:00'
+
+  action:
+    service: notify.telegram_notify
+    data:
+      title: '*Jirawan*'
+      message: "It apears that Jirawan has come home"
+
+- alias: "telegram_notify_automation_jirawan_not_home"
+  id: '887678435475'
+  trigger:
+    platform: state
+    entity_id: person.jirawan
+    from: 'home'
+    to: 'not_home'
+
+  condition:
+    condition: time
+    after: '09:00:00'
+    before: '23:00:00'
+
+  action:
+    service: notify.telegram_notify
+    data:
+      title: '*Jirawan*'
+      message: "It apears that Jirawan has left home"

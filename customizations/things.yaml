@@ -243,3 +243,11 @@ sensor.outsidefarm2_humidity:
 sensor.outsidefarm2_temperature:
   friendly_name: Outside temp2
   icon: mdi:thermometer
+
+sensor.blommlada_humid:
+  friendly_name: Blomlåda
+  icon: mdi:water-percent
+
+sensor.blommlada_temp:
+  friendly_name: Outside temp2
+  icon: mdi:thermometer

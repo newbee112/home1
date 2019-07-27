@@ -1,4 +1,0 @@
-- platform: mqtt
-  name: "test"
-  device_class: motion
-  state_topic: "sl/test"

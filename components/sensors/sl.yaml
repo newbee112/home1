@@ -1,8 +1,0 @@
-- platform: sl
-  name: Skapnack
-  ri4key: !secret ri4keyapi
-  si2key: !secret si2keyapi
-  siteid: 9140
- # lines: 17, 17
- # direction: 2
-  sensor: binary_sensor.test

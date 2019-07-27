@@ -7,6 +7,9 @@ homeassistant:
   unit_system: metric
   time_zone: Europe/Stockholm
   customize: !include_dir_merge_named customizations/
+  #auth_providers:
+  #- type: legacy_api_password
+  #  api_password: !secret api_password
 
 #startup standard things
 frontend:
@@ -17,7 +20,11 @@ hassio:
 history:
 logbook:
 system_health:
-custom_updater:
+hacs:
+  token: !secret git_custom_updater_token
+
+http: 
+  base_url: !secret base_url_hidden
 
 influxdb:
   host: !secret influxdbhost
@@ -30,14 +37,15 @@ influxdb:
   max_retries: 3
   default_measurement: state
 
+telegram_bot:
+  - platform: polling
+    api_key: !secret telegram_bot_key
+    allowed_chat_ids:
+      - !secret telegram_bot_chat_id1
 
 #lovelace yaml conf enabled
 lovelace:
   mode: yaml
-
-#legacy API to be removed
-http:
-  api_password: !secret api_password
 
 #all includes
 weather: !include_dir_merge_list components/weather/
@@ -58,6 +66,8 @@ switch: !include_dir_merge_list components/switches/
 automation: !include_dir_merge_list automations/
 timer: !include_dir_merge_named components/timers/
 alexa_media: !include_dir_merge_named components/alexa_media/
+person: !include_dir_merge_list persons/
+notify: !include components/notify/telegram.yaml
 
 # to do, still old structure
 script: !include scripts.yaml

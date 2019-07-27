@@ -7,37 +7,68 @@ cards:
       - type: entities
         title: one
         entities:
+          - group.all_automations
           - automation.animation_speed_kitchen
           - automation.animation_speed_lab
           - automation.animation_speed_outside
-          - automation.animation_speed_outside2
+          - automation.animation_speed_outside2 
           - automation.holiday_input_effect_kitchen
-          - automation.holiday_input_effect_lab
+          - automation.holiday_input_effect_lab 
           - automation.holiday_input_effect_outside
           - automation.holiday_input_effect_outside_2
-          - automation.holiday_lights_evening
+          - automation.ir_remote_1
+          - automation.ir_remote_2
+          - automation.trigger_alarm_while_armed_away
+          - automation.bedroom_led_evening_off
+          - automation.bedroom_led_evening_on
+          - automation.bedroom_led_morning_weekdays
+          - automation.bedroom_led_morning_weekends
+          - automation.bedroom_small_light_evening_off
+          - automation.bedroom_small_light_evening_on
+          - automation.bedroom_small_light_morning_weekdays 
+          - automation.bedroom_small_light_morning_weekends
+          - automation.brandlarm1
+          - automation.closet_aquariums_off
+          - automation.closet_aquariums_on
+          - automation.holiday_lights_evening_off
+          - automation.holiday_lights_evening_on
           - automation.holiday_lights_evening_solid
-          - automation.holiday_lights_kitchen_evening
-          - automation.holiday_lights_kitchen_evening_solid
-          - automation.holiday_lights_kitchen_morning
-          - automation.holiday_lights_kitchen_morning_solid
-          - automation.nattlampa
-      - type: entities
-        title: two
-        entities:
-          - automation.holiday_lights_morning
+          - automation.holiday_lights_morning_off
+          - automation.holiday_lights_morning_on
           - automation.holiday_lights_morning_solid
-          - automation.holiday_lights_outside2_evening
-          - automation.holiday_lights_outside2_evening_solid
-          - automation.holiday_lights_outside2_morning
-          - automation.holiday_lights_outside2_morning_solid
-          - automation.holiday_lights_outside_evening
-          - automation.holiday_lights_outside_evening_solid
-          - automation.holiday_lights_outside_morning
-          - automation.holiday_lights_outside_morning_solid
-          - automation.outside_led_off
-          - automation.outside_led_off2
+          - automation.holiday_lights_seteffect_morning
+          - automation.kitchen_odling_off
+          - automation.kitchen_odling_on
+          - automation.livingroom_kitchen_evening_off
+          - automation.livingroom_kitchen_evening_on
+          - automation.livingroom_kitchen_morning_weekdays
+          - automation.livingroom_kitchen_morning_weekends
+          - automation.livingroom_small_lamps_evening_off
+          - automation.livingroom_small_lamps_evening_on
+          - automation.livingroom_small_lamps_morning_weekdays
+          - automation.livingroom_small_lamps_morning_weekends
+          - automation.livingroom_small_led_evening_off
+          - automation.livingroom_small_led_evening_on
+          - automation.livingroom_small_led_morning_weekdays
+          - automation.livingroom_small_led_morning_weekends
+          - automation.motion_sense_kitchen
+          - automation.nattlampa
+          - automation.nattlampa2
+          - automation.pressence_home_ocupance_off_jirawan
+          - automation.pressence_home_ocupance_off_jonan
+          - automation.pressence_home_ocupance_on
+          - automation.pressence_king_mqtt_home
+          - automation.pressence_king_mqtt_not_home
+          - automation.pressence_queen_mqtt_home
+          - automation.pressence_queen_mqtt_not_home
+          - automation.timer_bedroom
+          - automation.turn_kitchen_blue
           - automation.turn_kitchen_off_morning
           - automation.turn_kitchen_off_night
           - automation.turn_kitchen_red
-          - automation.turn_kitchen_blue
+          - automation.update_sl
+          - automation.vattna1
+      - type: entities
+        title: two
+        entities:
+          - automation.holiday_lights_morning_solid

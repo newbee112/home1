@@ -1,8 +1,9 @@
 - alias: livingroom_small_led_morning_weekdays
   id: '652222211111228'
   trigger:
-  - platform: time
-    at: '06:16:00'
+    platform: sun
+    event: sunrise
+    offset: "-01:00:00"
   condition: 
   - condition: time
     weekday:
@@ -25,8 +26,9 @@
 - alias: livingroom_small_led_morning_weekends
   id: '333322211112232312'
   trigger:
-  - platform: time
-    at: '08:16:00'
+    platform: sun
+    event: sunrise
+    offset: "-01:30:00"
   condition: 
   - condition: time
     weekday:

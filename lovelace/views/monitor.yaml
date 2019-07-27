@@ -9,9 +9,6 @@ cards:
         entities:
           - binary_sensor.water_alarm_720
           - sensor.outside_door_alarm
-          - input_boolean.johan_home_status
-          - input_boolean.jirawan_home_status
-          - input_boolean.someone_home_status
           - input_boolean.alarm_arm_disarm
           - binary_sensor.larm
           - binary_sensor.sense1
@@ -43,9 +40,6 @@ cards:
           - device_tracker.camera_akvarie
           - device_tracker.livingroom_tv
           - device_tracker.lab_esp_led
-          - sensor.livingroom_roomba_battery
-          - sensor.livingroom_roomba_status
-          - switch.roomba
           - device_tracker.livingroom_esp_ir
           - device_tracker.pihole
           - device_tracker.livingroom_sonoff_front

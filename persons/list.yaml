@@ -1,0 +1,9 @@
+- name: Johan
+  id: kjeh
+  device_trackers:
+    - device_tracker.galaxy_s9
+
+- name: Jirawan
+  id: jk92
+  device_trackers:
+    - device_tracker.iphone

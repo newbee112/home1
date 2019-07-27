@@ -1,0 +1,9 @@
+- platform: mqtt
+  name: "Makeup Lights"
+  command_topic: "bruh2/makeup/setpower"
+  state_topic: "bruh2/makeup/setpowerpub"
+  rgb_state_topic: "bruh2/makeup/setcolorpub"
+  rgb_command_topic: "bruh2/makeup/setcolor"
+  brightness_state_topic: "bruh/mqttstrip/setbrightnesspub"
+  brightness_command_topic: "bruh2/makeup/setbrightness"
+  optimistic: false

@@ -26,4 +26,9 @@
     outsidefarm2: 192.168.10.46
     livingroom_esp_ir: 192.168.10.102
     Pihole: 192.168.10.103
-    
+
+- platform: synology_srm
+  host: 192.168.10.1
+  port: 8000
+  password: !secret router_psw
+  ssl: false
