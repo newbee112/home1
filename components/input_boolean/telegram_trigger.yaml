@@ -1,5 +1,4 @@
 telegram_trigger:
-  name: telegram trigger boolean
   initial: off
 
 

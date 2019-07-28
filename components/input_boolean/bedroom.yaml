@@ -1,13 +1,8 @@
 bedroom_small_lamp:
-  name: Sovrum lampa
-  icon: mdi:lamp
 
 bedroom_celing_1:
-  name: Sovrum tak
   initial: off
-  icon: mdi:ceiling-light
 
 bedroom_celing_2:
-  name: Sovrum spot
   initial: off
-  icon: mdi:ceiling-light
+

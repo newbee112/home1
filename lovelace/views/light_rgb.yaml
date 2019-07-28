@@ -1,14 +1,47 @@
-id: rgb_lights
-title: RGB lights
+id: Test_auto_device_tracker
+title: Test_auto_device_tracker
 icon: mdi:home-automation
 cards:
-  - type: vertical-stack
-    cards:
-      - type: custom:light-entity-card
-        entity: light.livingroom1
-        persist_features: true
-      - type: custom:light-entity-card
-        entity: light.makeup_lights     
-        effects_list: input_select.makeup_led_effect
-        persist_features: true
+  - type: custom:monster-card
+    card:
+      type: glance
+      title: Monster
+    filter:
+      include:
+        - domain: device_tracker
+          attributes:
+            state: 'home'
+            source_type: router
+  - type: custom:monster-card
+    card:
+      type: glance
+      title: Monster
+    filter:
+      include:
+        - domain: device_tracker
+          attributes:
+            state: 'not_home'
+            source_type: router
 
+  - type: custom:monster-card
+    show_empty: false
+    card:
+      type: glance
+      title: Lights On
+    filter:
+      include:
+        - domain: device_tracker
+      exclude:
+        - state: 'not_home'
+        - state: 'unavailable'
+
+  - type: custom:monster-card
+    show_empty: false
+    card:
+      type: glance
+      title: Lights On
+    filter:
+      include:
+        - domain: device_tracker
+      exclude:
+        - state: 'home'

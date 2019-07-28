@@ -10,14 +10,11 @@
     Bedroom_Alexa: 192.168.10.107
     Outside_front_ESP_LED_wall: 192.168.10.112
     Kitchen_window_ESP_LED: 192.168.10.60
-    Livingroom_ESP_Roomba: 192.168.10.38
-    Livingroom_PI3_pressence: 192.168.10.99
     Outside_front_ESP_LED_rail: 192.168.10.51
     Livingroom_ESP_LED: 192.168.10.9
     livingroom_sonoff_front: 192.168.10.39
     Lab_ESP_Temp: 192.168.10.77
     Hydro1: 192.168.10.67
-    RMlinkmini: 192.168.10.109
     Camera_720: 192.168.10.85
     Camera_hall: 192.168.10.57
     Camera_ute: 192.168.10.126
@@ -25,7 +22,7 @@
     outsidefarm1: 192.168.10.123
     outsidefarm2: 192.168.10.46
     livingroom_esp_ir: 192.168.10.102
-    Pihole: 192.168.10.103
+
 
 - platform: synology_srm
   host: 192.168.10.1

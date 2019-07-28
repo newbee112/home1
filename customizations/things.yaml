@@ -4,7 +4,7 @@ input_boolean.akvarium_odling:
   icon: mdi:fish
 
 input_boolean.720_co2:
-  friendly_name: Akvarium 720l co2
+  friendly_name: CO2 Vardagsrum
   initial: on
   icon: mdi:gas-cylinder
 
@@ -30,18 +30,6 @@ sensor.disk_use_percent_home:
   friendly_name: Hårddisk VM
   icon: mdi:harddisk
 
-sensor.aquarium_1:
-  friendly_name: Akvarie 1
-  icon: mdi:thermometer
-
-sensor.aquarium_2:
-  friendly_name: Akvarie 2
-  icon: mdi:thermometer
-
-sensor.aquarium_3:
-  friendly_name: Akvarie 3
-  icon: mdi:thermometer
-
 sensor.lab_nexa_humid:
   friendly_name: Garderoben
   icon: mdi:water-percent
@@ -63,33 +51,20 @@ sensor.lab_sonoff_pow1_voltage:
   icon: mdi:chip
 
 sensor.livingroom_humidity:
-  friendly_name: Vardagsrum
+  friendly_name: Vardagsrum Akvarium
   icon: mdi:water-percent
 
 sensor.livingroom_temperature:
-  friendly_name: Vardagsrum
+  friendly_name: Vardagsrum Akvarium
   icon: mdi:thermometer
 
-sensor.livingroom_roomba_battery:
-  friendly_name: Roomba batteri
-  icon: mdi:robot-vacuum-variant
-
-sensor.livingroom_roomba_status:
-  friendly_name: Roomba status
-  icon: mdi:robot-vacuum-variant
-
 binary_sensor.water_alarm_720:
-  friendly_name: Vatten larm
+  friendly_name: Vardgagsrum Vattenläcka
   icon: mdi:alert
 
 sensor.memory_free:
   friendly_name: Använt minne VM
   icon: mdi:memory
-
-sensor.outside_door_alarm:
-  friendly_name: Sensor dörr ute
-  icon: mdi:door
-
 
 binary_sensor.lab_esp_motion_detect:
   friendly_name: Garderob PIR
@@ -139,24 +114,16 @@ device_tracker.kitchen_window_esp_led:
   friendly_name: Kök Jul LED
   icon: mdi:chip
 
-device_tracker.livingroom_esp_roomba:
-  friendly_name: Roomba
-  icon: mdi:chip
-
-device_tracker.livingroom_pi3_pressence:
-  friendly_name: Vardagsrum PI3
-  icon: mdi:chip
-
 device_tracker.outside_front_esp_led_rail:
   friendly_name: Loftgång LED
   icon: mdi:chip
 
 device_tracker.livingroom_esp_led:
-  friendly_name: Vardagsrum
+  friendly_name: Köket LED
   icon: mdi:chip
 
 device_tracker.lab_sonoff_pow1:
-  friendly_name: SonOff Pow1
+  friendly_name: Vardagsrum SONOFF Pow1
   icon: mdi:chip
 
 device_tracker.lab_esp_temp:
@@ -192,11 +159,11 @@ input_boolean.bedroom_movement1:
   icon: mdi:motion-sensor
 
 device_tracker.outsidefarm1:
-  friendly_name: Outside farm1
+  friendly_name: Hydrofarm1
   icon: mdi:chip
 
 device_tracker.outsidefarm2:
-  friendly_name: Outside farm2
+  friendly_name: Hydrofarm2
   icon: mdi:chip
 
 sensor.livingroom_ir_esp_temp:
@@ -204,13 +171,12 @@ sensor.livingroom_ir_esp_temp:
   icon: mdi:thermometer
 
 sensor.livingroom_ir_esp_humid:
-  friendly_name: Livingroom
+  friendly_name: Vardagsrum
   icon: mdi:water-percent
 
 device_tracker.livingroom_esp_ir:
-  friendly_name: Livingroom esp ir
+  friendly_name: Vardagsrum esp ir
   icon: mdi:chip
-
 
 camera.skogskyrkogarden:
   friendly_name: Skogskyrkovägen
@@ -229,25 +195,29 @@ camera.gubbangen:
   icon: mdi:video
 
 sensor.outsidefarm1_soil_conv:
-  friendly_name: Outside soil1
+  friendly_name: Loftgång soil1
   icon: mdi:grave-stone
 
 sensor.outsidefarm2_soil_conv:
-  friendly_name: Outside soil2
+  friendly_name: Loftgång soil2
   icon: mdi:grave-stone
 
 sensor.outsidefarm2_humidity:
-  friendly_name: Outside humid2
+  friendly_name: Loftgång humid2
   icon: mdi:water-percent
 
 sensor.outsidefarm2_temperature:
-  friendly_name: Outside temp2
+  friendly_name: Loftgång temp2
   icon: mdi:thermometer
 
 sensor.blommlada_humid:
-  friendly_name: Blomlåda
+  friendly_name: Loftgång humid1
   icon: mdi:water-percent
 
 sensor.blommlada_temp:
-  friendly_name: Outside temp2
+  friendly_name: Loftgång temp1
   icon: mdi:thermometer
+
+input_boolean.telegram_trigger:
+  friendly_name: Telegram
+  icon: mdi:server-network
