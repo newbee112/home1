@@ -1,0 +1,4 @@
+  - platform: soundtouch
+    host: 192.168.10.108
+    port: 8090
+    name: Sovrum Bose

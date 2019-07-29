@@ -5,43 +5,30 @@ cards:
   - type: vertical-stack
     cards:
       - type: entities
-        title: Home
+        title: Status
         entities:
           - binary_sensor.water_alarm_720
-          - sensor.outside_door_alarm
           - input_boolean.alarm_arm_disarm
           - binary_sensor.larm
           - binary_sensor.sense1
           - binary_sensor.sense2
           - binary_sensor.movement_lab
+          - binary_sensor.outer_doorw
+          - binary_sensor.motion_ute_ir
 
       - type: entities
-        title: Things
+        title: Server
         entities:
-          - input_boolean.tellstick
-          - device_tracker.lab_vm_node_red
-          - device_tracker.lab_server_main
           - sensor.disk_use_percent_home
           - sensor.memory_free
-          - device_tracker.bedroom_bose
-          - device_tracker.livingroom_esp_720
-          - device_tracker.bedroom_bed_esp_led
-          - device_tracker.lab_esp_temp
-          - device_tracker.kitchen_window_esp_led
-          - device_tracker.livingroom_esp_led
-          - device_tracker.outside_front_esp_led_wall
-          - device_tracker.outside_front_esp_led_rail
-          - device_tracker.livingroom_pi3_pressence
-          - device_tracker.hydro1
-          - device_tracker.rmlinkmini
-          - device_tracker.camera_720
-          - device_tracker.camera_hall
-          - device_tracker.camera_ute
-          - device_tracker.camera_akvarie
-          - device_tracker.livingroom_tv
-          - device_tracker.lab_esp_led
-          - device_tracker.livingroom_esp_ir
-          - device_tracker.pihole
-          - device_tracker.livingroom_sonoff_front
-          - device_tracker.outsidefarm1
-          - device_tracker.outsidefarm2
+
+      - type: custom:monster-card
+        show_empty: false
+        card:
+          type: entities
+          title: Things not home
+        filter:
+          include:
+            - domain: device_tracker
+          exclude: 
+            - state: 'home'

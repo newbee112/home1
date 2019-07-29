@@ -26,7 +26,6 @@
 - alias: livingroom_small_lamps_morning_weekends
   id: '333322211112232312'
   trigger:
-  trigger:
     platform: sun
     event: sunrise
     offset: "-01:30:00"

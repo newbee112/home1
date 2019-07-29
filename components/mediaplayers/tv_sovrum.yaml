@@ -1,0 +1,6 @@
+- platform: philips_android_tv
+  name: TV sovrum
+  host: 192.168.10.72
+  mac: 10:3D:0A:10:59:14
+  username: !secret Username_tv
+  password: !secret Password_tv

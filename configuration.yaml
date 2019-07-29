@@ -71,3 +71,16 @@ notify: !include components/notify/telegram.yaml
 
 # to do, still old structure
 script: !include scripts.yaml
+
+tts:
+  - platform: google_cloud
+    key_file: google_cloud.json
+    language: en-US
+    gender: male
+    voice: en-US-Wavenet-F
+    encoding: linear16
+    speed: 0.9
+    pitch: -2.5
+    gain: 5.0
+
+

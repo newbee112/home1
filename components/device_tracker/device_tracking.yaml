@@ -1,29 +1,3 @@
-- platform: ping
-  hosts:
-    Lab_ESP_LED: 192.168.10.58
-    Livingroom_ESP_720: 192.168.10.91
-    Bedroom_bed_ESP_LED: 192.168.10.55
-    Lab_server_main: 192.168.10.80
-    Lab_VM_node_red: 192.168.10.16
-    Livingroom_TV: 192.168.10.42
-    Bedroom_Bose: 192.168.10.108
-    Bedroom_Alexa: 192.168.10.107
-    Outside_front_ESP_LED_wall: 192.168.10.112
-    Kitchen_window_ESP_LED: 192.168.10.60
-    Outside_front_ESP_LED_rail: 192.168.10.51
-    Livingroom_ESP_LED: 192.168.10.9
-    livingroom_sonoff_front: 192.168.10.39
-    Lab_ESP_Temp: 192.168.10.77
-    Hydro1: 192.168.10.67
-    Camera_720: 192.168.10.85
-    Camera_hall: 192.168.10.57
-    Camera_ute: 192.168.10.126
-    Camera_akvarie: 192.168.10.121
-    outsidefarm1: 192.168.10.123
-    outsidefarm2: 192.168.10.46
-    livingroom_esp_ir: 192.168.10.102
-
-
 - platform: synology_srm
   host: 192.168.10.1
   port: 8000

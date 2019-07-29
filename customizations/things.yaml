@@ -221,3 +221,9 @@ sensor.blommlada_temp:
 input_boolean.telegram_trigger:
   friendly_name: Telegram
   icon: mdi:server-network
+
+binary_sensor.outer_doorw:
+  friendly_name: Loftgång dörr sensor
+
+binary_sensor.motion_ute_ir:
+  friendly_name: Loftgång IR sensor

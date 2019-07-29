@@ -2,18 +2,17 @@ title: Home Control Panel
 resources: !include_dir_list lovelace/resources
 views:
   - !include lovelace/views/dashboard.yaml
-  - !include lovelace/views/simple.yaml
   - !include lovelace/views/sensors.yaml
   - !include lovelace/views/monitor.yaml
   - !include lovelace/views/cameras.yaml
-  - !include lovelace/views/auto.yaml
-  - !include lovelace/views/security.yaml
+    #- !include lovelace/views/security.yaml
   - !include lovelace/views/grafana.yaml
   - !include lovelace/views/trafiken.yaml
+  - !include lovelace/views/simple.yaml
   - !include lovelace/views/tabletview.yaml
-  - !include lovelace/views/kris.yaml
-  - !include lovelace/views/light_rgb.yaml
-  - !include lovelace/views/light_rgb_makeup.yaml
+  - !include lovelace/views/auto.yaml
+  #- !include lovelace/views/kris.yaml
+  #- !include lovelace/views/light_rgb_makeup.yaml
 
 cch:
   menu: show

@@ -40,6 +40,18 @@ cards:
     state_filter:
       - 'on'
       - 'home'
+  - type: custom:mini-media-player
+    entity: media_player.spotify
+    icon: mdi:spotify
+    artwork: cover
 
+  - type: custom:mini-media-player
+    entity: media_player.johan_s_echo_dot_2
+    icon: mdi:amazon
+    artwork: cover
 
+  - type: custom:mini-media-player
+    entity: media_player.sovrum_bose
+    icon: mdi:speaker-wireless
+    artwork: cover
 

@@ -5,7 +5,7 @@ cards:
   - type: vertical-stack
     cards:
       - type: entities
-        title: Innomhus
+        title: Inne
         entities:
           - type: sensor
             entity: sensor.bedroom_temperature
@@ -26,18 +26,6 @@ cards:
             entity: sensor.livingroom_temperature
             graph: none
           - type: sensor
-            entity: sensor.hydrofarm1_tub1
-            graph: none
-          - type: sensor
-            entity: sensor.hydrofarm1_temperature
-            graph: none
-          - type: sensor
-            entity: sensor.hydrofarm1_humidity
-            graph: none
-          - type: sensor
-            entity: sensor.hydrofarm1_brightness
-            graph: none
-          - type: sensor
             entity: sensor.livingroom_ir_esp_humid
             graph: none
           - type: sensor
@@ -52,6 +40,22 @@ cards:
           - type: sensor
             entity: sensor.livingroom_ceiling_front_voltage
             graph: none
+
+      - type: entities
+        title: Logtgång
+        entities:
+          - type: sensor
+            entity: sensor.hydrofarm1_tub1
+            graph: none
+          - type: sensor
+            entity: sensor.hydrofarm1_temperature
+            graph: none
+          - type: sensor
+            entity: sensor.hydrofarm1_humidity
+            graph: none
+          - type: sensor
+            entity: sensor.hydrofarm1_brightness
+            graph: none
           - type: sensor
             entity: sensor.outsidefarm1_soil_conv
             graph: none
@@ -64,18 +68,3 @@ cards:
           - type: sensor
             entity: sensor.outsidefarm2_temperature
             graph: none
-
-      - type: entities
-        title: Akvarium
-        entities:
-          - type: sensor
-            entity: sensor.aquarium_1
-            graph: none
-          - type: sensor
-            entity: sensor.aquarium_2
-            graph: none
-          - type: sensor
-            entity: sensor.aquarium_3
-            graph: none
-          - type: input_boolean
-            entity: input_boolean.720_co2

@@ -1,6 +1,6 @@
 id: tabletview
 title: tabletview
-icon: mdi:home-automation
+icon: mdi:tablet
 panel: true
 cards:
   - type: vertical-stack
