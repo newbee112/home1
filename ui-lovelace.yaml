@@ -11,6 +11,7 @@ views:
   - !include lovelace/views/simple.yaml
   - !include lovelace/views/tabletview.yaml
   - !include lovelace/views/auto.yaml
+  - !include lovelace/views/octoprint.yaml
   #- !include lovelace/views/kris.yaml
   #- !include lovelace/views/light_rgb_makeup.yaml
 

@@ -1,0 +1,7 @@
+example_script:
+  sequence:
+    # This is written using the Script Syntax
+    - service: tts.google_cloud_say
+      data:
+        entity_id: media_player.chromecastaudio9798
+        message: 'testing tts'

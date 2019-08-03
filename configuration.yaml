@@ -15,6 +15,10 @@ homeassistant:
 frontend:
   themes: !include_dir_merge_named themes/
 
+cast:
+  media_player:
+    - host: 192.168.10.22
+    
 config:
 hassio:
 history:
@@ -78,9 +82,13 @@ tts:
     language: en-US
     gender: male
     voice: en-US-Wavenet-F
-    encoding: linear16
+    encoding: mp3
     speed: 0.9
     pitch: -2.5
-    gain: 5.0
+    gain: +5.0
 
-
+octoprint:
+  host: 192.168.10.99
+  api_key: 88CB3BE85B964EB2817E1319EF87401B
+  bed: true
+  number_of_tools: 1

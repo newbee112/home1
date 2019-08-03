@@ -55,3 +55,8 @@ cards:
     icon: mdi:speaker-wireless
     artwork: cover
 
+  - type: custom:mini-media-player
+    entity: media_player.chromecastaudio9798
+    icon: mdi:speaker-wireless
+    artwork: cover
+

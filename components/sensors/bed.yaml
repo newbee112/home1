@@ -1,0 +1,30 @@
+- platform: mqtt
+  state_topic: 'home/bedroom/bed'
+  name: "Raw Master Bed Weight Measurement"
+
+- platform: template
+  sensors:
+    johan_in_bed:
+      friendly_name: "Johan in Bed"
+      value_template: >
+        {{ states('sensor.raw_master_bed_weight_measurement')|float >= 3844335 }}
+    jirawan_in_bed:
+      friendly_name: "Jirawan in Bed"
+      value_template: >
+        {{ states('sensor.raw_master_bed_weight_measurement')|float > 2973715
+          and (states('sensor.raw_master_bed_weight_measurement')|float < 3844335
+               or states('sensor.raw_master_bed_weight_measurement')|float >= 4701333)}}
+
+- platform: template
+  sensors:
+    num_in_master_bed:
+      friendly_name: "Number of People in Bed"
+      unit_of_measurement: 'people'
+      value_template: >-
+        {% if is_state('binary_sensor.johan_in_bed', 'on') and is_state('binary_sensor.jirawan_in_bed', 'on') %}
+            2
+        {% elif is_state('binary_sensor.johan_in_bed', 'on') or is_state('binary_sensor.jirawan_in_bed', 'on') %}
+            1
+        {% else %}
+            0
+        {% endif %}
