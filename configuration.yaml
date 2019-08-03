@@ -89,6 +89,6 @@ tts:
 
 octoprint:
   host: 192.168.10.99
-  api_key: 88CB3BE85B964EB2817E1319EF87401B
+  api_key: !secret octoprint
   bed: true
   number_of_tools: 1
