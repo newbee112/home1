@@ -31,5 +31,5 @@ plex.conf
 alexa_media.pickle
 alexa_media*
 google_cloud.json
-
+.spotify-token-cache
 
