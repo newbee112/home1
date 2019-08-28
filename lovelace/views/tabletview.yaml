@@ -129,46 +129,46 @@ cards:
             aspect_ratio: 3/1
             default_color: rgb(255, 233, 155)
             action: toggle
-            name: Bedroom LED
+
             size: 20px
             style:
               - font-size: 10px
               - font-weight: bold
           - type: "custom:button-card"
-            entity: input_boolean.bedroom_small_lamp
+            entity: switch.bedroom3
             icon: mdi:lamp
             color: auto
             color_type: card
             aspect_ratio: 3/1
             default_color: rgb(255, 233, 155)
             action: toggle
-            name: Bedroom lamp
+
             size: 20px
             style:
               - font-size: 10px
               - font-weight: bold
           - type: "custom:button-card"
-            entity: input_boolean.bedroom_celing_1
+            entity: switch.bedroom2
             icon: mdi:ceiling-light
             color: auto
             color_type: card
             aspect_ratio: 3/1
             default_color: rgb(255, 233, 155)
             action: toggle
-            name: Bedroom lamp
+
             size: 20px
             style:
               - font-size: 10px
               - font-weight: bold
           - type: "custom:button-card"
-            entity: input_boolean.bedroom_celing_2
+            entity: switch.bedroom1
             icon: mdi:ceiling-light
             color: auto
             color_type: card
             aspect_ratio: 3/1
             default_color: rgb(255, 233, 155)
             action: toggle
-            name: Bedroom lamp
+
             size: 20px
             style:
               - font-size: 10px
@@ -181,7 +181,7 @@ cards:
             aspect_ratio: 3/1
             default_color: rgb(255, 233, 155)
             action: toggle
-            name: Makeup
+
             size: 20px
             style:
               - font-size: 10px
@@ -197,59 +197,59 @@ cards:
             aspect_ratio: 3/1
             default_color: rgb(255, 233, 155)
             action: toggle
-            name: Kitchen LED
+
             size: 20px
             style:
               - font-size: 10px
               - font-weight: bold
           - type: "custom:button-card"
-            entity: input_boolean.kitchen_spot
+            entity: switch.kitchen3
             icon: mdi:ceiling-light
             color: auto
             color_type: card
             aspect_ratio: 3/1
             default_color: rgb(255, 233, 155)
             action: toggle
-            name: Kitchen Spot
+
             size: 20px
             style:
               - font-size: 10px
               - font-weight: bold
           - type: "custom:button-card"
-            entity: input_boolean.kitchen_table
+            entity: switch.kitchen4
             icon: mdi:ceiling-light
             color: auto
             color_type: card
             aspect_ratio: 3/1
             default_color: rgb(255, 233, 155)
             action: toggle
-            name: Kitchen Table
+
             size: 20px
             style:
               - font-size: 10px
               - font-weight: bold
           - type: "custom:button-card"
-            entity: input_boolean.kitchen_window
+            entity: switch.kitchen1
             icon: mdi:lamp
             color: auto
             color_type: card
             aspect_ratio: 3/1
             default_color: rgb(255, 233, 155)
             action: toggle
-            name: kitchen window
+
             size: 20px
             style:
               - font-size: 10px
               - font-weight: bold
           - type: "custom:button-card"
-            entity: input_boolean.hallway_celing
+            entity: switch.hallway1
             icon: mdi:ceiling-light
             color: auto
             color_type: card
             aspect_ratio: 3/1
             default_color: rgb(255, 233, 155)
             action: toggle
-            name: Hallway Celing
+
             size: 20px
             style:
               - font-size: 10px
@@ -263,31 +263,19 @@ cards:
         cards:
 
           - type: "custom:button-card"
-            entity: input_boolean.livingroom_small_lamps
+            entity: switch.livingroom5
             icon: mdi:lamp
             color: auto
             color_type: card
             aspect_ratio: 3/1
             default_color: rgb(255, 233, 155)
             action: toggle
-            name: Livingroom Lamp
+
             size: 20px
             style:
               - font-size: 10px
               - font-weight: bold
-          - type: "custom:button-card"
-            entity: input_boolean.livingroom_small_led
-            icon: mdi:lamp
-            color: auto
-            color_type: card
-            aspect_ratio: 3/1
-            default_color: rgb(255, 233, 155)
-            action: toggle
-            name: Livingroom LED
-            size: 20px
-            style:
-              - font-size: 10px
-              - font-weight: bold
+
 
           - type: "custom:button-card"
             entity: switch.sonoff_basic_relay
@@ -297,38 +285,39 @@ cards:
             aspect_ratio: 3/1
             default_color: rgb(255, 233, 155)
             action: toggle
-            name: Livingrom ceiling front
-            size: 20px
-            style:
-              - font-size: 10px
-              - font-weight: bold
-          - type: "custom:button-card"
-            entity: input_boolean.livingroom_celing_1
-            icon: mdi:ceiling-light
-            color: auto
-            color_type: card
-            aspect_ratio: 3/1
-            default_color: rgb(255, 233, 155)
-            action: toggle
-            name: Livingroom celing back
-            size: 20px
-            style:
-              - font-size: 10px
-              - font-weight: bold
-          - type: "custom:button-card"
-            entity: input_boolean.livingroom_celing_2
-            icon: mdi:ceiling-light
-            color: auto
-            color_type: card
-            aspect_ratio: 3/1
-            default_color: rgb(255, 233, 155)
-            action: toggle
-            name: Livingroom celing small
-            size: 20px
-            style:
-              - font-size: 10px
-              - font-weight: bold
 
+            size: 20px
+            style:
+              - font-size: 10px
+              - font-weight: bold
+          - type: "custom:button-card"
+            entity: switch.livingroom2
+            icon: mdi:ceiling-light
+            color: auto
+            color_type: card
+            aspect_ratio: 3/1
+            default_color: rgb(255, 233, 155)
+            action: toggle
+
+            size: 20px
+            style:
+              - font-size: 10px
+              - font-weight: bold
+          - type: "custom:button-card"
+            entity: switch.livingroom1
+            icon: mdi:ceiling-light
+            color: auto
+            color_type: card
+            aspect_ratio: 3/1
+            default_color: rgb(255, 233, 155)
+            action: toggle
+
+            size: 20px
+            style:
+              - font-size: 10px
+              - font-weight: bold
+          - type: "custom:button-card"
+            color_type: blank-card
       - type: horizontal-stack
         cards:
           - type: "custom:button-card"
@@ -370,7 +359,7 @@ cards:
             color_type: card
             aspect_ratio: 3/1
             default_color: rgb(255, 233, 155)
-            name: Livingroom temp
+
             style:
               - font-size: 10px
               - font-weight: bold
@@ -380,7 +369,7 @@ cards:
             color: auto
             color_type: card
             aspect_ratio: 3/1
-            name: Livingroom humid
+
             default_color: rgb(255, 233, 155)
             style:
               - font-size: 10px
@@ -388,7 +377,7 @@ cards:
           - type: "custom:button-card"
             entity: sensor.bedroom_temperature
             show_state: true
-            name: Bedroom temp
+
             color: auto
             color_type: card
             aspect_ratio: 3/1
@@ -399,7 +388,7 @@ cards:
           - type: "custom:button-card"
             entity: sensor.bedroom_humidity
             show_state: true
-            name: Bedroom humid
+
             color: auto
             color_type: card
             aspect_ratio: 3/1
@@ -410,7 +399,7 @@ cards:
           - type: "custom:button-card"
             entity: sensor.outsidefarm2_soil_conv
             show_state: true
-            name: Odling soil
+
             color: auto
             color_type: card
             aspect_ratio: 3/1

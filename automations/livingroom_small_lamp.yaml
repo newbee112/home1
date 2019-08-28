@@ -16,12 +16,12 @@
   - service: homeassistant.turn_on
     data:
       entity_id:
-        - input_boolean.livingroom_small_lamps
+        - switch.livingroom5
   - delay: '01:00:00'
   - service: homeassistant.turn_off
     data:
       entity_id:
-        - input_boolean.livingroom_small_lamps
+        - switch.livingroom5
 
 - alias: livingroom_small_lamps_morning_weekends
   id: '333322211112232312'
@@ -38,12 +38,12 @@
   - service: homeassistant.turn_on
     data:
       entity_id:
-        - input_boolean.livingroom_small_lamps
+        - switch.livingroom5
   - delay: '01:00:00'
   - service: homeassistant.turn_off
     data:
       entity_id:
-        - input_boolean.livingroom_small_lamps
+        - switch.livingroom5
 
 - alias: livingroom_small_lamps_evening_on
   id: '1222313433434566523'
@@ -58,7 +58,7 @@
   - service: homeassistant.turn_on
     data:
       entity_id:
-        - input_boolean.livingroom_small_lamps
+        - switch.livingroom5
 
 - alias: livingroom_small_lamps_evening_off
   id: '644443333322567635432'
@@ -70,4 +70,4 @@
   - service: homeassistant.turn_off
     data:
       entity_id:
-        - input_boolean.livingroom_small_lamps
+        - switch.livingroom5

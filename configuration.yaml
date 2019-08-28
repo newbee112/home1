@@ -54,7 +54,7 @@ lovelace:
 #all includes
 weather: !include_dir_merge_list components/weather/
 media_player: !include_dir_merge_list components/mediaplayers/
-panel_iframe: !include_dir_merge_named panels/
+#panel_iframe: !include_dir_merge_named panels/
 camera: !include_dir_merge_list components/cameras/
 light: !include_dir_merge_list components/lights/
 alarm_control_panel: !include components/alarm_system/alarm_control_panel.yaml
@@ -76,6 +76,10 @@ notify: !include components/notify/telegram.yaml
 # to do, still old structure
 script: !include scripts.yaml
 
+tellstick:
+    host: core-tellstick
+    port: [50800, 50801]
+
 tts:
   - platform: google_cloud
     key_file: google_cloud.json
@@ -92,3 +96,6 @@ octoprint:
   api_key: !secret octoprint
   bed: true
   number_of_tools: 1
+
+roku:
+  - host: 192.168.10.43

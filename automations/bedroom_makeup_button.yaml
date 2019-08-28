@@ -1,0 +1,24 @@
+- alias: bedroom_makeup_toggle
+  id: '3453677563232213455443544234'
+  trigger:
+  - platform: state
+    entity_id:  binary_sensor.make_up_led
+    to: 'on'
+  action:
+  - service: homeassistant.toggle
+    data:
+      entity_id:
+        - light.makeup_lights
+
+- alias: bedroom_celing_toggle
+  id: '3453677563234346622342347844234'
+  trigger:
+  - platform: state
+    entity_id:  binary_sensor.bedroom_ceiling1_2
+    to: 'on'
+  action:
+  - service: homeassistant.toggle
+    data:
+      entity_id:
+        - input_boolean.bedroom_celing_1
+        - input_boolean.bedroom_celing_2

@@ -5,7 +5,7 @@ views:
   - !include lovelace/views/sensors.yaml
   - !include lovelace/views/monitor.yaml
   - !include lovelace/views/cameras.yaml
-    #- !include lovelace/views/security.yaml
+  - !include lovelace/views/lights.yaml
   - !include lovelace/views/grafana.yaml
   - !include lovelace/views/trafiken.yaml
   - !include lovelace/views/simple.yaml
@@ -14,6 +14,7 @@ views:
   - !include lovelace/views/octoprint.yaml
   #- !include lovelace/views/kris.yaml
   #- !include lovelace/views/light_rgb_makeup.yaml
+  - !include lovelace/views/holidaylight.yaml
 
 cch:
   menu: show

@@ -7,13 +7,13 @@
     johan_in_bed:
       friendly_name: "Johan in Bed"
       value_template: >
-        {{ states('sensor.raw_master_bed_weight_measurement')|float >= 3844335 }}
+        {{ states('sensor.raw_master_bed_weight_measurement')|float <= -3200000 }}
     jirawan_in_bed:
       friendly_name: "Jirawan in Bed"
       value_template: >
-        {{ states('sensor.raw_master_bed_weight_measurement')|float > 2973715
-          and (states('sensor.raw_master_bed_weight_measurement')|float < 3844335
-               or states('sensor.raw_master_bed_weight_measurement')|float >= 4701333)}}
+        {{ states('sensor.raw_master_bed_weight_measurement')|float < -2400000
+          and (states('sensor.raw_master_bed_weight_measurement')|float > -3200000
+               or states('sensor.raw_master_bed_weight_measurement')|float <= -3400000)}}
 
 - platform: template
   sensors:
@@ -21,10 +21,20 @@
       friendly_name: "Number of People in Bed"
       unit_of_measurement: 'people'
       value_template: >-
-        {% if is_state('binary_sensor.johan_in_bed', 'on') and is_state('binary_sensor.jirawan_in_bed', 'on') %}
+        {% if is_state('sensor.johan_in_bed', 'True') and is_state('sensor.jirawan_in_bed', 'True') %}
             2
-        {% elif is_state('binary_sensor.johan_in_bed', 'on') or is_state('binary_sensor.jirawan_in_bed', 'on') %}
+        {% elif is_state('sensor.johan_in_bed', 'True') or is_state('sensor.jirawan_in_bed', 'True') %}
             1
         {% else %}
             0
         {% endif %}
+
+- platform: glances
+  host: 192.168.10.90
+  resources:
+    - 'cpu_temp'
+    - 'docker_cpu_use'
+    - 'docker_memory_use'
+    - 'processor_load'
+    - 'disk_use_percent'
+    - 'memory_use_percent'

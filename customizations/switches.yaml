@@ -1,0 +1,60 @@
+
+#Hallen
+
+switch.hallway1:
+  icon: mdi:ceiling-light
+  friendly_name: Hallen tak
+
+#Garderob
+
+switch.aquariumodling:
+  icon: mdi:lamp
+  friendly_name: Akvarie Odling
+
+#Toalett
+
+#Sovrum
+
+switch.bedroom1:
+  icon: mdi:ceiling-light
+  friendly_name: Sovrum tak
+
+switch.bedroom2:
+  icon: mdi:ceiling-light
+  friendly_name: Sovrum spot
+
+switch.bedroom3:
+  icon: mdi:lamp
+  friendly_name: Sovrum fönster
+
+#Vardagsrum
+
+switch.livingroom1:
+  icon: mdi:ceiling-light
+  friendly_name: Vardgsrum tak
+
+switch.livingroom2:
+  icon: mdi:ceiling-light
+  friendly_name: Vardagsrum bak
+
+switch.livingroom5:
+  icon: mdi:lamp
+  friendly_name: Vardagsrum fönster
+
+switch.co2:
+  icon: mdi:gas-cylinder
+  friendly_name: Akvarium CO2
+
+#köket
+
+switch.kitchen1:
+  icon: mdi:lamp
+  friendly_name: Kök fönster
+
+switch.kitchen3:
+  icon: mdi:ceiling-light
+  friendly_name: Kök spot
+
+switch.kitchen4:
+  icon: mdi:ceiling-light
+  friendly_name: Kök bord

@@ -10,15 +10,7 @@ cards:
     name: Yard net
     entities:
       - light.esp_led_bedroom
-      - input_boolean.bedroom_small_lamp
       - switch.sonoff
-      - input_boolean.livingroom_small_lamps
-      - input_boolean.livingroom_small_led
-      - input_boolean.kitchen_window
-      - input_boolean.kitchen_spot
-      - input_boolean.kitchen_table
-      - input_boolean.hallway_celing
-      - input_boolean.kitchen_odling
       - light.livingroom1
       - light.holiday_lights
       - light.holiday_lights_kitchen
@@ -26,13 +18,21 @@ cards:
       - light.holiday_lights_outside2
       - input_boolean.akvarium_odling
       - switch.sonoff_basic_relay
-      - input_boolean.bedroom_celing_1
-      - input_boolean.bedroom_celing_2
-      - input_boolean.livingroom_celing_1
-      - input_boolean.livingroom_celing_2
       - light.makeup_lights
       - person.johan
       - person.jirawan
+      - switch.hallway1
+      - switch.akvarieodling
+      - switch.bedroom1
+      - switch.bedroom2
+      - switch.bedroom3
+      - switch.livingroom1
+      - switch.livingroom2
+      - switch.livingroom5
+      - switch.co2
+      - switch.kitchen1
+      - switch.kitchen3
+      - switch.kitchen4
     show_empty: false
     card:
       type: glance
@@ -60,3 +60,7 @@ cards:
     icon: mdi:speaker-wireless
     artwork: cover
 
+  - type: custom:mini-media-player
+    entity: media_player.roku_2md67t019048
+    icon: mdi:speaker-wireless
+    artwork: cover

@@ -16,12 +16,12 @@
   - service: homeassistant.turn_on
     data:
       entity_id:
-        - input_boolean.kitchen_window
+        - switch.kitchen1
   - delay: '01:00:00'
   - service: homeassistant.turn_off
     data:
       entity_id:
-        - input_boolean.kitchen_window
+        - switch.kitchen1
 
 - alias: livingroom_kitchen_morning_weekends
   id: '345345345343453455367868'
@@ -38,12 +38,12 @@
   - service: homeassistant.turn_on
     data:
       entity_id:
-        - input_boolean.kitchen_window
+        - switch.kitchen1
   - delay: '01:00:00'
   - service: homeassistant.turn_off
     data:
       entity_id:
-        - input_boolean.kitchen_window
+        - switch.kitchen1
 
 - alias: livingroom_kitchen_evening_on
   id: '1231235433453455453453453'
@@ -58,7 +58,7 @@
   - service: homeassistant.turn_on
     data:
       entity_id:
-        - input_boolean.kitchen_window
+        - switch.kitchen1
 
 - alias: livingroom_kitchen_evening_off
   id: '64444333332223423426567635432'
@@ -70,4 +70,4 @@
   - service: homeassistant.turn_off
     data:
       entity_id:
-        - input_boolean.kitchen_window
+        - switch.kitchen1

@@ -11,9 +11,3 @@
   name: Sockenvagen
   still_image_url: https://api.trafikinfo.trafikverket.se/v1/Images/TrafficFlowCamera_39626463.Jpeg?type=fullsize
 
-# Octoprint
-
-- platform: mjpeg
-  name: OctoPrint
-  still_image_url: http://192.168.10.99/webcam/?action=snapshot
-  mjpeg_url: http://192.168.10.99/?action=stream

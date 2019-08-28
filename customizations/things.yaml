@@ -1,17 +1,7 @@
-input_boolean.akvarium_odling:
-  friendly_name: Garderob Akvarie
-  initial: on
-  icon: mdi:fish
 
-input_boolean.720_co2:
-  friendly_name: CO2 Vardagsrum
-  initial: on
-  icon: mdi:gas-cylinder
 
-input_boolean.tellstick:
-  friendly_name: NodeRedServerWatchdog
-  initial: off
-  icon: mdi:server-network
+
+
 
 input_boolean.alarm_arm_disarm:
   friendly_name: Alarm home/away

@@ -13,9 +13,12 @@ cards:
           - binary_sensor.sense1
           - binary_sensor.sense2
           - binary_sensor.movement_lab
-          - binary_sensor.outer_doorw
-          - binary_sensor.motion_ute_ir
-
+          - binary_sensor.loftgang_door
+          - sensor.jirawan_in_bed
+          - sensor.johan_in_bed
+          - sensor.num_in_master_bed
+          - sensor.raw_master_bed_weight_measurement
+          
       - type: entities
         title: Server
         entities:

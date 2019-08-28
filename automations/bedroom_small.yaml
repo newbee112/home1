@@ -15,12 +15,12 @@
   - service: homeassistant.turn_on
     data:
       entity_id:
-        - input_boolean.bedroom_small_lamp
+        - switch.bedroom3
   - delay: '01:00:00'
   - service: homeassistant.turn_off
     data:
       entity_id:
-        - input_boolean.bedroom_small_lamp
+        - switch.bedroom3
 
 - alias: bedroom_small_light_morning_weekends
   id: '6565665768523427654878'
@@ -36,12 +36,12 @@
   - service: homeassistant.turn_on
     data:
       entity_id:
-        - input_boolean.bedroom_small_lamp
+        - switch.bedroom3
   - delay: '01:00:00'
   - service: homeassistant.turn_off
     data:
       entity_id:
-        - input_boolean.bedroom_small_lamp
+        - switch.bedroom3
 
 - alias: bedroom_small_light_evening_on
   id: '6562222222222222444422222222223'
@@ -56,7 +56,7 @@
   - service: homeassistant.turn_on
     data:
       entity_id:
-        - input_boolean.bedroom_small_lamp
+        - switch.bedroom3
 
 - alias: bedroom_small_light_evening_off
   id: '6562333434322342322222223'
@@ -68,4 +68,4 @@
   - service: homeassistant.turn_off
     data:
       entity_id:
-        - input_boolean.bedroom_small_lamp
+        - switch.bedroom3

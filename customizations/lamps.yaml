@@ -22,46 +22,6 @@ light.holiday_lights_outside2:
   icon: mdi:led-strip
   friendly_name: Loftgång LED
 
-input_boolean.livingroom_small_lamps:
-  friendly_name: Vardagsrum lampa
-  initial: on
-  icon: mdi:lamp
-
-input_boolean.livingroom_small_led:
-  friendly_name: Vardagsrum lampa
-  initial: on
-  icon: mdi:lamp
-
-input_boolean.kitchen_window:
-  friendly_name: Vardagsrum lampa
-  initial: on
-  icon: mdi:lamp
-
-input_boolean.bedroom_small_lamp:
-  friendly_name: Sovrum lampa
-  initial: on
-  icon: mdi:lamp
-
-input_boolean.kitchen_odling:
-  friendly_name: Kök Odling lampa
-  initial: off
-  icon: mdi:flower
-
-input_boolean.hallway_celing:
-  friendly_name: Hall tak
-  initial: off
-  icon: mdi:ceiling-light
-
-input_boolean.kitchen_spot:
-  friendly_name: Kök spot
-  initial: off
-  icon: mdi:ceiling-light
-
-input_boolean.kitchen_table:
-  friendly_name: Kök bord
-  initial: off
-  icon: mdi:ceiling-light
-
 switch.sonoff_basic_relay:
   friendly_name: Vardagsrum fram
   icon: mdi:ceiling-light
@@ -70,10 +30,14 @@ input_number.lab_animation_speed:
   icon: mdi:led-strip
   friendly_name: Hastighet julbelysning
 
-input_number.makeup_animation_speed:
+input_select.holiday_led_effect:
   icon: mdi:led-strip
   friendly_name: Effekt julbelysning
 
-input_select.holiday_led_effect:
+input_select.makeup_led_effect:
   icon: mdi:led-strip
   friendly_name: Effekt makeup LED
+
+input_number.makeup_animation_speed:
+  icon: mdi:led-strip
+  friendly_name: Hastighet makeup

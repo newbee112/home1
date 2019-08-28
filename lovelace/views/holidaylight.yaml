@@ -1,0 +1,13 @@
+id: holidaylight
+title: HolidayLights
+icon: mdi:cards-heart
+cards:
+  - type: vertical-stack
+    cards:
+      - type: entities
+        title: Config
+        entities:
+          - input_select.holiday_led_effect
+          - input_number.lab_animation_speed
+          - input_select.makeup_led_effect
+          - input_number.makeup_animation_speed

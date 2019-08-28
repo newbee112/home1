@@ -8,18 +8,20 @@ cards:
         title: Inside
         entities:
           - light.esp_led_bedroom
-          - input_boolean.bedroom_small_lamp
           - light.livingroom1
-          - input_boolean.kitchen_odling
-          - input_boolean.kitchen_spot
-          - input_boolean.kitchen_table
-          - switch.sonoff
-          - input_boolean.akvarium_odling
-          - input_boolean.hallway_celing
-          - input_boolean.livingroom_small_lamps
-          - input_boolean.livingroom_small_led
-          - input_boolean.kitchen_window
           - switch.sonoff_basic_relay
+          - switch.hallway1
+          - switch.aquariumodling
+          - switch.bedroom1
+          - switch.bedroom2
+          - switch.bedroom3
+          - switch.livingroom1
+          - switch.livingroom2
+          - switch.livingroom5
+          - switch.co2
+          - switch.kitchen1
+          - switch.kitchen3
+          - switch.kitchen4
       - type: entities
         title: Outside
         entities:
