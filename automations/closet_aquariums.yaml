@@ -7,7 +7,7 @@
   - service: homeassistant.turn_on
     data:
       entity_id:
-        - input_boolean.akvarium_odling
+        - switch.aquariumodling
 
 - alias: closet_aquariums_off
   id: '652222211111228'
@@ -18,4 +18,4 @@
   - service: homeassistant.turn_off
     data:
       entity_id:
-        - input_boolean.akvarium_odling
+        - switch.aquariumodling

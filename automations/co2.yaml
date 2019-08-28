@@ -1,0 +1,21 @@
+- alias: co2_on
+  id: '652223111356322323234565461228'
+  trigger:
+  - platform: time
+    at: '10:03:00'
+  action:
+  - service: homeassistant.turn_on
+    data:
+      entity_id:
+        - switch.co2
+
+- alias: co2_off
+  id: '6522222111145345721228'
+  trigger:
+  - platform: time
+    at: '21:03:00'
+  action:
+  - service: homeassistant.turn_off
+    data:
+      entity_id:
+        - switch.co2

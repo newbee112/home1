@@ -20,5 +20,5 @@
   - service: homeassistant.toggle
     data:
       entity_id:
-        - input_boolean.bedroom_celing_1
-        - input_boolean.bedroom_celing_2
+        - switch.bedroom1
+        - switch.bedroom2
