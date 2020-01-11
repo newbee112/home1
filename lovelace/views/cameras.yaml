@@ -1,37 +1,25 @@
 id: cameras
 title: Cameras
 icon: mdi:video
+
 cards:
-  - type: vertical-stack
-    cards:
-      - type: horizontal-stack
-        cards:
-          - type: picture-entity
-            title: Outside
-            entity: camera.outside
-            show_name: false
-            show_state: false
-          - type: picture-entity
-            title: Livingroom1
-            entity: camera.room  
-            show_name: false
-            show_state: false
-      - type: horizontal-stack
-        cards:
-          - type: picture-entity
-            title: Odling
-            entity: camera.odling
-            show_name: false
-            show_state: false
-          - type: picture-entity
-            title: Livingroom2
-            entity: camera.hall     
-            show_name: false   
-            show_state: false
-      - type: horizontal-stack
-        cards:
-          - type: picture-entity
-            title: Pundare
-            entity: camera.cam1
-            show_name: false
-            show_state: false
+  - type: picture-entity
+    title: Outside
+    entity: camera.outside
+    show_name: false
+    show_state: false
+  - type: picture-entity
+    title: wyze1
+    entity: camera.wyze1
+    show_name: false
+    show_state: false
+  - type: picture-entity
+    title: wyze2
+    entity: camera.wyze2
+    show_name: false
+    show_state: false
+  - type: picture-entity
+    title: wyze3
+    entity: camera.wyze3
+    show_name: false
+    show_state: false

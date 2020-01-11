@@ -1,0 +1,33 @@
+- alias: loftgang_dorr_sensor
+  id: '34536711121455443544234'
+  trigger:
+  - platform: state
+    entity_id: binary_sensor.loftgang_door
+    to: 'on'
+  condition:
+    condition: and
+    conditions: 
+      - condition: time
+        after: '20:00:00'
+        before: '06:00:00' 
+      - condition: numeric_state
+        entity_id: sensor.num_in_master_bed
+        above: 0
+  action:
+    - service: media_player.play_media
+      data:
+        entity_id: media_player.chromecastaudio9798
+        media_content_id: http://192.168.10.90:8123/local/1.mp3
+        media_content_type: 'music'
+    - delay: '00:00:02'
+    - service: media_player.play_media
+      data:
+        entity_id: media_player.chromecastaudio9798
+        media_content_id: http://192.168.10.90:8123/local/1.mp3
+        media_content_type: 'music'
+    - delay: '00:00:02'
+    - service: media_player.play_media
+      data:
+        entity_id: media_player.chromecastaudio9798
+        media_content_id: http://192.168.10.90:8123/local/1.mp3
+        media_content_type: 'music'

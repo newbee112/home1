@@ -15,6 +15,8 @@ views:
   #- !include lovelace/views/kris.yaml
   #- !include lovelace/views/light_rgb_makeup.yaml
   - !include lovelace/views/holidaylight.yaml
+  - !include lovelace/views/cam2.yaml
+  - !include lovelace/views/stream.yaml
 
 cch:
   menu: show
@@ -26,8 +28,11 @@ cch:
   clock_date: false
   exceptions:
     - conditions:
-        user_agent: Mobile
+        query_string: kiosk
       config:
-        menu: overflow
+        kiosk_mode: true
+        media_query: "(max-width: 600px)"
         notifications: overflow
-
+        voice: overflow
+        menu: overflow
+        swipe: true

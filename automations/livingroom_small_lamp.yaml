@@ -39,7 +39,7 @@
     data:
       entity_id:
         - switch.livingroom5
-  - delay: '01:00:00'
+  - delay: '03:00:00'
   - service: homeassistant.turn_off
     data:
       entity_id:
@@ -65,7 +65,7 @@
   trigger:
   - platform: sun
     event: sunset
-    offset: '+04:01:00'
+    offset: '+07:01:00'
   action:
   - service: homeassistant.turn_off
     data:

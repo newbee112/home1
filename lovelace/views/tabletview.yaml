@@ -203,7 +203,20 @@ cards:
               - font-size: 10px
               - font-weight: bold
           - type: "custom:button-card"
-            entity: switch.kitchen3
+            entity: light.wall_three_three_l1
+            icon: mdi:ceiling-light 
+            color: auto
+            color_type: card
+            aspect_ratio: 3/1
+            default_color: rgb(255, 233, 155)
+            action: toggle
+
+            size: 20px
+            style:
+              - font-size: 10px
+              - font-weight: bold
+          - type: "custom:button-card"
+            entity: light.wall_three_three_l2
             icon: mdi:ceiling-light
             color: auto
             color_type: card
@@ -216,20 +229,7 @@ cards:
               - font-size: 10px
               - font-weight: bold
           - type: "custom:button-card"
-            entity: switch.kitchen4
-            icon: mdi:ceiling-light
-            color: auto
-            color_type: card
-            aspect_ratio: 3/1
-            default_color: rgb(255, 233, 155)
-            action: toggle
-
-            size: 20px
-            style:
-              - font-size: 10px
-              - font-weight: bold
-          - type: "custom:button-card"
-            entity: switch.kitchen1
+            entity: light.wall_three_three_l3
             icon: mdi:lamp
             color: auto
             color_type: card

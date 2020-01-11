@@ -1,0 +1,12 @@
+- alias: livingroom_ceiling_front_toggle
+  id: '34536775632322442332256835663313455443544234'
+  trigger:
+  - platform: state
+    entity_id:  light.wall_five_two_l2
+    #to: 'on'
+  action:
+  - service: homeassistant.toggle
+    data:
+      entity_id:
+        - switch.sonoff_basic_relay
+

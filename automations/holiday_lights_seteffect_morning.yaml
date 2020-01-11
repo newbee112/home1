@@ -25,7 +25,7 @@
         {% elif now().strftime("%m%d")|int == 0505 %}
           Cyclon Rainbow
         {% elif now().strftime("%m%d")|int >= 1001 and now().strftime("%m%d")|int <= 1031 %}
-          Halloween
+          Punkin
         {% elif now().strftime("%m%d")|int == 1113 %}
           Hail
         {% elif now().strftime("%m%d")|int >= 1101 and now().strftime("%m%d")|int <= 1130 %}

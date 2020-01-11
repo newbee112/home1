@@ -1,0 +1,12 @@
+- alias: kitchen_window_toggle
+  id: '345367756323224435663313455443544234'
+  trigger:
+  - platform: state
+    entity_id:  light.wall_three_three_l3
+    #to: 'on'
+  action:
+  - service: homeassistant.toggle
+    data:
+      entity_id:
+        - switch.kitchen1
+

@@ -1,4 +1,3 @@
-#home
 homeassistant:
   name: Home
   latitude: !secret lat 
@@ -7,25 +6,29 @@ homeassistant:
   unit_system: metric
   time_zone: Europe/Stockholm
   customize: !include_dir_merge_named customizations/
-  #auth_providers:
-  #- type: legacy_api_password
-  #  api_password: !secret api_password
-
-#startup standard things
+  auth_providers:
+   - type: homeassistant
+   - type: trusted_networks
+     trusted_networks:
+       - 192.168.10.0/24
 frontend:
   themes: !include_dir_merge_named themes/
-
+stream:
 cast:
   media_player:
     - host: 192.168.10.22
-    
+
+
+
+
 config:
 hassio:
 history:
+ffmpeg:
 logbook:
 system_health:
-hacs:
-  token: !secret git_custom_updater_token
+#hacs:
+  #token: !secret git_custom_updater_token
 
 http: 
   base_url: !secret base_url_hidden
@@ -47,11 +50,9 @@ telegram_bot:
     allowed_chat_ids:
       - !secret telegram_bot_chat_id1
 
-#lovelace yaml conf enabled
 lovelace:
   mode: yaml
 
-#all includes
 weather: !include_dir_merge_list components/weather/
 media_player: !include_dir_merge_list components/mediaplayers/
 camera: !include_dir_merge_list components/cameras/
@@ -68,7 +69,7 @@ input_boolean: !include_dir_merge_named components/input_boolean/
 switch: !include_dir_merge_list components/switches/
 automation: !include_dir_merge_list automations/
 timer: !include_dir_merge_named components/timers/
-alexa_media: !include_dir_merge_named components/alexa_media/
+#alexa_media: !include_dir_merge_named components/alexa_media/
 person: !include_dir_merge_list persons/
 notify: !include components/notify/telegram.yaml
 

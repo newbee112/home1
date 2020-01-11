@@ -217,3 +217,46 @@ binary_sensor.outer_doorw:
 
 binary_sensor.motion_ute_ir:
   friendly_name: Loftgång IR sensor
+
+#Väggbrytare
+
+#Barnkammare
+sensor.wall_one_three_wifi:
+  friendly_name: Wifi barnkammare
+binary_sensor.t3_status:
+  friendly_name: Status barnkammare
+
+#Lilla hallen
+sensor.wall_five_two_wifi:
+  friendly_name: Wifi lilla hallen
+binary_sensor.t3_status_3:
+  friendly_name: Status lilla hallen
+
+#Köket
+sensor.wall_three_three_wifi:
+  friendly_name: Wifi kök
+binary_sensor.t3_status_2:
+  friendly_name: Status kök
+
+#Vardgasrum
+sensor.wall_six_two_wifi:
+  friendly_name: Wifi vardagsrum
+binary_sensor.t3_status_4:
+  friendly_name: Status vardagsrum
+
+#Hallen vid vardagsrummet
+sensor.wall_seven_two_wifi:
+  friendly_name: Wifi Hallen
+binary_sensor.t3_status_5:
+  friendly_name: Status Hallen
+
+#Hallen vid dörren
+sensor.wall_two_two_wifi:
+  friendly_name: Wifi Hallen
+binary_sensor.t3_status_6:
+  friendly_name: Status Hallen
+#Sovrum
+sensor.wall_four_three_wifi:
+  friendly_name: Wifi Sovrum
+binary_sensor.t3_status_7:
+  friendly_name: Status Sovrum

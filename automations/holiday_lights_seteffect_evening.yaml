@@ -25,7 +25,7 @@
         {% elif now().strftime("%m%d")|int == 0505 %}
           Cyclon Rainbow
         {% elif now().strftime("%m%d")|int >= 1001 and now().strftime("%m%d")|int <= 1031 %}
-          Halloween
+          Orange & Purple
         {% elif now().strftime("%m%d")|int == 1113 %}
           Hail
         {% elif now().strftime("%m%d")|int >= 1101 and now().strftime("%m%d")|int <= 1130 %}
@@ -55,7 +55,7 @@
   trigger:
     platform: sun
     event: sunset
-    offset: "03:00:00"
+    offset: "06:00:00"
   action:
     service: light.turn_off
     entity_id: group.holiday_lights

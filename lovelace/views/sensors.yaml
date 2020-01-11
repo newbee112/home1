@@ -14,12 +14,6 @@ cards:
             entity: sensor.bedroom_humidity
             graph: none
           - type: sensor
-            entity: sensor.lab_nexa_humid
-            graph: none
-          - type: sensor
-            entity: sensor.lab_nexa_temp
-            graph: none
-          - type: sensor
             entity: sensor.livingroom_humidity
             graph: none
           - type: sensor
@@ -39,6 +33,55 @@ cards:
             graph: none
           - type: sensor
             entity: sensor.livingroom_ceiling_front_voltage
+            graph: none
+          - type: sensor
+            entity: sensor.wall_one_three_wifi
+            graph: none
+          - type: sensor
+            entity: sensor.wall_five_two_wifi
+            graph: none
+          - type: sensor
+            entity: sensor.wall_three_three_wifi
+            graph: none
+          - type: sensor
+            entity: sensor.wall_six_two_wifi
+            graph: none
+          - type: sensor
+            entity: sensor.wall_two_two_wifi
+            graph: none
+          - type: sensor
+            entity: sensor.wall_four_three_wifi
+            graph: none
+          - type: sensor
+            entity: sensor.wall_seven_two_wifi
+            graph: none
+
+          - type: binary_sensor
+            entity: binary_sensor.t3_status
+            graph: none
+
+          - type: binary_sensor
+            entity: binary_sensor.t3_status_2
+            graph: none
+
+          - type: binary_sensor
+            entity: binary_sensor.t3_status_3
+            graph: none
+
+          - type: binary_sensor
+            entity: binary_sensor.t3_status_4
+            graph: none
+
+          - type: binary_sensor
+            entity: binary_sensor.t3_status_5
+            graph: none
+
+          - type: binary_sensor
+            entity: binary_sensor.t3_status_6
+            graph: none
+
+          - type: binary_sensor
+            entity: binary_sensor.t3_status_7
             graph: none
 
       - type: entities

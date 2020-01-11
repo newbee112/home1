@@ -2,7 +2,7 @@
   client_id: !secret spotify_client_id
   client_secret: !secret spotify_client_secret
   aliases:
-      ec7e821ca4c81eed057f0b0ca66f895641e96018: 'Echo'
+      5a4b1413ab751520166b8e320d5d715a7c2b67bb: 'Echo'
       bcade7d1ebb21a0562fb646e2040db6deac8736c: 'Bose'
-      ee941b2cd437d4b41afd94bf5055d043: 'TV_sovrummet'
       ce4ad588b2bb66a32b0481f17c6a6097: 'Google cast'
+      14ad852392dd1284a6188f891e11e10abccb9fe9: 'dator'

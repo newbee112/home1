@@ -9,30 +9,33 @@ cards:
   - type: entity-filter
     name: Yard net
     entities:
-      - light.esp_led_bedroom
+      - light.esp_led_bedroom 
       - switch.sonoff
-      - light.livingroom1
+      - light.livingroom1 #led kök
       - light.holiday_lights
       - light.holiday_lights_kitchen
       - light.holiday_lights_outside
       - light.holiday_lights_outside2
       - input_boolean.akvarium_odling
-      - switch.sonoff_basic_relay
       - light.makeup_lights
       - person.johan
       - person.jirawan
       - switch.hallway1
-      - switch.akvarieodling
       - switch.bedroom1
       - switch.bedroom2
       - switch.bedroom3
-      - switch.livingroom1
-      - switch.livingroom2
       - switch.livingroom5
       - switch.co2
-      - switch.kitchen1
-      - switch.kitchen3
-      - switch.kitchen4
+      - light.t3_l1
+      - light.t3_l2
+      - light.t3_l3
+      - light.wall_three_three_l1
+      - light.wall_three_three_l2
+      - light.wall_three_three_l3
+      - light.wall_five_two_l1
+      - light.wall_five_two_l2
+      - light.wall_six_two_l1
+      - light.wall_six_two_l2
     show_empty: false
     card:
       type: glance

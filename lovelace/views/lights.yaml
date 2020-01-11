@@ -9,19 +9,25 @@ cards:
         entities:
           - light.esp_led_bedroom
           - light.livingroom1
-          - switch.sonoff_basic_relay
-          - switch.hallway1
-          - switch.aquariumodling
-          - switch.bedroom1
-          - switch.bedroom2
-          - switch.bedroom3
-          - switch.livingroom1
-          - switch.livingroom2
           - switch.livingroom5
           - switch.co2
-          - switch.kitchen1
-          - switch.kitchen3
-          - switch.kitchen4
+          - light.wall_three_three_l1
+          - light.wall_three_three_l2
+          - light.wall_three_three_l3
+          - light.t3_l1
+          - light.t3_l2
+          - light.t3_l3
+          - light.wall_five_two_l1
+          - light.wall_five_two_l2
+          - light.wall_six_two_l1
+          - light.wall_six_two_l2
+          - light.wall_two_two_l1
+          - light.wall_two_two_l2
+          - light.wall_seven_two_l1
+          - light.wall_seven_two_l2
+          - light.wall_four_three_l1
+          - light.wall_four_three_l2
+          - light.wall_four_three_l3
       - type: entities
         title: Outside
         entities:

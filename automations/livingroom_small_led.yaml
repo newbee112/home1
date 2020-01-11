@@ -1,5 +1,5 @@
-- alias: livingroom_small_led_morning_weekdays
-  id: '652222211111228'
+- alias: livingroom_small_lamp_window_morning_weekdays
+  id: '652222211223311113556111228'
   trigger:
     platform: sun
     event: sunrise
@@ -16,14 +16,14 @@
   - service: homeassistant.turn_on
     data:
       entity_id:
-        - input_boolean.livingroom_small_led
+        - switch.livingroom5
   - delay: '01:00:00'
   - service: homeassistant.turn_off
     data:
       entity_id:
-        - input_boolean.livingroom_small_led
+        - switch.livingroom5
 
-- alias: livingroom_small_led_morning_weekends
+- alias: livingroom_small_lamp_window_morning_weekends
   id: '333322211112232312'
   trigger:
     platform: sun
@@ -38,19 +38,19 @@
   - service: homeassistant.turn_on
     data:
       entity_id:
-        - input_boolean.livingroom_small_led
-  - delay: '01:00:00'
+        - switch.livingroom5
+  - delay: '03:00:00'
   - service: homeassistant.turn_off
     data:
       entity_id:
-        - input_boolean.livingroom_small_led
+        - switch.livingroom5
 
-- alias: livingroom_small_led_evening_on
+- alias: livingroom_small_lamp_window_evening_on
   id: '1222313433434566523'
   trigger:
   - platform: sun
     event: sunset
-    offset: '-00:30:00'
+    offset: '-00:31:00'
   condition: 
   - condition: time
     before: '22:00:00' 
@@ -58,16 +58,16 @@
   - service: homeassistant.turn_on
     data:
       entity_id:
-        - input_boolean.livingroom_small_led
+        - switch.livingroom5
 
-- alias: livingroom_small_led_evening_off
+- alias: livingroom_small_lamp_window_evening_off
   id: '644443333322567635432'
   trigger:
   - platform: sun
     event: sunset
-    offset: '+04:00:00'
+    offset: '+07:01:00'
   action:
   - service: homeassistant.turn_off
     data:
       entity_id:
-        - input_boolean.livingroom_small_led
+        - switch.livingroom5

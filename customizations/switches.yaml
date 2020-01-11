@@ -1,41 +1,57 @@
 
-#Hallen
+#Stora Hallen
 
-switch.hallway1:
+light.wall_two_two_l1:
+  icon: mdi:ceiling-light
+  friendly_name: Hallen glugg
+
+light.wall_two_two_l2:
   icon: mdi:ceiling-light
   friendly_name: Hallen tak
 
-#Garderob
+light.wall_seven_two_l1:
+  icon: mdi:ceiling-light
+  friendly_name: Hallen tak
 
-switch.aquariumodling:
+light.wall_seven_two_l2:
+  icon: mdi:ceiling-light
+  friendly_name: Hallen free
+
+#Lilla Hallen
+
+light.wall_five_two_l1:
+  icon: mdi:ceiling-light
+  friendly_name: Skrubb tak
+
+#Barnkammare
+
+light.t3_l1:
+  icon: mdi:ceiling-light
+  friendly_name: Maria spot
+light.t3_l2:
+  icon: mdi:ceiling-light
+  friendly_name: Maria tak
+light.t3_l3:
   icon: mdi:lamp
-  friendly_name: Akvarie Odling
+  friendly_name: Maria free
 
 #Toalett
 
 #Sovrum
 
-switch.bedroom1:
+light.wall_four_three_l1:
   icon: mdi:ceiling-light
   friendly_name: Sovrum tak
 
-switch.bedroom2:
+light.wall_four_three_l2:
   icon: mdi:ceiling-light
   friendly_name: Sovrum spot
 
-switch.bedroom3:
-  icon: mdi:lamp
-  friendly_name: Sovrum fönster
+light.wall_four_three_l3:
+  icon: mdi:ceiling-light
+  friendly_name: Sovrum LED
 
 #Vardagsrum
-
-switch.livingroom1:
-  icon: mdi:ceiling-light
-  friendly_name: Vardgsrum tak
-
-switch.livingroom2:
-  icon: mdi:ceiling-light
-  friendly_name: Vardagsrum bak
 
 switch.livingroom5:
   icon: mdi:lamp
@@ -45,16 +61,28 @@ switch.co2:
   icon: mdi:gas-cylinder
   friendly_name: Akvarium CO2
 
+light.wall_five_two_l2:
+  icon: mdi:ceiling-light
+  friendly_name: Vardagsrum fram
+
+light.wall_six_two_l1:
+  icon: mdi:ceiling-light
+  friendly_name: Vardagsrum tak 2
+
+light.wall_six_two_l2:
+  icon: mdi:ceiling-light
+  friendly_name: Vardagsrum tak 1
+
 #köket
 
-switch.kitchen1:
-  icon: mdi:lamp
-  friendly_name: Kök fönster
-
-switch.kitchen3:
+light.wall_three_three_l1:
   icon: mdi:ceiling-light
   friendly_name: Kök spot
 
-switch.kitchen4:
+light.wall_three_three_l2:
   icon: mdi:ceiling-light
   friendly_name: Kök bord
+
+light.wall_three_three_l3:
+  icon: mdi:lamp
+  friendly_name: Kök fönster

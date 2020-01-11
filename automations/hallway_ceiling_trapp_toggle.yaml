@@ -1,0 +1,12 @@
+- alias: hallway_ceiling_trapp_toggle
+  id: '345333344243566331345544353444234'
+  trigger:
+  - platform: state
+    entity_id:  light.wall_two_two_l2
+    #to: 'on'
+  action:
+  - service: homeassistant.toggle
+    data:
+      entity_id:
+        - light.wall_seven_two_l1
+
