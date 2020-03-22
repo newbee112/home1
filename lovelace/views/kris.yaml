@@ -1,7 +1,0 @@
----
-id: Krisinformation
-title: Krisinformation
-icon: mdi:alert
-cards:
-  - type: custom:krisinfo-card
-    entity: sensor.krisinformation_stockholm

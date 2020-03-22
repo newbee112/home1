@@ -1,5 +1,0 @@
-- platform: mqtt
-  name: "Outside_door_alarm"
-  state_topic: "movement1"
-
-  

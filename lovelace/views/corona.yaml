@@ -1,0 +1,15 @@
+id: corona
+title: Corona
+icon: mdi:monitor-dashboard
+cards:
+  - type: vertical-stack
+    cards:
+      - type: entities
+        title: Inne
+        entities:
+          - sensor.sweden_coronavirus_confirmed
+          - sensor.sweden_coronavirus_current
+          - sensor.sweden_coronavirus_deaths
+          - sensor.sweden_coronavirus_recovered
+
+

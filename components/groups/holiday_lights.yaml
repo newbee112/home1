@@ -1,6 +1,0 @@
-holiday_lights:
-  entities:
-  - light.holiday_lights
-  - light.holiday_lights_kitchen
-  - light.holiday_lights_outside
-  - light.holiday_lights_outside2

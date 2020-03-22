@@ -237,12 +237,19 @@ sensor.wall_three_three_wifi:
   friendly_name: Wifi kök
 binary_sensor.t3_status_2:
   friendly_name: Status kök
+binary_sensor.wallsocket_1_status:
+  friendly_name: Status kök fönster
 
 #Vardgasrum
 sensor.wall_six_two_wifi:
   friendly_name: Wifi vardagsrum
 binary_sensor.t3_status_4:
   friendly_name: Status vardagsrum
+binary_sensor.wallsocket_2_status:
+  friendly_name: Status lilla fram
+binary_sensor.wallsocket_3_status:
+  friendly_name: Status lilla bak
+
 
 #Hallen vid vardagsrummet
 sensor.wall_seven_two_wifi:

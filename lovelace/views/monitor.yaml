@@ -12,7 +12,6 @@ cards:
           - binary_sensor.larm
           - binary_sensor.sense1
           - binary_sensor.sense2
-          - binary_sensor.movement_lab
           - binary_sensor.loftgang_door
           - sensor.jirawan_in_bed
           - sensor.johan_in_bed
@@ -25,7 +24,7 @@ cards:
           - sensor.disk_use_percent_home
           - sensor.memory_free
 
-      - type: custom:monster-card
+      - type: custom:auto-entities
         show_empty: false
         card:
           type: entities

@@ -6,17 +6,17 @@ views:
   - !include lovelace/views/monitor.yaml
   - !include lovelace/views/cameras.yaml
   - !include lovelace/views/lights.yaml
-  - !include lovelace/views/grafana.yaml
+  - !include lovelace/views/corona.yaml
   - !include lovelace/views/trafiken.yaml
-  - !include lovelace/views/simple.yaml
-  - !include lovelace/views/tabletview.yaml
+  #- !include lovelace/views/simple.yaml
+  #- !include lovelace/views/tabletview.yaml
   - !include lovelace/views/auto.yaml
-  - !include lovelace/views/octoprint.yaml
-  #- !include lovelace/views/kris.yaml
+  #- !include lovelace/views/octoprint.yaml
+  #- !include lovelace/views/maria_led.yaml
   #- !include lovelace/views/light_rgb_makeup.yaml
   - !include lovelace/views/holidaylight.yaml
-  - !include lovelace/views/cam2.yaml
-  - !include lovelace/views/stream.yaml
+  #- !include lovelace/views/cam2.yaml
+  #- !include lovelace/views/stream.yaml
 
 cch:
   menu: show

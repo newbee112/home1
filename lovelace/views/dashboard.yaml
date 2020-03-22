@@ -20,22 +20,19 @@ cards:
       - light.makeup_lights
       - person.johan
       - person.jirawan
-      - switch.hallway1
-      - switch.bedroom1
-      - switch.bedroom2
-      - switch.bedroom3
-      - switch.livingroom5
-      - switch.co2
       - light.t3_l1
       - light.t3_l2
       - light.t3_l3
       - light.wall_three_three_l1
       - light.wall_three_three_l2
-      - light.wall_three_three_l3
+      - light.wallsocket_1_relay
+      - light.wallsocket_2_relay
+      - light.wallsocket_3_relay
       - light.wall_five_two_l1
       - light.wall_five_two_l2
       - light.wall_six_two_l1
       - light.wall_six_two_l2
+      - light.maria_led_2
     show_empty: false
     card:
       type: glance
@@ -67,3 +64,10 @@ cards:
     entity: media_player.roku_2md67t019048
     icon: mdi:speaker-wireless
     artwork: cover
+
+  - type: custom:mini-media-player
+    entity: media_player.unnamed_device
+    icon: mdi:speaker-wireless
+    artwork: cover
+
+

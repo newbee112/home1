@@ -1,3 +1,0 @@
-alarm_arm_disarm:
-  name: Alarm home/away
-  initial: OFF

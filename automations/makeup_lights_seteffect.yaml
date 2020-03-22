@@ -1,7 +1,7 @@
 - alias: "Makeup Input Effect"
   id: '312124530656741212534'
   initial_state: True
-  hide_entity: True
+  
   trigger:
     - platform: state
       entity_id: input_select.makeup_led_effect

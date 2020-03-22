@@ -1,6 +1,6 @@
 - alias: holiday_lights_morning_solid
   initial_state: true
-  hide_entity: true
+  
   trigger:
     platform: sun
     event: sunrise

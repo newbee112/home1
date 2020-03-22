@@ -7,107 +7,37 @@ cards:
       - type: entities
         title: Inne
         entities:
-          - type: sensor
-            entity: sensor.bedroom_temperature
-            graph: none
-          - type: sensor
-            entity: sensor.bedroom_humidity
-            graph: none
-          - type: sensor
-            entity: sensor.livingroom_humidity
-            graph: none
-          - type: sensor
-            entity: sensor.livingroom_temperature
-            graph: none
-          - type: sensor
-            entity: sensor.livingroom_ir_esp_humid
-            graph: none
-          - type: sensor
-            entity: sensor.livingroom_ir_esp_temp
-            graph: none
-          - type: sensor
-            entity: sensor.livingroom_ceiling_front_current
-            graph: none
-          - type: sensor
-            entity: sensor.livingroom_ceiling_front_power
-            graph: none
-          - type: sensor
-            entity: sensor.livingroom_ceiling_front_voltage
-            graph: none
-          - type: sensor
-            entity: sensor.wall_one_three_wifi
-            graph: none
-          - type: sensor
-            entity: sensor.wall_five_two_wifi
-            graph: none
-          - type: sensor
-            entity: sensor.wall_three_three_wifi
-            graph: none
-          - type: sensor
-            entity: sensor.wall_six_two_wifi
-            graph: none
-          - type: sensor
-            entity: sensor.wall_two_two_wifi
-            graph: none
-          - type: sensor
-            entity: sensor.wall_four_three_wifi
-            graph: none
-          - type: sensor
-            entity: sensor.wall_seven_two_wifi
-            graph: none
+          - sensor.bedroom_temperature
+          - sensor.bedroom_humidity
+          - sensor.livingroom_humidity
+          - sensor.livingroom_temperature
+          - sensor.livingroom_ir_esp_humid
+          - sensor.livingroom_ir_esp_temp
+          - sensor.livingroom_ceiling_front_current
+          - sensor.livingroom_ceiling_front_power
+          - sensor.livingroom_ceiling_front_voltage
+          - sensor.wall_one_three_wifi
+          - sensor.wall_five_two_wifi
+          - sensor.wall_three_three_wifi
+          - sensor.wall_six_two_wifi
+          - sensor.wall_two_two_wifi
+          - sensor.wall_four_three_wifi
+          - sensor.wall_seven_two_wifi
+          - binary_sensor.t3_status
+          - binary_sensor.t3_status_2
+          - binary_sensor.t3_status_3
+          - binary_sensor.t3_status_4
+          - binary_sensor.t3_status_5
+          - binary_sensor.t3_status_6
+          - binary_sensor.t3_status_7
 
-          - type: binary_sensor
-            entity: binary_sensor.t3_status
-            graph: none
-
-          - type: binary_sensor
-            entity: binary_sensor.t3_status_2
-            graph: none
-
-          - type: binary_sensor
-            entity: binary_sensor.t3_status_3
-            graph: none
-
-          - type: binary_sensor
-            entity: binary_sensor.t3_status_4
-            graph: none
-
-          - type: binary_sensor
-            entity: binary_sensor.t3_status_5
-            graph: none
-
-          - type: binary_sensor
-            entity: binary_sensor.t3_status_6
-            graph: none
-
-          - type: binary_sensor
-            entity: binary_sensor.t3_status_7
-            graph: none
 
       - type: entities
         title: Logtgång
         entities:
-          - type: sensor
-            entity: sensor.hydrofarm1_tub1
-            graph: none
-          - type: sensor
-            entity: sensor.hydrofarm1_temperature
-            graph: none
-          - type: sensor
-            entity: sensor.hydrofarm1_humidity
-            graph: none
-          - type: sensor
-            entity: sensor.hydrofarm1_brightness
-            graph: none
-          - type: sensor
-            entity: sensor.outsidefarm1_soil_conv
-            graph: none
-          - type: sensor
-            entity: sensor.outsidefarm2_soil_conv
-            graph: none
-          - type: sensor
-            entity: sensor.outsidefarm2_humidity
-            graph: none
-          - type: sensor
-            entity: sensor.outsidefarm2_temperature
-            graph: none
+          - sensor.hydrofarm1_tub1
+          - sensor.hydrofarm1_temperature
+          - sensor.hydrofarm1_humidity
+          - sensor.hydrofarm1_brightness
+          - sensor.outsidefarm1_soil_conv
+          - sensor.outsidefarm2_soil_conv

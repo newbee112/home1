@@ -9,3 +9,16 @@ makeup_animation_speed:
   min: 1
   max: 150
   step: 10
+#Maria LED
+ledspeed:
+  name: Speed
+  initial: 0
+  min: 0
+  max: 255
+  step: 1
+ledintensity:
+  name: Intensity
+  initial: 0
+  min: 0
+  max: 255
+  step: 1

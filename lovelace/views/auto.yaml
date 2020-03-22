@@ -4,7 +4,7 @@ icon: mdi:home-automation
 cards:
   - type: vertical-stack
     cards:
-      - type: custom:monster-card
+      - type: custom:auto-entities
         show_empty: false
         card:
           type: entities
@@ -15,7 +15,7 @@ cards:
           exclude: 
             - state: 'off'
 
-      - type: custom:monster-card
+      - type: custom:auto-entities
         show_empty: false
         card:
           type: entities

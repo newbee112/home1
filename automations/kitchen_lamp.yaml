@@ -1,9 +1,9 @@
-- alias: livingroom_small_lamp_window_morning_weekdays
-  id: '652222211223311113556111228'
+- alias: kitchen_window_morning_weekdays
+  id: '578784565434565463546576'
   trigger:
     platform: sun
     event: sunrise
-    offset: "-01:00:00"
+    offset: "-03:00:00"
   condition: 
   - condition: time
     weekday:
@@ -16,19 +16,19 @@
   - service: homeassistant.turn_on
     data:
       entity_id:
-        - switch.livingroom5
+        - light.wallsocket_1_relay
   - delay: '01:00:00'
   - service: homeassistant.turn_off
     data:
       entity_id:
-        - switch.livingroom5
+        - light.wallsocket_1_relay
 
-- alias: livingroom_small_lamp_window_morning_weekends
-  id: '333322211112232312'
+- alias: kitchen_window_morning_weekends
+  id: '345345345343453455367868'
   trigger:
     platform: sun
     event: sunrise
-    offset: "-01:30:00"
+    offset: "-03:30:00"
   condition: 
   - condition: time
     weekday:
@@ -38,19 +38,19 @@
   - service: homeassistant.turn_on
     data:
       entity_id:
-        - switch.livingroom5
-  - delay: '03:00:00'
+        - light.wallsocket_1_relay
+  - delay: '01:00:00'
   - service: homeassistant.turn_off
     data:
       entity_id:
-        - switch.livingroom5
+        - light.wallsocket_1_relay
 
-- alias: livingroom_small_lamp_window_evening_on
-  id: '1222313433434566523'
+- alias: kitchen_window_evening_on
+  id: '1231235433453455453453453'
   trigger:
   - platform: sun
     event: sunset
-    offset: '-00:31:00'
+    offset: '-01:32:00'
   condition: 
   - condition: time
     before: '22:00:00' 
@@ -58,16 +58,16 @@
   - service: homeassistant.turn_on
     data:
       entity_id:
-        - switch.livingroom5
+        - light.wallsocket_1_relay
 
-- alias: livingroom_small_lamp_window_evening_off
-  id: '644443333322567635432'
+- alias: kitchen_window_evening_off
+  id: '64444333332223423426567635432'
   trigger:
   - platform: sun
     event: sunset
-    offset: '+07:01:00'
+    offset: '+04:02:00'
   action:
   - service: homeassistant.turn_off
     data:
       entity_id:
-        - switch.livingroom5
+        - light.wallsocket_1_relay

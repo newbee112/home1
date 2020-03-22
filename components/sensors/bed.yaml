@@ -7,13 +7,13 @@
     johan_in_bed:
       friendly_name: "Johan in Bed"
       value_template: >
-        {{ states('sensor.raw_master_bed_weight_measurement')|float <= -3200000 }}
+        {{ states('sensor.raw_master_bed_weight_measurement')|float <= -2900000 }}
     jirawan_in_bed:
       friendly_name: "Jirawan in Bed"
       value_template: >
-        {{ states('sensor.raw_master_bed_weight_measurement')|float < -2400000
-          and (states('sensor.raw_master_bed_weight_measurement')|float > -3200000
-               or states('sensor.raw_master_bed_weight_measurement')|float <= -3400000)}}
+        {{ states('sensor.raw_master_bed_weight_measurement')|float < -2000000
+          and (states('sensor.raw_master_bed_weight_measurement')|float > -2600000
+               or states('sensor.raw_master_bed_weight_measurement')|float <= -3300000)}}
 
 - platform: template
   sensors:

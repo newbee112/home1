@@ -1,20 +1,7 @@
-- alias: "Animation_Speed_Lab"
-  id: '32222223343421245346634444442534'
-  initial_state: True
-  hide_entity: True
-  trigger:
-    - platform: state
-      entity_id: input_number.lab_animation_speed
-  action:
-    - service: mqtt.publish
-      data_template:
-        topic: "bruh/mqttstrip/setanimationspeed"
-        payload: '{{ trigger.to_state.state | int }}'
 
 - alias: "Animation_Speed_Outside"
   id: '312124533343421245888787651212534'
   initial_state: True
-  hide_entity: True
   trigger:
     - platform: state
       entity_id: input_number.lab_animation_speed
@@ -23,28 +10,6 @@
       data_template:
         topic: "bruh1/outside/setanimationspeed"
         payload: '{{ trigger.to_state.state | int }}'
-
-- alias: "Animation_Speed_Kitchen"
-  id: '315555555421245888787651212534'
-  initial_state: True
-  hide_entity: True
-  trigger:
-    - platform: state
-      entity_id: input_number.lab_animation_speed
-  action:
-    - service: mqtt.publish
-      data_template:
-        topic: "bruh2/outside/setanimationspeed"
-        payload: '{{ trigger.to_state.state | int }}'
-
-- alias: "Animation_Speed_Outside2"
-  id: '315555566781245888787651212534'
-  initial_state: True
-  hide_entity: True
-  trigger:
-    - platform: state
-      entity_id: input_number.lab_animation_speed
-  action:
     - service: mqtt.publish
       data_template:
         topic: "bruh3/outside/setanimationspeed"

@@ -1,9 +1,0 @@
-- id: '3463434367897544266767676534'
-  alias: 'Webhook endpoint to entry motion' ## http://internal_ip-address-of-HA:8123/api/webhook/motion_entrance ##
-  trigger:
-    - platform: webhook
-      webhook_id: wyze1 ## this is the only place you create the webhook ID ##
-  action:
-    - service: homeassistant.turn_off
-      entity_id: switch.livingroom5
-

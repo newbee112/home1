@@ -13,7 +13,6 @@ exclude:
     - input_select.holiday_led_effect
     - sensor.cpu_speed
     - zone.home
-    - input_boolean.tellstick
     - device_tracker.bose
     - device_tracker.music_box
     - device_tracker.s9
@@ -27,7 +26,6 @@ exclude:
     - sensor.livingroom_roomba_status
     - sensor.custom_card_tracker
     - sensor.custom_component_tracker
-    - sensor.krisinformation_stockholm
     - sensor.unnamed_device
     - sensor.unnamed_device_2
     - switch.sonoff

@@ -9,11 +9,12 @@ cards:
         entities:
           - light.esp_led_bedroom
           - light.livingroom1
-          - switch.livingroom5
-          - switch.co2
+          - light.maria_led_2
           - light.wall_three_three_l1
           - light.wall_three_three_l2
-          - light.wall_three_three_l3
+          - light.wallsocket_1_relay
+          - light.wallsocket_2_relay
+          - light.wallsocket_3_relay
           - light.t3_l1
           - light.t3_l2
           - light.t3_l3

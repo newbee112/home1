@@ -1,13 +1,3 @@
-- platform: mqtt
-  name: "Lab_NEXA_temp"
-  state_topic: "temp1"
-  unit_of_measurement: '°C'
-
-- platform: mqtt
-  name: "Lab_NEXA_humid"
-  state_topic: "humid1"
-  unit_of_measurement: '%'
-
 - platform: systemmonitor
   resources:
     - type: disk_use_percent

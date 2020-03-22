@@ -73,6 +73,14 @@ light.wall_six_two_l2:
   icon: mdi:ceiling-light
   friendly_name: Vardagsrum tak 1
 
+light.wallsocket_2_relay:
+  icon: mdi:lamp
+  friendly_name: Vardagsrum lilla fram
+
+light.wallsocket_3_relay:
+  icon: mdi:lamp
+  friendly_name: Vardagsrum lilla bak
+
 #köket
 
 light.wall_three_three_l1:
@@ -83,6 +91,6 @@ light.wall_three_three_l2:
   icon: mdi:ceiling-light
   friendly_name: Kök bord
 
-light.wall_three_three_l3:
+light.wallsocket_1_relay:
   icon: mdi:lamp
   friendly_name: Kök fönster

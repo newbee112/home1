@@ -1,6 +1,5 @@
 - alias: holiday_lights_evening_on
   initial_state: true
-  hide_entity: true
   trigger:
     platform: sun
     event: sunset
@@ -51,11 +50,13 @@
 
 - id: '345334342124534534'
   alias: holiday_lights_evening_off
-  hide_entity: true
+  
   trigger:
     platform: sun
     event: sunset
     offset: "06:00:00"
   action:
-    service: light.turn_off
-    entity_id: group.holiday_lights
+    - service: light.turn_off
+      entity_id: light.holiday_lights_outside
+    - service: light.turn_off
+      entity_id: light.holiday_lights_outside2

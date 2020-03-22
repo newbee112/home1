@@ -8,5 +8,5 @@
   - service: homeassistant.toggle
     data:
       entity_id:
-        - switch.kitchen1
+        - light.wallsocket_1_relay
 

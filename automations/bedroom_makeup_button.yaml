@@ -20,5 +20,5 @@
   - service: homeassistant.toggle
     data:
       entity_id:
-        - switch.bedroom1
-        - switch.bedroom2
+        - light.wall_four_three_l1
+        - light.wall_four_three_l2

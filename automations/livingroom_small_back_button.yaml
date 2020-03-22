@@ -1,0 +1,11 @@
+- alias: wallswitch_3_button
+  id: '6522231122442261228'
+  trigger:
+  - platform: state
+    entity_id: binary_sensor.wallsocket_3_button
+    to: 'on'
+  action:
+  - service: homeassistant.toggle
+    data:
+      entity_id:
+        - light.wallsocket_3_relay

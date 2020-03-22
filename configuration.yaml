@@ -53,6 +53,22 @@ telegram_bot:
 lovelace:
   mode: yaml
 
+  dashboards:
+    lovelace-generated: # Needs to contain a hyphen (-)
+      mode: yaml
+      filename: generated.yaml
+      title: Generated
+      icon: mdi:tools
+      show_in_sidebar: true
+      require_admin: false
+    lovelace-ui: # Needs to contain a hyphen (-)
+      mode: yaml
+      filename: ui-lovelace.yaml
+      title: Standard
+      icon: mdi:tools
+      show_in_sidebar: true
+      require_admin: false
+
 weather: !include_dir_merge_list components/weather/
 media_player: !include_dir_merge_list components/mediaplayers/
 camera: !include_dir_merge_list components/cameras/
@@ -76,10 +92,6 @@ notify: !include components/notify/telegram.yaml
 # to do, still old structure
 script: !include scripts.yaml
 
-tellstick:
-    host: core-tellstick
-    port: [50800, 50801]
-
 tts:
   - platform: google_cloud
     key_file: google_cloud.json
@@ -91,11 +103,12 @@ tts:
     pitch: -2.5
     gain: +5.0
 
-octoprint:
-  host: 192.168.10.99
-  api_key: !secret octoprint
-  bed: true
-  number_of_tools: 1
+#octoprint:
+#  host: 192.168.10.99
+#  api_key: !secret octoprint
+#  bed: true
+#  number_of_tools: 1
 
-roku:
-  - host: 192.168.10.43
+#roku:
+#  - host: 192.168.10.43
+
