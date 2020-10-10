@@ -1,6 +1,6 @@
-- platform: synology
-  url: !secret synology_url
-  username: !secret synology_usr
-  password: !secret synology_psw
-  timeout: 15
-  verify_ssl: False
+#- platform: synology
+#  url: !secret synology_url
+#  username: !secret synology_usr
+#  password: !secret synology_psw
+#  timeout: 15
+#  verify_ssl: False

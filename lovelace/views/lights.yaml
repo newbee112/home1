@@ -7,34 +7,45 @@ cards:
       - type: entities
         title: Inside
         entities:
+          - light.alarm_led_1
+          - light.alarm_led_2
+          - light.alarm_led_3
+          - light.alarm_led_4
           - light.esp_led_bedroom
           - light.livingroom1
+          - light.makeup_lights
           - light.maria_led_2
-          - light.wall_three_three_l1
-          - light.wall_three_three_l2
-          - light.wallsocket_1_relay
-          - light.wallsocket_2_relay
-          - light.wallsocket_3_relay
           - light.t3_l1
           - light.t3_l2
           - light.t3_l3
           - light.wall_five_two_l1
           - light.wall_five_two_l2
-          - light.wall_six_two_l1
-          - light.wall_six_two_l2
-          - light.wall_two_two_l1
-          - light.wall_two_two_l2
-          - light.wall_seven_two_l1
-          - light.wall_seven_two_l2
+          - light.wall_five_two_l3
           - light.wall_four_three_l1
           - light.wall_four_three_l2
           - light.wall_four_three_l3
+          - light.wall_seven_two_l1
+          - light.wall_seven_two_l2
+          - light.wall_seven_two_l3
+          - light.wall_six_two_l1
+          - light.wall_six_two_l2
+          - light.wall_six_two_l3
+          - light.wall_three_three_l1
+          - light.wall_three_three_l2
+          - light.wall_three_three_l3
+          - light.wall_two_two_l1
+          - light.wall_two_two_l2
+          - light.wall_two_two_l3
+          - light.wallsocket_1_relay
+          - light.wallsocket_2_relay
+          - light.wallsocket_3_relay
+          - light.wallsocket_4_relay
+          - light.wallsocket_5_relay
+          - switch.sonoff_basic_relay
       - type: entities
         title: Outside
         entities:
-          - light.holiday_lights
-          - light.holiday_lights_kitchen
-          - light.holiday_lights_outside
+          - light.holiday_lights_outside1
           - light.holiday_lights_outside2
           - input_number.lab_animation_speed
           - input_select.holiday_led_effect

@@ -6,38 +6,26 @@ light.livingroom1:
   icon: mdi:led-strip
   friendly_name: Kök LED
 
-light.holiday_lights:
-  icon: mdi:led-strip
-  friendly_name: Test WS2813LED
-
-light.holiday_lights_kitchen:
-  icon: mdi:led-strip
-  friendly_name: Kök jul ljustake LED
-
 light.holiday_lights_outside:
   icon: mdi:led-strip
-  friendly_name: Loftgång LED
+  friendly_name: Loftgång LED1
 
 light.holiday_lights_outside2:
   icon: mdi:led-strip
-  friendly_name: Loftgång LED
-
-switch.sonoff_basic_relay:
-  friendly_name: Vardagsrum fram
-  icon: mdi:ceiling-light
+  friendly_name: Loftgång LED2
 
 input_number.lab_animation_speed:
   icon: mdi:led-strip
-  friendly_name: Hastighet julbelysning
+  friendly_name: Loftgång LED speed
 
 input_select.holiday_led_effect:
   icon: mdi:led-strip
-  friendly_name: Effekt julbelysning
+  friendly_name: Loftgång LED Effekt 
 
 input_select.makeup_led_effect:
   icon: mdi:led-strip
-  friendly_name: Effekt makeup LED
+  friendly_name: Sovrum Effekt
 
 input_number.makeup_animation_speed:
   icon: mdi:led-strip
-  friendly_name: Hastighet makeup
+  friendly_name: Sovrum makeup

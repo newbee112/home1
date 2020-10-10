@@ -3,7 +3,7 @@
   trigger:
     platform: sun
     event: sunrise
-    offset: "-03:00:00"
+    offset: "-00:30:00"
   condition: 
   - condition: time
     weekday:
@@ -16,19 +16,19 @@
   - service: homeassistant.turn_on
     data:
       entity_id:
-        - light.wallsocket_1_relay
-  - delay: '01:00:00'
+        - light.wall_three_three_l3
+  - delay: '00:45:00'
   - service: homeassistant.turn_off
     data:
       entity_id:
-        - light.wallsocket_1_relay
+        - light.wall_three_three_l3
 
 - alias: kitchen_window_morning_weekends
   id: '345345345343453455367868'
   trigger:
     platform: sun
     event: sunrise
-    offset: "-03:30:00"
+    offset: "-01:30:00"
   condition: 
   - condition: time
     weekday:
@@ -38,12 +38,12 @@
   - service: homeassistant.turn_on
     data:
       entity_id:
-        - light.wallsocket_1_relay
+        - light.wall_three_three_l3
   - delay: '01:00:00'
   - service: homeassistant.turn_off
     data:
       entity_id:
-        - light.wallsocket_1_relay
+        - light.wall_three_three_l3
 
 - alias: kitchen_window_evening_on
   id: '1231235433453455453453453'
@@ -58,16 +58,16 @@
   - service: homeassistant.turn_on
     data:
       entity_id:
-        - light.wallsocket_1_relay
+        - light.wall_three_three_l3
 
 - alias: kitchen_window_evening_off
   id: '64444333332223423426567635432'
   trigger:
   - platform: sun
     event: sunset
-    offset: '+04:02:00'
+    offset: '+05:02:00'
   action:
   - service: homeassistant.turn_off
     data:
       entity_id:
-        - light.wallsocket_1_relay
+        - light.wall_three_three_l3

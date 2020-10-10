@@ -1,33 +1,50 @@
-- alias: livingroom_small_back_lamps_evening_on
-  id: '652222211111228'
+- alias: livingroom_small_front_lamps_evening_on
+  id: '6522222111112281'
   trigger:
     platform: sun
-    event: sunset
-    offset: "-00:30:00"
-  condition: 
-  - condition: time
-    weekday:
-      - mon
-      - tue
-      - wed
-      - thu
-      - fri
-      - sat
-      - sun 
+    event: sunrise
+    offset: '-00:15:00'
+
   action:
   - service: homeassistant.turn_on
     data:
       entity_id:
         - light.wallsocket_2_relay
 
-- alias: livingroom_small_back_lamps_evening_off
-  id: '333322211112232312'
+- alias: livingroom_small_front_lamps_morning_weekdays_off
+  id: '65222221231133231112281'
+  trigger:
+    platform: sun
+    event: sunrise
+    offset: '+00:45:00'
+
+  action:
+  - service: homeassistant.turn_off
+    data:
+      entity_id:
+        - light.wallsocket_2_relay
+
+
+- alias: livingroom_small_front_lamps_evening_off
+  id: '3333222111122323121'
   trigger:
   - platform: sun
     event: sunset
-    offset: '+00:01:00'
+    offset: '+05:10:00'
   action:
   - service: homeassistant.turn_off
+    data:
+      entity_id:
+        - light.wallsocket_2_relay
+
+- alias: livingroom_small_front_lamps_evening_on
+  id: '64444332333d322434435676352432'
+  trigger:
+  - platform: sun
+    event: sunset
+    offset: '-03:30:00'
+  action:
+  - service: homeassistant.turn_on
     data:
       entity_id:
         - light.wallsocket_2_relay

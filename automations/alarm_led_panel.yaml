@@ -1,0 +1,75 @@
+#logtgång dörr
+- id: '145663454567888444345'
+  alias: alarm_panel_led_1_flash_red
+  trigger:
+    platform: state
+    entity_id: binary_sensor.master_outside_loftgang_door
+    to: 'on' 
+  action:
+    - service: light.turn_on
+      data:
+        brightness: 255
+        effect: strobe
+        entity_id:
+          - light.alarm_led_1
+    - delay: '00:01:00'
+    - service: light.turn_off
+      data:
+        entity_id:
+          - light.alarm_led_1
+
+#vattenläcka vardagsrum
+- id: '14566345456434683434345'
+  alias: alarm_panel_led_4_flash_purple
+  trigger:
+    platform: state
+    entity_id: binary_sensor.water_alarm_720
+    to: 'on' 
+  action:
+    - service: light.turn_on
+      data:
+        brightness: 255
+        effect: strobe
+        entity_id:
+          - light.alarm_led_4
+#larm frost
+- id: '1346223468954566434345'
+  alias: alarm_panel_led_3_flash_yellow
+  trigger:
+    platform: numeric_state
+    entity_id: sensor.master_outside_temperature
+    below: 3 
+  action:
+    - service: light.turn_on
+      data:
+        brightness: 255
+        effect: strobe
+        entity_id:
+          - light.alarm_led_3
+    - delay: '12:00:00'
+    - service: light.turn_off
+      data:
+        entity_id:
+          - light.alarm_led_3
+
+
+#vattna sallad
+- id: '134622343332222'
+  alias: alarm_panel_led_2_flash_greem
+  trigger:
+    platform: numeric_state
+    entity_id: sensor.outsidefarm1_soil
+    above: 0.60 
+  action:
+    - service: light.turn_on
+      data:
+        brightness: 255
+        effect: strobe
+        entity_id:
+          - light.alarm_led_2
+    - delay: '12:00:00'
+    - service: light.turn_off
+      data:
+        entity_id:
+          - light.alarm_led_2
+

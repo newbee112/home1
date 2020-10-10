@@ -5,21 +5,21 @@ icon: mdi:video
 cards:
   - type: picture-entity
     title: Outside
-    entity: camera.outside
+    entity: camera.nothingtofind_outside
     show_name: false
     show_state: false
   - type: picture-entity
     title: wyze1
-    entity: camera.wyze1
+    entity: camera.nothingtofind_wyze1
     show_name: false
     show_state: false
   - type: picture-entity
     title: wyze2
-    entity: camera.wyze2
+    entity: camera.nothingtofind_wyze2
     show_name: false
     show_state: false
   - type: picture-entity
     title: wyze3
-    entity: camera.wyze3
+    entity: camera.nothingtofind_wyze3
     show_name: false
     show_state: false

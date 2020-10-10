@@ -1,0 +1,12 @@
+- alias: bedroom_makeup_toggle
+  id: '345367756323224435663223233134555545443544234'
+  trigger:
+  - platform: state
+    entity_id:  light.wall_four_three_l3
+    #to: 'on'
+  action:
+  - service: homeassistant.toggle
+    data:
+      entity_id:
+        - light.makeup_lights
+

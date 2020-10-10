@@ -27,13 +27,13 @@ light.wall_five_two_l1:
 
 light.t3_l1:
   icon: mdi:ceiling-light
-  friendly_name: Maria spot
+  friendly_name: Barnkammare spot
 light.t3_l2:
   icon: mdi:ceiling-light
-  friendly_name: Maria tak
+  friendly_name: Barnkammare tak
 light.t3_l3:
-  icon: mdi:lamp
-  friendly_name: Maria free
+  icon: mdi:led-strip
+  friendly_name: Barnkammare vägg
 
 #Toalett
 
@@ -49,17 +49,9 @@ light.wall_four_three_l2:
 
 light.wall_four_three_l3:
   icon: mdi:ceiling-light
-  friendly_name: Sovrum LED
+  friendly_name: Sovrum Makeup LED
 
 #Vardagsrum
-
-switch.livingroom5:
-  icon: mdi:lamp
-  friendly_name: Vardagsrum fönster
-
-switch.co2:
-  icon: mdi:gas-cylinder
-  friendly_name: Akvarium CO2
 
 light.wall_five_two_l2:
   icon: mdi:ceiling-light
@@ -80,6 +72,10 @@ light.wallsocket_2_relay:
 light.wallsocket_3_relay:
   icon: mdi:lamp
   friendly_name: Vardagsrum lilla bak
+
+light.wallsocket_5_relay:
+  icon: mdi:lamp
+  friendly_name: Vardagsrum fönster
 
 #köket
 

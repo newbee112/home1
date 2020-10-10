@@ -28,9 +28,9 @@ cards:
         show_empty: false
         card:
           type: entities
-          title: Things not home
+          title: binary sensors not on
         filter:
           include:
-            - domain: device_tracker
+            - domain: binary_sensor
           exclude: 
-            - state: 'home'
+            - state: 'on'

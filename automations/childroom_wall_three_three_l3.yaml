@@ -1,0 +1,12 @@
+- alias: child_room_wall_toggle
+  id: '3453623237756323224435663313455443544234'
+  trigger:
+  - platform: state
+    entity_id:  light.t3_l3
+    #to: 'on'
+  action:
+  - service: homeassistant.toggle
+    data:
+      entity_id:
+        - light.wallsocket_4_relay
+

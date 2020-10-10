@@ -6,7 +6,6 @@ views:
   - !include lovelace/views/monitor.yaml
   - !include lovelace/views/cameras.yaml
   - !include lovelace/views/lights.yaml
-  - !include lovelace/views/corona.yaml
   - !include lovelace/views/trafiken.yaml
   #- !include lovelace/views/simple.yaml
   #- !include lovelace/views/tabletview.yaml

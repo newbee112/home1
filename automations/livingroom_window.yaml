@@ -1,0 +1,68 @@
+- alias: livingroom_window_on
+  id: '652222212311124154111228'
+  trigger:
+    platform: sun
+    event: sunrise
+    offset: "-00:30:00"
+  condition: 
+  - condition: time
+    weekday:
+      - mon
+      - tue
+      - wed
+      - thu
+      - fri
+      - sat
+      - sun 
+  action:
+  - service: homeassistant.turn_on
+    data:
+      entity_id:
+        - light.wallsocket_5_relay
+
+- alias: livingroom_window_off
+  id: '65222221231133125132523111228'
+  trigger:
+    platform: sun
+    event: sunrise
+    offset: "+01:00:00"
+  condition: 
+  - condition: time
+    weekday:
+      - mon
+      - tue
+      - wed
+      - thu
+      - fri
+      - sat
+      - sun 
+  action:
+  - service: homeassistant.turn_off
+    data:
+      entity_id:
+        - light.wallsocket_5_relay
+
+
+- alias: livingroom_window_on
+  id: '6444433233332323451222567635432'
+  trigger:
+  - platform: sun
+    event: sunset
+    offset: '-01:30:00'
+  action:
+  - service: homeassistant.turn_on
+    data:
+      entity_id:
+        - light.wallsocket_5_relay
+
+- alias: livingroom_window_off
+  id: '644443323333224344356763433435432'
+  trigger:
+  - platform: sun
+    event: sunset
+    offset: '+04:30:00'
+  action:
+  - service: homeassistant.turn_off
+    data:
+      entity_id:
+        - light.wallsocket_5_relay

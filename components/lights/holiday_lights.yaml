@@ -1,11 +1,11 @@
 - platform: mqtt
-  name: "Holiday Lights"
-  command_topic: "bruh/mqttstrip/setpower"
-  state_topic: "bruh/mqttstrip/setpowerpub"
-  rgb_state_topic: "bruh/mqttstrip/setcolorpub"
-  rgb_command_topic: "bruh/mqttstrip/setcolor"
-  brightness_state_topic: "bruh/mqttstrip/setbrightnesspub"
-  brightness_command_topic: "bruh/mqttstrip/setbrightness"
+  name: "Holiday Lights Outside1"
+  command_topic: "bruh1/outside/setpower"
+  state_topic: "bruh1/outside/setpowerpub"
+  rgb_state_topic: "bruh1/outside/setcolorpub"
+  rgb_command_topic: "bruh1/outside/setcolor"
+  brightness_state_topic: "bruh1/outside/setbrightnesspub"
+  brightness_command_topic: "bruh1/outside/setbrightness"
   optimistic: false
 
 - platform: mqtt

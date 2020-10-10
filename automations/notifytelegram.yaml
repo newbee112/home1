@@ -27,7 +27,7 @@
       message: "It apears that there is a fire at home, please check"
 
 - alias: "telegram_notify_automation_jirawan_home"
-  id: '887678435475'
+  id: '887678435474444445'
   trigger:
     platform: state
     entity_id: person.jirawan
@@ -46,7 +46,7 @@
       message: "It apears that Jirawan has come home"
 
 - alias: "telegram_notify_automation_jirawan_not_home"
-  id: '887678435475'
+  id: '88767222228435475'
   trigger:
     platform: state
     entity_id: person.jirawan
@@ -63,3 +63,17 @@
     data:
       title: '*Jirawan*'
       message: "It apears that Jirawan has left home"
+
+- alias: "telegram_notify_automation_camera_outside"
+  id: '111223111223332323235523585245'
+  trigger:
+    platform: state
+    entity_id: camera.nothingtofind_wyze1
+    from: 'idle'
+    to: 'recording'
+
+  action:
+    service: notify.telegram_notify
+    data:
+      title: '*Tjuv!!!*'
+      message: "döda"

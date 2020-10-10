@@ -6,8 +6,8 @@ cards:
     thumb_interval: 5
     update_interval: 0.5
     cameras:
-      - entity: camera.outside
-      - entity: camera.room 
-      - entity: camera.odling
-      - entity: camera.hall
-      - entity: camera.cam1
+      - entity: camera.nothingtofind_outside
+      - entity: camera.nothingtofind_wyze1
+      - entity: camera.nothingtofind_wyze2
+      - entity: camera.nothingtofind_wyze3
+

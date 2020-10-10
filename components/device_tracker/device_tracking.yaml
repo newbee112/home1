@@ -1,5 +1,5 @@
-- platform: synology_srm
-  host: 192.168.10.1
-  port: 8000
-  password: !secret router_psw
-  ssl: false
+#- platform: synology_srm
+#  host: 192.168.10.1
+#  port: 8000
+#  password: !secret router_psw
+#  ssl: false

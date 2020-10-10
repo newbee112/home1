@@ -1,8 +1,8 @@
-- platform: spotify
-  client_id: !secret spotify_client_id
-  client_secret: !secret spotify_client_secret
-  aliases:
-      5a4b1413ab751520166b8e320d5d715a7c2b67bb: 'Echo'
-      bcade7d1ebb21a0562fb646e2040db6deac8736c: 'Bose'
-      ce4ad588b2bb66a32b0481f17c6a6097: 'Google cast'
-      14ad852392dd1284a6188f891e11e10abccb9fe9: 'dator'
+#- platform: spotify
+#  client_id: !secret spotify_client_id
+#  client_secret: !secret spotify_client_secret
+#  aliases:
+#      5a4b1413ab751520166b8e320d5d715a7c2b67bb: 'Echo'
+#      bcade7d1ebb21a0562fb646e2040db6deac8736c: 'Bose'
+#      ce4ad588b2bb66a32b0481f17c6a6097: 'Google cast'
+#      14ad852392dd1284a6188f891e11e10abccb9fe9: 'dator'
