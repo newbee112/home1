@@ -67,13 +67,10 @@
 - alias: "telegram_notify_automation_camera_outside"
   id: '111223111223332323235523585245'
   trigger:
-    platform: state
-    entity_id: camera.nothingtofind_wyze1
-    from: 'idle'
-    to: 'recording'
-
+    platform: webhook
+    webhook_id: outside
   action:
     service: notify.telegram_notify
     data:
-      title: '*Tjuv!!!*'
-      message: "döda"
+      title: '*Rörelse på ballkongen*'
+      message: "Spelar in"

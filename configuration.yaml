@@ -18,17 +18,14 @@ cloud:
 cast:
 sun:
 mobile_app:
-
 config:
 hassio:
 history:
 ffmpeg:
 logbook:
 system_health:
-
 http: 
   base_url: !secret base_url_hidden
-
 influxdb:
   host: !secret influxdbhost
   port: !secret influxport
@@ -39,16 +36,13 @@ influxdb:
   verify_ssl: false
   max_retries: 3
   default_measurement: state
-
 telegram_bot:
   - platform: polling
     api_key: !secret telegram_bot_key
     allowed_chat_ids:
       - !secret telegram_bot_chat_id1
-
 lovelace:
   mode: yaml
-
   dashboards:
     lovelace-generated: # Needs to contain a hyphen (-)
       mode: yaml
@@ -64,7 +58,6 @@ lovelace:
       icon: mdi:tools
       show_in_sidebar: true
       require_admin: false
-
 weather: !include_dir_merge_list components/weather/
 media_player: !include_dir_merge_list components/mediaplayers/
 camera: !include_dir_merge_list components/cameras/
@@ -83,10 +76,7 @@ automation: !include_dir_merge_list automations/
 timer: !include_dir_merge_named components/timers/
 person: !include_dir_merge_list persons/
 notify: !include components/notify/telegram.yaml
-
-# to do, still old structure
 script: !include scripts.yaml
-
 tts:
   - platform: google_cloud
     key_file: google_cloud.json
@@ -97,7 +87,6 @@ tts:
     speed: 0.9
     pitch: -2.5
     gain: +5.0
-
 speedtestdotnet:
   scan_interval:
     minutes: 30
@@ -106,7 +95,6 @@ speedtestdotnet:
     - download
     - upload
   server_id: 14200
-
 spotify:
   client_id: !secret spotify_client_id
   client_secret: !secret spotify_client_secret
