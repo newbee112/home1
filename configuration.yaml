@@ -11,6 +11,11 @@ homeassistant:
    - type: trusted_networks
      trusted_networks:
        - 192.168.10.0/24
+  allowlist_external_dirs:
+    - /share/motioneye/Camera1
+    - /share/motioneye/Camera2
+    - /share/motioneye/Camera3
+
 frontend:
   themes: !include_dir_merge_named themes/
 stream:
@@ -24,8 +29,8 @@ history:
 ffmpeg:
 logbook:
 system_health:
-http: 
-  base_url: !secret base_url_hidden
+#http: 
+#  base_url: !secret base_url_hidden
 influxdb:
   host: !secret influxdbhost
   port: !secret influxport
@@ -98,4 +103,8 @@ speedtestdotnet:
 spotify:
   client_id: !secret spotify_client_id
   client_secret: !secret spotify_client_secret
-
+discovery: 
+shell_command:
+  snapshot_camera_outside1: 'curl http://192.168.10.90:7999/1/action/snapshot'
+  start_video_camera_outside1: 'curl http://192.168.10.90:7999/1/config/set\?emulate_motion\=1'
+  stop_video_camera_outside1: 'curl http://192.168.10.90:7999/1/config/set\?emulate_motion\=0'

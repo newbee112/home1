@@ -1,0 +1,6 @@
+- platform: template
+  sensors:
+    temp_outside_door:
+      friendly_name: "Temp outside door"
+      unit_of_measurement: '°C'
+      value_template: "{{ state_attr('binary_sensor.openclose_8', 'temperature') }}"

@@ -1,0 +1,39 @@
+id: outside_beer
+title: Öl Jäsning
+icon: mdi:glass-mug-variant
+cards:
+  - type: vertical-stack
+    cards:
+      - type: "custom:button-card"
+        entity: light.wallsocket_3_relay
+        icon: mdi:radiator
+        color_type: card
+        name: 300px
+        styles:
+          card:
+            - height: 300px
+        color: rgb(255, 255, 0)
+        state:
+          - value: "off"
+            color: rgb(0, 0, 255)
+      - type: history-graph
+        title: 'Värmare på / av'
+        hours_to_show: 72
+        refresh_interval: 30
+        entities:
+        - light.wallsocket_3_relay
+      - type: custom:gauge-card
+        entity: sensor.master_outside_temperature
+        severity:
+          min: -5
+          max: 20
+        scale: 100px
+      - type: history-graph
+        title: 'Öl temp / humid'
+        hours_to_show: 72
+        refresh_interval: 30
+        entities:
+        - sensor.master_outside_temperature
+        - sensor.master_outside_humidity
+
+

@@ -3,7 +3,7 @@
   alias: alarm_panel_led_1_flash_red
   trigger:
     platform: state
-    entity_id: binary_sensor.master_outside_loftgang_door
+    entity_id: binary_sensor.openclose_8
     to: 'on' 
   action:
     - service: light.turn_on
@@ -12,7 +12,7 @@
         effect: strobe
         entity_id:
           - light.alarm_led_1
-    - delay: '00:01:00'
+    - delay: '00:00:10'
     - service: light.turn_off
       data:
         entity_id:
@@ -36,9 +36,9 @@
 - id: '1346223468954566434345'
   alias: alarm_panel_led_3_flash_yellow
   trigger:
-    platform: numeric_state
-    entity_id: sensor.master_outside_temperature
-    below: 3 
+    platform: state
+    entity_id: binary_sensor.tradfri_motion_sensor
+    to: 'on'  
   action:
     - service: light.turn_on
       data:
@@ -46,7 +46,7 @@
         effect: strobe
         entity_id:
           - light.alarm_led_3
-    - delay: '12:00:00'
+    - delay: '00:00:10'
     - service: light.turn_off
       data:
         entity_id:
@@ -57,9 +57,17 @@
 - id: '134622343332222'
   alias: alarm_panel_led_2_flash_greem
   trigger:
-    platform: numeric_state
-    entity_id: sensor.outsidefarm1_soil
-    above: 0.60 
+    platform: webhook
+    webhook_id: maria
+  condition:
+    condition: or
+    conditions:
+      - condition: state
+        entity_id: light.wall_four_three_l1
+        state: 'off'
+      - condition: numeric_state
+        entity_id: sensor.num_in_master_bed
+        below: 1
   action:
     - service: light.turn_on
       data:
@@ -67,9 +75,10 @@
         effect: strobe
         entity_id:
           - light.alarm_led_2
-    - delay: '12:00:00'
+    - delay: '00:00:10'
     - service: light.turn_off
       data:
         entity_id:
           - light.alarm_led_2
+
 

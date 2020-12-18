@@ -1,56 +1,40 @@
-- alias: livingroom_small_light_morning_weekdays
+- alias: livingroom_front_ceiling_on_when_dark
   id: '651111118788787878'
   trigger:
-  - platform: sun
-    event: sunrise
-    offset: "-00:30:00"
+    platform: state
+    entity_id: input_boolean.light_sensor_outside
+    to: 'on'
   condition: 
   - condition: time
-    weekday:
-      - mon
-      - tue
-      - wed
-      - thu
-      - fri
-      - sat
-      - sun 
+    after: '08:00:00'
+    before: '22:30:00'
   action:
   - service: homeassistant.turn_on
     data:
       entity_id:
         - light.wall_five_two_l2
 
-- alias: livingroom_small_light_morning_off
-  id: '6562333434326651312315234673422223'
+- alias: livingroom_front_ceiling_off_when_light
+  id: '6511113252546547567856894'
   trigger:
-  - platform: sun
-    event: sunrise
-    offset: '+02:14:00'
+    platform: state
+    entity_id: input_boolean.light_sensor_outside
+    to: 'off'
+  condition: 
+  - condition: time
+    after: '08:00:00'
+    before: '22:30:00'
   action:
   - service: homeassistant.turn_off
     data:
       entity_id:
         - light.wall_five_two_l2
 
-
-- alias: livingroom_small_light_evening_on
-  id: '656255522224344112212222222223'
+- alias: livingroom_front_ceiling_off_night
+  id: '6511113252324243242342424'
   trigger:
-  - platform: sun
-    event: sunset
-    offset: '-03:00:00'
-  action:
-  - service: homeassistant.turn_on
-    data:
-      entity_id:
-        - light.wall_five_two_l2
-
-- alias: livingroom_small_light_evening_off
-  id: '656233343432665234673422223'
-  trigger:
-  - platform: sun
-    event: sunset
-    offset: '+04:00:00'
+    platform: time
+    at: "22:30:10"
   action:
   - service: homeassistant.turn_off
     data:

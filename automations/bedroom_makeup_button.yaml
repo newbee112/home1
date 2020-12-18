@@ -8,7 +8,7 @@
   - service: homeassistant.toggle
     data:
       entity_id:
-        - light.makeup_lights
+        - light.wall_four_three_l3
 
 - alias: bedroom_celing_toggle
   id: '3453677563234346622342347844234'

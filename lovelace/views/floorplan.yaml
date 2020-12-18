@@ -1,0 +1,693 @@
+id: floorplan
+title: Floorplan
+icon: mdi:home-automation
+panel: true
+cards:
+  - type: picture-elements
+    image: /local/floorplan.png
+    elements:
+
+# Kök
+      - type: state-icon
+        tap_action:
+          action: toggle
+        entity: light.livingroom1
+        title: null
+        style:
+          top: 5%
+          left: 35%
+
+      - type: state-icon
+        tap_action:
+          action: toggle
+        entity: light.livingroom1
+        title: null
+        style:
+          top: 34%
+          left: 48%
+
+
+      - type: state-icon
+        tap_action:
+          action: toggle
+        entity: light.wall_three_three_l1
+        title: null
+        style:
+          top: 15%
+          left: 28%
+          transform: 'translate(-50%, -50%) scale(2.0, 2.0)'
+
+      - type: state-icon
+        tap_action:
+          action: toggle
+        entity: light.wall_three_three_l1
+        title: null
+        style:
+          top: 15%
+          left: 38%
+          transform: 'translate(-50%, -50%) scale(2.0, 2.0)'
+
+      - type: state-icon
+        tap_action:
+          action: toggle
+        entity: light.wall_three_three_l2
+        title: null
+        style:
+          top: 30%
+          left: 28%
+          transform: 'translate(-50%, -50%) scale(2.0, 2.0)'
+
+      - type: state-icon
+        tap_action:
+          action: toggle
+        entity: light.wall_three_three_l3
+        title: null
+        style:
+          top: 27%
+          left: 21%
+          transform: 'translate(-50%, -50%) scale(2.0, 2.0)'
+
+      - type: state-icon
+        tap_action:
+          action: toggle
+        entity: light.wall_three_three_l3
+        title: null
+        style:
+          top: 35%
+          left: 21%
+          transform: 'translate(-50%, -50%) scale(2.0, 2.0)'
+
+      - type: state-icon
+        tap_action:
+          action: toggle
+        entity: light.wall_three_three_l3
+        title: null
+        style:
+          top: 50%
+          left: 21%
+          transform: 'translate(-50%, -50%) scale(2.0, 2.0)'
+
+
+# Sovrum
+
+      - type: state-icon
+        tap_action:
+          action: toggle
+        entity: light.wall_four_three_l3
+        title: null
+        style:
+          top: 48%
+          left: 97%
+          transform: 'translate(-50%, -50%) scale(2.0, 2.0)'
+      - type: state-icon
+        tap_action:
+          action: toggle
+        entity: light.esp_led_bedroom
+        title: null
+        style:
+          top: 10%
+          left: 72%
+
+      - type: state-icon
+        tap_action:
+          action: toggle
+        entity: light.esp_led_bedroom
+        title: null
+        style:
+          top: 30%
+          left: 72%
+
+      - type: state-icon
+        tap_action:
+          action: toggle
+        entity: light.esp_led_bedroom
+        title: null
+        style:
+          top: 20%
+          left: 81%
+
+      - type: state-icon
+        tap_action:
+          action: toggle
+        entity: light.esp_led_bedroom
+        title: null
+        style:
+          top: 20%
+          left: 94%
+          
+      - type: state-badge
+        entity: sensor.jirawan_in_bed
+        title: null
+        style:
+          top: 10%
+          left: 84%
+          transform: 'translate(-50%, -50%) scale(1.0, 1.0)'
+
+      - type: state-badge
+        entity: sensor.johan_in_bed
+        title: null
+        style:
+          top: 10%
+          left: 91%
+          transform: 'translate(-50%, -50%) scale(1.0, 1.0)'
+
+
+      - type: state-icon
+        tap_action:
+          action: toggle
+        entity: light.wall_four_three_l1
+        title: null
+        style:
+          top: 30%
+          left: 88%
+          transform: 'translate(-50%, -50%) scale(2.0, 2.0)'
+
+      - type: state-icon
+        tap_action:
+          action: toggle
+        entity: light.wall_four_three_l2
+        title: null
+        style:
+          top: 44%
+          left: 88%
+          transform: 'translate(-50%, -50%) scale(2.0, 2.0)'
+
+
+
+      - type: state-label
+        entity: sensor.bedroom_temperature
+        title: null
+        style:
+          top: 25%
+          left: 76%
+          transform: 'translate(-50%, -50%) scale(2.0, 2.0)'
+
+      - type: state-icon
+        entity: camera.nothingtofind_wyze3
+        title: null
+        style:
+          top: 8%
+          left: 97%
+          transform: 'translate(-50%, -50%) scale(2.0, 2.0)'
+
+      - type: state-label
+        entity: camera.nothingtofind_wyze3
+        title: null
+        style:
+          color: white
+          top: 13%
+          left: 97%
+
+      - type: state-label
+        entity: sensor.lightlevel_7
+        title: null
+        style:
+          top: 25%
+          left: 97%
+
+
+      - type: state-label
+        entity: sensor.lightlevel_7_battery_level
+        title: null
+        style:
+          top: 27%
+          left: 97%
+
+
+# Barnkammare
+      - type: state-icon
+        tap_action:
+          action: toggle
+        entity: light.maria_led_2
+        title: null
+        style:
+          top: 86%
+          left: 47%
+
+      - type: state-icon
+        tap_action:
+          action: toggle
+        entity: light.t3_l1
+        title: null
+        style:
+          top: 71%
+          left: 40%
+          transform: 'translate(-50%, -50%) scale(2.0, 2.0)'
+
+      - type: state-label
+        entity: sensor.maria_temperature
+        title: null
+        style:
+          top: 86%
+          left: 40%
+          transform: 'translate(-50%, -50%) scale(2.0, 2.0)'
+
+#      - type: state-icon
+#        tap_action:
+#          action: toggle
+#        entity: light.t3_l2
+#        style:
+#          top: 30%
+#          left: 15%
+#          transform: 'translate(-50%, -50%) scale(2.0, 2.0)'
+
+
+      - type: state-icon
+        tap_action:
+          action: toggle
+        entity: light.t3_l3
+        title: null
+        style:
+          top: 93%
+          left: 48%
+          transform: 'translate(-50%, -50%) scale(2.0, 2.0)'
+
+# Lilla hallen
+
+
+      - type: state-icon
+        tap_action:
+          action: toggle
+        entity: light.wall_five_two_l1
+        title: null
+        style:
+          top: 43%
+          left: 60%
+          transform: 'translate(-50%, -50%) scale(2.0, 2.0)'
+
+# Vardagsrum
+
+      - type: state-icon
+        tap_action:
+          action: toggle
+        entity: light.wall_five_two_l2
+        title: null
+        style:
+          top: 60%
+          left: 89%
+          transform: 'translate(-50%, -50%) scale(2.0, 2.0)'
+
+      - type: state-icon
+        tap_action:
+          action: toggle
+        entity: light.wall_five_two_l2
+        title: null
+        style:
+          top: 60%
+          left: 83%
+          transform: 'translate(-50%, -50%) scale(2.0, 2.0)'
+
+      - type: state-icon
+        tap_action:
+          action: toggle
+        entity: light.wall_six_two_l1
+        title: null
+        style:
+          top: 92%
+          left: 60%
+          transform: 'translate(-50%, -50%) scale(2.0, 2.0)'
+
+      - type: state-icon
+        tap_action:
+          action: toggle
+        entity: light.wall_six_two_l2
+        title: null
+        style:
+          top: 92%
+          left: 87%
+          transform: 'translate(-50%, -50%) scale(2.0, 2.0)'
+
+      - type: state-icon
+        tap_action:
+          action: toggle
+        entity: light.wallsocket_2_relay
+        title: null
+        style:
+          top: 55%
+          left: 97%
+          transform: 'translate(-50%, -50%) scale(2.0, 2.0)'
+
+      - type: state-icon
+        tap_action:
+          action: toggle
+        entity: light.wallsocket_5_relay
+        title: null
+        style:
+          top: 95%
+          left: 97%
+          transform: 'translate(-50%, -50%) scale(2.0, 2.0)'
+
+      - type: state-label
+        entity: sensor.livingroom_ir_esp_temp
+        title: null
+        style:
+          top: 95%
+          left: 53%
+          transform: 'translate(-50%, -50%) scale(2.0, 2.0)'
+
+      - type: state-label
+        entity: sensor.livingroom_temperature
+        title: null
+        style:
+          top: 54%
+          left: 72%
+          transform: 'translate(-50%, -50%) scale(2.0, 2.0)'
+
+      - type: state-icon
+        tap_action:
+          action: toggle
+        entity: light.color_light_2
+        title: null
+        style:
+          top: 81%
+          left: 97%
+          transform: 'translate(-50%, -50%) scale(2.0, 2.0)'
+
+      - type: state-icon
+        tap_action:
+          action: toggle
+        entity: light.color_light_4
+        title: null
+        style:
+          top: 89%
+          left: 97%
+          transform: 'translate(-50%, -50%) scale(2.0, 2.0)'
+
+      - type: state-icon
+        entity: camera.nothingtofind_wyze1
+        title: null
+        style:
+          top: 90%
+          left: 95%
+          transform: 'translate(-50%, -50%) scale(2.0, 2.0)'
+
+      - type: state-label
+        entity: camera.nothingtofind_wyze1
+        title: null
+        style:
+          color: white
+          top: 95%
+          left: 95%
+
+
+
+
+# Hallen
+
+      - type: state-icon
+        tap_action:
+          action: toggle
+        entity: light.wall_seven_two_l1
+        title: null
+        style:
+          top: 60%
+          left: 25%
+          transform: 'translate(-50%, -50%) scale(2.0, 2.0)'
+
+      - type: state-icon
+        tap_action:
+          action: toggle
+        entity: light.wall_seven_two_l1
+        title: null
+        style:
+          top: 60%
+          left: 45%
+          transform: 'translate(-50%, -50%) scale(2.0, 2.0)'
+
+      - type: state-icon
+        tap_action:
+          action: toggle
+        entity: light.wall_two_two_l2
+        title: null
+        style:
+          top: 52%
+          left: 27%
+          transform: 'translate(-50%, -50%) scale(2.0, 2.0)'
+
+      - type: state-icon
+        entity: camera.nothingtofind_wyze2
+        title: null
+        style:
+          top: 55%
+          left: 66%
+          transform: 'translate(-50%, -50%) scale(2.0, 2.0)'
+
+      - type: state-label
+        entity: camera.nothingtofind_wyze2
+        title: null
+        style:
+          color: white
+          top: 60%
+          left: 66%
+
+
+
+# Unused
+#      - type: state-icon
+#        tap_action:
+#          action: toggle
+#        entity: light.wall_five_two_l3
+#        style:
+#          top: 30%
+#          left: 15%
+
+#      - type: state-icon
+#        tap_action:
+#          action: toggle
+#        entity: light.wall_seven_two_l2
+#        style:
+#          top: 30%
+#          left: 15%
+
+# Loftgången
+
+      - type: state-icon
+        tap_action:
+          action: toggle
+        entity: light.wallsocket_3_relay
+        title: null
+        style:
+          top: 20%
+          left: 15%
+          transform: 'translate(-50%, -50%) scale(2.0, 2.0)'
+
+      - type: state-label
+        entity: sensor.master_outside_temperature
+        title: null
+        style:
+          top: 15%
+          left: 15%
+          transform: 'translate(-50%, -50%) scale(2.0, 2.0)'
+
+
+      - type: state-icon
+        tap_action:
+          action: toggle
+        entity: light.holiday_lights_outside1
+        title: null
+        style:
+          top: 15%
+          left: 2%
+
+      - type: state-icon
+        tap_action:
+          action: toggle
+        entity: light.holiday_lights_outside1
+        title: null
+        style:
+          top: 35%
+          left: 2%
+
+      - type: state-icon
+        tap_action:
+          action: toggle
+        entity: light.holiday_lights_outside1
+        title: null
+        style:
+          top: 55%
+          left: 2%
+
+      - type: state-icon
+        tap_action:
+          action: toggle
+        entity: light.holiday_lights_outside2
+        title: null
+        style:
+          top: 21%
+          left: 19%
+
+      - type: state-icon
+        tap_action:
+          action: toggle
+        entity: light.holiday_lights_outside2
+        title: null
+        style:
+          top: 41%
+          left: 19%
+
+      - type: state-icon
+        entity: camera.nothingtofind_outside
+        title: null
+        style:
+          top: 10%
+          left: 10%
+          transform: 'translate(-50%, -50%) scale(2.0, 2.0)'
+
+      - type: state-label
+        entity: camera.nothingtofind_outside
+        title: null
+        style:
+          color: white
+          top: 15%
+          left: 10%
+
+
+      - type: state-icon
+        entity: binary_sensor.tradfri_motion_sensor
+        title: null
+        style:
+          top: 10%
+          left: 5%
+          transform: 'translate(-50%, -50%) scale(2.0, 2.0)'
+
+      - type: state-label
+        entity: sensor.tradfri_motion_sensor_battery_level
+        title: null
+        style:
+          color: white
+          top: 15%
+          left: 5%
+
+      - type: state-label
+        entity: sensor.lightlevel_6
+        title: null
+        style:
+          top: 10%
+          left: 17%
+
+
+      - type: state-label
+        entity: sensor.light_sensor_battery_level
+        title: null
+        style:
+          top: 8%
+          left: 17%
+
+
+
+
+
+      - type: state-icon
+        entity: binary_sensor.openclose_8
+        title: null
+        style:
+          top: 71%
+          left: 8%
+          transform: 'translate(-50%, -50%) scale(2.0, 2.0)'
+
+      - type: state-label
+        entity: sensor.openclose_8_battery_level
+        title: null
+        style:
+          color: white
+          top: 69%
+          left: 8%
+
+      - type: state-label
+        entity: sensor.temp_outside_door
+        title: null
+        style:
+          color: white
+          top: 67%
+          left: 8%
+
+          
+
+
+
+# Cameras
+
+      - type: image
+        entity: camera.nothingtofind_outside
+        camera_image: camera.nothingtofind_outside
+        title: null
+        style:
+          top: 80%
+          left: 7%
+          width: 10%
+
+
+      - type: image
+        entity: camera.nothingtofind_wyze2
+        camera_image: camera.nothingtofind_wyze2
+        title: null
+        style:
+          top: 80%
+          left: 18%
+          width: 10%
+
+      - type: image
+        entity: camera.nothingtofind_wyze2
+        camera_image: camera.nothingtofind_wyze1
+        title: null
+        style:
+          top: 90%
+          left: 18%
+          width: 10%
+
+      - type: image
+        entity: camera.nothingtofind_wyze2
+        camera_image: camera.nothingtofind_wyze3
+        title: null
+        style:
+          top: 90%
+          left: 7%
+          width: 10%
+
+# people
+
+
+      - type: state-icon
+        entity: binary_sensor.water_alarm_720
+        title: null
+        style:
+          top: 90%
+          left: 26%
+          transform: 'translate(-50%, -50%) scale(2.0, 2.0)'
+
+
+      - type: image
+        entity: person.johan
+        title: null
+        state_image:
+          "home": /local/male_home.png
+          "not_home": /local/male_not_home.png
+        style:
+          top: 80%
+          left: 31%
+          width: 4%
+      - type: state-label
+        entity: person.johan
+        title: null
+        style:
+          color: white
+          top: 85%
+          left: 31%
+
+      - type: image
+        entity: person.jirawan
+        title: null
+        state_image:
+          "home": /local/woman_home.png
+          "not_home": /local/woman_not_home.png
+        style:
+          top: 80%
+          left: 26%
+          width: 5%
+      - type: state-label
+        entity: person.jirawan
+        title: null
+        style:
+          color: white
+          top: 85%
+          left: 26%

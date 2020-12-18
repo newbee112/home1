@@ -1,6 +1,11 @@
 
 
+light.wallsocket_3_relay:
+  icon: mdi:radiator
+  friendly_name: Öl värme
 
+light.wall_four_three_l3:
+  icon: mdi:led-strip-variant
 
 
 input_boolean.alarm_arm_disarm:
@@ -96,13 +101,7 @@ device_tracker.bedroom_alexa:
   friendly_name: Sovrum Alexa
   icon: mdi:amazon
 
-device_tracker.outside_front_esp_led_wall:
-  friendly_name: Loftgång LED
-  icon: mdi:chip
 
-device_tracker.kitchen_window_esp_led:
-  friendly_name: Kök Jul LED
-  icon: mdi:chip
 
 device_tracker.outside_front_esp_led_rail:
   friendly_name: Loftgång LED
@@ -120,17 +119,13 @@ device_tracker.lab_esp_temp:
   friendly_name: Garderob
   icon: mdi:chip
 
-device_tracker.odling_esp:
-  friendly_name: Odling
-  icon: mdi:chip
+
 
 device_tracker.rmlinkmini:
   friendly_name: RM Link Mini
   icon: mdi:chip
 
-device_tracker.camera_720:
-  friendly_name: Vardagsrum kamera
-  icon: mdi:video
+
 
 device_tracker.camera_hall:
   friendly_name: Hallen kamera
@@ -140,21 +135,14 @@ device_tracker.camera_ute:
   friendly_name: Loftgång kamera
   icon: mdi:video
 
-device_tracker.camera_akvarie:
-  friendly_name: Garderob kamera
-  icon: mdi:video
+
 
 input_boolean.bedroom_movement1:
   friendly_name: Sovrum PIR
   icon: mdi:motion-sensor
 
-device_tracker.outsidefarm1:
-  friendly_name: Hydrofarm1
-  icon: mdi:chip
 
-device_tracker.outsidefarm2:
-  friendly_name: Hydrofarm2
-  icon: mdi:chip
+
 
 sensor.livingroom_ir_esp_temp:
   friendly_name: Livingroom
@@ -184,29 +172,9 @@ camera.gubbangen:
   friendly_name: Gubbängen
   icon: mdi:video
 
-sensor.outsidefarm1_soil_conv:
-  friendly_name: Loftgång soil1
-  icon: mdi:grave-stone
 
-sensor.outsidefarm2_soil_conv:
-  friendly_name: Loftgång soil2
-  icon: mdi:grave-stone
 
-sensor.outsidefarm2_humidity:
-  friendly_name: Loftgång humid2
-  icon: mdi:water-percent
 
-sensor.outsidefarm2_temperature:
-  friendly_name: Loftgång temp2
-  icon: mdi:thermometer
-
-sensor.blommlada_humid:
-  friendly_name: Loftgång humid1
-  icon: mdi:water-percent
-
-sensor.blommlada_temp:
-  friendly_name: Loftgång temp1
-  icon: mdi:thermometer
 
 input_boolean.telegram_trigger:
   friendly_name: Telegram
@@ -265,3 +233,12 @@ sensor.wall_four_three_wifi:
   friendly_name: Wifi Sovrum
 binary_sensor.t3_status_7:
   friendly_name: Status Sovrum
+
+
+sensor.jirawan_in_bed:
+  friendly_name: Jirawan in bed
+  icon: mdi:human
+
+sensor.johan_in_bed:
+  friendly_name: Johan in bed
+  icon: mdi:human

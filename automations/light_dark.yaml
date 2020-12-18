@@ -1,0 +1,29 @@
+- alias: light_sensor_out_dark_1212
+  id: '72432345234523452342768769789622676744'
+  trigger:
+    platform: numeric_state
+    entity_id:
+      - sensor.lightlevel_6
+      - sensor.lightlevel_7
+    below: 50
+    for: "00:05:00"
+  action:
+  - service: homeassistant.turn_on
+    data:
+      entity_id:
+        - input_boolean.light_sensor_outside
+
+- alias: light_sensor_out_light_1212
+  id: '72434752345345345234523423656435324'
+  trigger:
+    platform: numeric_state
+    entity_id:
+      - sensor.lightlevel_6
+      - sensor.lightlevel_7
+    above: 50
+    for: "00:05:00"
+  action:
+  - service: homeassistant.turn_off
+    data:
+      entity_id:
+        - input_boolean.light_sensor_outside

@@ -1,0 +1,24 @@
+- alias: livingroom_wled_button_on
+  id: '345334534534534453453453453544234'
+  trigger:
+  - platform: state
+    entity_id:  light.wall_seven_two_l2
+    to: 'on'
+  action:
+  - service: homeassistant.turn_on
+    data:
+      entity_id:
+        - light.wled_livingroom
+
+- alias: livingroom_wled_button_off
+  id: '3453675675675675675232323213263546544234'
+  trigger:
+  - platform: state
+    entity_id:  light.wall_seven_two_l2
+    to: 'off'
+  action:
+  - service: homeassistant.turn_off
+    data:
+      entity_id:
+        - light.wled_livingroom
+

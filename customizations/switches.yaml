@@ -32,7 +32,7 @@ light.t3_l2:
   icon: mdi:ceiling-light
   friendly_name: Barnkammare tak
 light.t3_l3:
-  icon: mdi:led-strip
+  icon: mdi:coach-lamp
   friendly_name: Barnkammare vägg
 
 #Toalett
@@ -87,6 +87,6 @@ light.wall_three_three_l2:
   icon: mdi:ceiling-light
   friendly_name: Kök bord
 
-light.wallsocket_1_relay:
-  icon: mdi:lamp
+light.wall_three_three_l3:
+  icon: mdi:ceiling-light
   friendly_name: Kök fönster

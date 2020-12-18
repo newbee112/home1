@@ -1,9 +1,66 @@
-
 ---
-id: blixtar
-title: Blixtar
+id: graphs
+title: Graphs
 icon: mdi:weather-lightning
+panel: true
 cards:
-  - type: iframe
-    aspect_ratio: 90%
-    url: 'https://embed.windy.com/embed2.html?lat=59.224&lon=18.068&zoom=10&level=surface&overlay=radar&menu=&message=true&marker=&calendar=&pressure=true&type=map&location=coordinates&detail=&detailLat=59.284&detailLon=18.068&metricWind=m%2Fs&metricTemp=%C2%B0C&radarRange=-1'
+  - type: vertical-stack
+    cards:
+
+      - type: horizontal-stack
+        cards:
+ 
+          - type: history-graph
+            title: "Humid"
+            hours_to_show: 48
+            entities:
+              - sensor.bedroom_humidity
+              - sensor.livingroom_humidity
+              - sensor.livingroom_ir_esp_humid
+              - sensor.maria_humidity
+          - type: history-graph
+            title: "Temp"
+            hours_to_show: 48
+            entities:
+              - sensor.bedroom_temperature
+              - sensor.livingroom_ir_esp_temp
+              - sensor.livingroom_temperature
+              - sensor.maria_temperature
+
+          - type: history-graph
+            title: "Internet"
+            hours_to_show: 48
+            entities:
+              - sensor.speedtest_download
+              - sensor.speedtest_upload
+
+
+
+
+      - type: horizontal-stack
+        cards:
+          - type: history-graph
+            title: "Servers"
+            hours_to_show: 48
+            entities:
+              - sensor.glances_cpu_temp
+              - sensor.nothingtofind_temperature
+
+      - type: horizontal-stack
+        cards:
+
+          - type: history-graph
+            title: "Wifi"
+            hours_to_show: 48
+            entities:
+              - sensor.bedroom_sense_wifi
+              - sensor.wall_five_two_wifi
+              - sensor.wall_five_two_wifi_2
+              - sensor.wall_four_three_wifi
+              - sensor.wall_one_three_wifi
+              - sensor.wall_seven_two_wifi
+              - sensor.wall_six_two_wifi
+              - sensor.wall_three_three_wifi
+              - sensor.wall_two_two_wifi
+              - sensor.wifi_signal_sensor
+              - sensor.wifi_signal_sensor_2

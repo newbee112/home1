@@ -67,10 +67,36 @@
 - alias: "telegram_notify_automation_camera_outside"
   id: '111223111223332323235523585245'
   trigger:
-    platform: webhook
-    webhook_id: outside
+    platform: state
+    entity_id: binary_sensor.tradfri_motion_sensor
+    to: 'on'
+
   action:
-    service: notify.telegram_notify
-    data:
-      title: '*Rörelse på ballkongen*'
-      message: "Spelar in"
+    - service: shell_command.start_video_camera_outside1
+    - delay: '00:00:03'
+    - service: shell_command.snapshot_camera_outside1
+    - delay: '00:00:02'
+    - service: notify.telegram_notify
+      data:
+        title: '*Rörelse på ballkongen*'
+        message: "Spelar in"
+        data:
+          photo:
+            - file: ../share/motioneye/Camera2/lastsnap.jpg
+              caption: lastsnap.jpg
+    - delay: '00:00:20'
+    - service: shell_command.stop_video_camera_outside1
+    - delay: '00:00:20'
+    - service: notify.telegram_notify
+      data:
+        title: '*Rörelse på ballkongen*'
+        message: "Spelar in"
+        data:
+          video:
+            - file: ../share/motioneye/Camera2/latest.mp4
+              caption: latest.mp4
+    - delay:
+        secounds: 60
+
+
+

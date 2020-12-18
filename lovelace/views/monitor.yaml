@@ -1,19 +1,21 @@
 id: monitor
 title: Monitor
 icon: mdi:cards-heart
+panel: true
 cards:
-  - type: vertical-stack
+  - type: horizontal-stack
     cards:
       - type: entities
         title: Status
         entities:
           - binary_sensor.water_alarm_720
-          - input_boolean.alarm_arm_disarm
-          - binary_sensor.larm
           - binary_sensor.sense1
           - binary_sensor.sense2
-          - binary_sensor.loftgang_door
+          - binary_sensor.maria_motion
+          - binary_sensor.tradfri_motion_sensor
           - sensor.jirawan_in_bed
+          - person.jirawan
+          - person.johan
           - sensor.johan_in_bed
           - sensor.num_in_master_bed
           - sensor.raw_master_bed_weight_measurement

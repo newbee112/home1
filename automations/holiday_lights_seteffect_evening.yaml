@@ -47,7 +47,7 @@
           {% else %}
             Twinkle
           {% endif %}
-    - delay: '06:00:00'
+    - delay: '10:00:00'
     - service: input_select.select_option
       entity_id: input_select.holiday_led_effect
       data_template:

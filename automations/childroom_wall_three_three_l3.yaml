@@ -1,5 +1,5 @@
 - alias: child_room_wall_toggle
-  id: '3453623237756323224435663313455443544234'
+  id: '34536232374564785623423444234'
   trigger:
   - platform: state
     entity_id:  light.t3_l3
@@ -10,3 +10,50 @@
       entity_id:
         - light.wallsocket_4_relay
 
+- alias: child_room_wall__on
+  id: '345376955467356544234'
+  trigger:
+  - platform: state
+    entity_id:  light.t3_l3
+    to: 'on'
+  action:
+  - service: homeassistant.turn_on
+    data:
+      entity_id:
+        - light.wallsocket_4_relay
+
+- alias: child_room_wall__off
+  id: '56734678769423213544234'
+  trigger:
+  - platform: state
+    entity_id:  light.t3_l3
+    to: 'off'
+  action:
+  - service: homeassistant.turn_off
+    data:
+      entity_id:
+        - light.wallsocket_4_relay
+
+- alias: child_room_wall__on_sync
+  id: '3354676980564567356722324'
+  trigger:
+  - platform: state
+    entity_id:  light.wallsocket_4_relay
+    to: 'on'
+  action:
+  - service: homeassistant.turn_on
+    data:
+      entity_id:
+        - light.t3_l3
+
+- alias: child_room_wall__off_sync
+  id: '45635465467783254635465654562324'
+  trigger:
+  - platform: state
+    entity_id:  light.wallsocket_4_relay
+    to: 'off'
+  action:
+  - service: homeassistant.turn_off
+    data:
+      entity_id:
+        - light.t3_l3

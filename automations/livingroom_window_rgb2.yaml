@@ -1,0 +1,57 @@
+- alias: livingroom_window_rgb_night_red_on
+  id: '4564'
+  trigger:
+    platform: time
+    at: "22:00"
+  action:
+  - service: light.turn_on
+    data:
+      entity_id:
+        - light.color_light_2
+        - light.color_light_4
+        - light.wled_livingroom
+      brightness: 30
+      rgb_color: [255,0,0]
+
+- alias: livingroom_window_rgb_morning_warmwhite_on
+  id: '7647'
+  trigger:
+    platform: time
+    at: "07:00"
+  action:
+  - service: light.turn_on
+    data:
+      entity_id:
+        - light.color_light_2
+        - light.color_light_4
+        - light.wled_livingroom
+      rgb_color: [255,201,118]
+      brightness: 40
+
+- alias: livingroom_window_rgb_morning_warmwhite_off
+  id: '23425'
+  trigger:
+    platform: time
+    at: "10:00"
+  action:
+  - service: light.turn_off
+    data:
+      entity_id:
+        - light.color_light_2
+        - light.color_light_4
+        - light.wled_livingroom
+
+- alias: livingroom_window_rgb_afternoon_warmwhite_on
+  id: '32t35456'
+  trigger:
+    platform: time
+    at: "14:30"
+  action:
+  - service: light.turn_on
+    data:
+      entity_id:
+        - light.color_light_2
+        - light.color_light_4
+        - light.wled_livingroom
+      rgb_color: [255,201,118]
+      brightness: 40

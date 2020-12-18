@@ -14,27 +14,3 @@
     - service: light.turn_off
       entity_id: light.esp_led_bedroom
 
-- alias: "motion_sense_kitchen"
-  id: '3333444344334543543433345546678245'
-  trigger:
-    platform: mqtt
-    topic: esp/433
-    # Optional
-    payload: '6565194'
-  condition:
-    condition: or
-    conditions:
-      - condition: state
-        entity_id: input_boolean.someone_home_status
-        state: 'off'
-      - condition: time
-        after: '23:30:00'
-        before: '05:30:00'
-  action: 
-    - service: mqtt.publish
-      data:
-        topic: "home/ESP_LED_BEDROOM/set"
-        payload: '{"state": "ON", "effect": "flash"}'
-    - delay: '00:00:30'
-    - service: light.turn_off
-      entity_id: light.esp_led_bedroom

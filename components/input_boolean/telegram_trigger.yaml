@@ -1,4 +1,6 @@
 telegram_trigger:
   initial: off
 
-
+light_sensor_outside:
+  initial: off
+#off=dark

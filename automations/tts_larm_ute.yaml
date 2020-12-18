@@ -2,7 +2,7 @@
   id: '34536711121455443544234'
   trigger:
   - platform: state
-    entity_id: binary_sensor.loftgang_door
+    entity_id: binary_sensor.openclose_3
     to: 'on'
   condition:
     condition: and

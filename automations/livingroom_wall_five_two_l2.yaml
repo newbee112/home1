@@ -1,12 +1,47 @@
-- alias: livingroom_ceiling_front_toggle
-  id: '34536775632322442332256835663313455443544234'
+- alias: livingroom_ceili3246ng_front_on
+  id: '345334534534534544234'
   trigger:
   - platform: state
     entity_id:  light.wall_five_two_l2
-    #to: 'on'
+    to: 'on'
   action:
-  - service: homeassistant.toggle
+  - service: homeassistant.turn_on
     data:
       entity_id:
         - switch.sonoff_basic_relay
 
+- alias: livingroom_ceiling_front_on_off
+  id: '34536775232323213263546544234'
+  trigger:
+  - platform: state
+    entity_id:  light.wall_five_two_l2
+    to: 'off'
+  action:
+  - service: homeassistant.turn_off
+    data:
+      entity_id:
+        - switch.sonoff_basic_relay
+
+- alias: livingroom_ceiling_front_on_sync
+  id: '3222345334898935642222324'
+  trigger:
+  - platform: state
+    entity_id:  switch.sonoff_basic_relay
+    to: 'on'
+  action:
+  - service: homeassistant.turn_on
+    data:
+      entity_id:
+        - light.wall_five_two_l2
+
+- alias: livingroom_ceiling_front_off_sync
+  id: '3455875434234234244562324'
+  trigger:
+  - platform: state
+    entity_id:  switch.sonoff_basic_relay
+    to: 'off'
+  action:
+  - service: homeassistant.turn_off
+    data:
+      entity_id:
+        - light.wall_five_two_l2

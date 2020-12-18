@@ -1,12 +1,47 @@
-- alias: kitchen_window_toggle
+- alias: kitchen_window_on
   id: '345367756323224435663313455443544234'
   trigger:
   - platform: state
     entity_id:  light.wall_three_three_l3
-    #to: 'on'
+    to: 'on'
   action:
-  - service: homeassistant.toggle
+  - service: homeassistant.turn_on
     data:
       entity_id:
         - light.wallsocket_1_relay
 
+- alias: kitchen_window_off
+  id: '34536775232323213544234'
+  trigger:
+  - platform: state
+    entity_id:  light.wall_three_three_l3
+    to: 'off'
+  action:
+  - service: homeassistant.turn_off
+    data:
+      entity_id:
+        - light.wallsocket_1_relay
+
+- alias: kitchen_window_on_sync
+  id: '34536775223233232321354423221222324'
+  trigger:
+  - platform: state
+    entity_id:  light.wallsocket_1_relay
+    to: 'on'
+  action:
+  - service: homeassistant.turn_on
+    data:
+      entity_id:
+        - light.wall_three_three_l3
+
+- alias: kitchen_window_off_sync
+  id: '3453677832375654562324'
+  trigger:
+  - platform: state
+    entity_id:  light.wallsocket_1_relay
+    to: 'off'
+  action:
+  - service: homeassistant.turn_off
+    data:
+      entity_id:
+        - light.wall_three_three_l3

@@ -1,12 +1,47 @@
-- alias: bedroom_makeup_toggle
-  id: '345367756323224435663223233134555545443544234'
+- alias: bedroom_makeup_on
+  id: '34536775632322443453453543462346732544234'
   trigger:
   - platform: state
     entity_id:  light.wall_four_three_l3
-    #to: 'on'
+    to: 'on'
   action:
-  - service: homeassistant.toggle
+  - service: homeassistant.turn_on
     data:
       entity_id:
         - light.makeup_lights
 
+- alias: bedroom_makeup_off
+  id: '3453464654735434534573546323213544234'
+  trigger:
+  - platform: state
+    entity_id:  light.wall_four_three_l3
+    to: 'off'
+  action:
+  - service: homeassistant.turn_off
+    data:
+      entity_id:
+        - light.makeup_lights
+
+- alias: bedroom_makeup_on_sync
+  id: '34254780978354345379780678913544233453221222324'
+  trigger:
+  - platform: state
+    entity_id:  light.makeup_lights
+    to: 'on'
+  action:
+  - service: homeassistant.turn_on
+    data:
+      entity_id:
+        - light.wall_four_three_l3
+
+- alias: bedroom_makeup_off_sync
+  id: '345367783237565434534345343562324'
+  trigger:
+  - platform: state
+    entity_id:  light.makeup_lights
+    to: 'off'
+  action:
+  - service: homeassistant.turn_off
+    data:
+      entity_id:
+        - light.wall_four_three_l3

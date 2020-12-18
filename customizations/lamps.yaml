@@ -1,31 +1,34 @@
 light.esp_led_bedroom:
-  icon: mdi:led-strip
+  icon: mdi:led-strip-variant
   friendly_name: Sovrum LED
 
 light.livingroom1:
-  icon: mdi:led-strip
+  icon: mdi:led-strip-variant
   friendly_name: Kök LED
 
-light.holiday_lights_outside:
-  icon: mdi:led-strip
+light.holiday_lights_outside1:
+  icon: mdi:led-strip-variant
   friendly_name: Loftgång LED1
 
 light.holiday_lights_outside2:
-  icon: mdi:led-strip
+  icon: mdi:led-strip-variant
   friendly_name: Loftgång LED2
 
 input_number.lab_animation_speed:
-  icon: mdi:led-strip
+  icon: mdi:led-strip-variant
   friendly_name: Loftgång LED speed
 
 input_select.holiday_led_effect:
-  icon: mdi:led-strip
+  icon: mdi:led-strip-variant
   friendly_name: Loftgång LED Effekt 
 
 input_select.makeup_led_effect:
-  icon: mdi:led-strip
+  icon: mdi:led-strip-variant
   friendly_name: Sovrum Effekt
 
 input_number.makeup_animation_speed:
-  icon: mdi:led-strip
+  icon: mdi:led-strip-variant
   friendly_name: Sovrum makeup
+
+
+

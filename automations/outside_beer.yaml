@@ -1,0 +1,89 @@
+- alias: outside_beer_temp_control_low_temp
+  id: "76764252767682423453"
+  trigger:
+    platform: numeric_state
+    entity_id: sensor.master_outside_temperature
+    #    above: 13
+    below: 11
+    for:
+      minutes: 1
+  action:
+    - service: homeassistant.turn_on
+      data:
+        entity_id:
+          - light.wallsocket_3_relay
+
+- alias: outside_beer_temp_control_low_temp2
+  id: "767642527676824234523"
+  trigger:
+    platform: numeric_state
+    entity_id: sensor.master_outside_temperature
+    #    above: 13
+    below: 12
+    for:
+      minutes: 1
+  action:
+    - service: homeassistant.turn_on
+      data:
+        entity_id:
+          - light.wallsocket_3_relay
+
+- alias: outside_beer_temp_control_high_temp
+  id: "76764252767682423sdasd453"
+  trigger:
+    platform: numeric_state
+    entity_id: sensor.master_outside_temperature
+    above: 12
+    #    below: 13
+    for:
+      minutes: 1
+  action:
+    - service: homeassistant.turn_off
+      data:
+        entity_id:
+          - light.wallsocket_3_relay
+
+- alias: outside_beer_temp_control_high_temp2
+  id: "76764252767682423sda2sd453"
+  trigger:
+    platform: numeric_state
+    entity_id: sensor.master_outside_temperature
+    above: 13
+    #    below: 13
+    for:
+      minutes: 1
+  action:
+    - service: homeassistant.turn_off
+      data:
+        entity_id:
+          - light.wallsocket_3_relay
+
+- alias: outside_beer_temp_control_high_temp3
+  id: "767642532767682423sdasd453"
+  trigger:
+    platform: numeric_state
+    entity_id: sensor.master_outside_temperature
+    above: 14
+    #    below: 13
+    for:
+      minutes: 1
+  action:
+    - service: homeassistant.turn_off
+      data:
+        entity_id:
+          - light.wallsocket_3_relay
+
+- alias: outside_beer_temp_control_high_temp4
+  id: "767642527674682423sdasd453"
+  trigger:
+    platform: numeric_state
+    entity_id: sensor.master_outside_temperature
+    above: 15
+    #    below: 13
+    for:
+      minutes: 1
+  action:
+    - service: homeassistant.turn_off
+      data:
+        entity_id:
+          - light.wallsocket_3_relay

@@ -3,16 +3,9 @@ id: dashboard
 title: Dashboard
 icon: mdi:home-assistant
 cards:
-  - type: iframe
-    aspect_ratio: 90%
-    url: 'https://embed.windy.com/embed2.html?lat=59.346&lon=17.945&zoom=11&level=surface&overlay=wind&menu=&message=&marker=&calendar=now&pressure=true&type=map&location=coordinates&detail=&detailLat=59.346&detailLon=17.945&metricWind=default&metricTemp=default&radarRange=-1'
   - type: entity-filter
     name: Yard net
     entities:
-      - light.alarm_led_1
-      - light.alarm_led_2
-      - light.alarm_led_3
-      - light.alarm_led_4
       - light.esp_led_bedroom
       - light.holiday_lights_outside1
       - light.holiday_lights_outside2
@@ -24,29 +17,22 @@ cards:
       - light.t3_l3
       - light.wall_five_two_l1
       - light.wall_five_two_l2
-      - light.wall_five_two_l3
       - light.wall_four_three_l1
       - light.wall_four_three_l2
       - light.wall_four_three_l3
       - light.wall_seven_two_l1
       - light.wall_seven_two_l2
-      - light.wall_seven_two_l3
       - light.wall_six_two_l1
       - light.wall_six_two_l2
-      - light.wall_six_two_l3
       - light.wall_three_three_l1
       - light.wall_three_three_l2
       - light.wall_three_three_l3
       - light.wall_two_two_l1
       - light.wall_two_two_l2
       - light.wall_two_two_l3
-      - light.wallsocket_1_relay
       - light.wallsocket_2_relay
-      - light.wallsocket_3_relay
-      - light.wallsocket_4_relay
       - light.wallsocket_5_relay
-
-
+      - light.wallsocket_3_relay
     show_empty: false
     card:
       type: glance
@@ -54,34 +40,16 @@ cards:
     state_filter:
       - 'on'
       - 'home'
-  - type: custom:mini-media-player
-    entity: media_player.spotify
-    icon: mdi:spotify
-    artwork: cover
 
-  - type: custom:mini-media-player
-    entity: media_player.johan_s_echo_dot_2
-    icon: mdi:amazon
-    artwork: cover
-
-  - type: custom:mini-media-player
-    entity: media_player.sovrum_bose
-    icon: mdi:speaker-wireless
-    artwork: cover
-
-  - type: custom:mini-media-player
-    entity: media_player.chromecastaudio9798
-    icon: mdi:speaker-wireless
-    artwork: cover
-
-  - type: custom:mini-media-player
-    entity: media_player.roku_2md67t019048
-    icon: mdi:speaker-wireless
-    artwork: cover
-
-  - type: custom:mini-media-player
-    entity: media_player.unnamed_device
-    icon: mdi:speaker-wireless
-    artwork: cover
-
-
+  - type: entities
+    name: Sensors
+    entities:
+      - sensor.bedroom_temperature
+      - sensor.maria_temperature
+      - sensor.livingroom_ir_esp_temp
+      - sensor.livingroom_temperature
+      - sensor.master_outside_temperature
+    show_empty: false
+    card:
+      type: glance
+      show_state: true
